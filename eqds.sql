@@ -103,4 +103,37 @@ CREATE TABLE `eqds_lastcount` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
+CREATE TABLE `sys_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `business_module` varchar(100) DEFAULT NULL COMMENT '业务模块',
+  `business_type` int(20) DEFAULT NULL COMMENT '业务类型（ 1新增 2修改 3删除,4数据同步 5数据上传）',
+  `method` varchar(100) DEFAULT NULL COMMENT '操作方法',
+  `request_method` varchar(10) DEFAULT NULL COMMENT '请求方式',
+  `ip` varchar(64) DEFAULT NULL COMMENT '操作者IP',
+  `status` int(1) DEFAULT NULL COMMENT '操作状态（0正常 1异常）',
+  `error_msg` varchar(2000) DEFAULT NULL COMMENT '错误消息',
+  `remarks` varchar(200) DEFAULT NULL COMMENT '备注',
+  `create_by` varchar(32) DEFAULT NULL COMMENT '操作人',
+  `create_time` datetime DEFAULT NULL COMMENT '操作时间',
+  `delete_flag` int(11) DEFAULT '0' COMMENT '删除标志',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `sys_user` (
+  `user_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
+  `user_name` varchar(30) NOT NULL COMMENT '用户账号',
+  `nick_name` varchar(30) NOT NULL COMMENT '用户昵称',
+  `phone_number` varchar(30) DEFAULT '' COMMENT '手机号码',
+  `password` varchar(100) DEFAULT '' COMMENT '密码',
+  `status` char(1) DEFAULT '0' COMMENT '帐号状态（0正常 1停用）',
+  `delete_flag` int(1) DEFAULT '0' COMMENT '删除标志（0代表存在 2代表删除）',
+  `menu_id` varchar(200) DEFAULT '' COMMENT '菜单id',
+  `menu_name` varchar(2000) DEFAULT '' COMMENT '菜单名称',
+  `create_by` varchar(64) DEFAULT '' COMMENT '创建者',
+  `create_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `update_by` varchar(64) DEFAULT '' COMMENT '更新者',
+  `update_time` datetime DEFAULT NULL COMMENT '更新时间',
+  `remarks` varchar(500) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

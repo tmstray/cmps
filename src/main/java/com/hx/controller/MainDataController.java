@@ -4,8 +4,10 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
+import com.hx.config.Log;
 import com.hx.entity.MainData;
 import com.hx.entity.User;
+import com.hx.model.BusinessType;
 import com.hx.model.MainDataModel;
 import com.hx.model.Response;
 import com.hx.service.MainDataService;
@@ -83,6 +85,7 @@ public class MainDataController {
 
     @ResponseBody
     @PostMapping(value = "/synchronize")
+    @Log(businessModule = "煤炭热值", businessType = BusinessType.SYNCHRONIZE)
     public Response dataSynchronize(HttpSession session){
         logger.info("同步数据开始...");
         User user = (User)session.getAttribute("USER_SESSION");
@@ -98,8 +101,10 @@ public class MainDataController {
         return response;
     }
 
-    @PostMapping(value = "/upload")
+
     @ResponseBody
+    @PostMapping(value = "/upload")
+    @Log(businessModule = "煤炭热值", businessType = BusinessType.UPLOAD)
     public Response calculateAndCreateFile(HttpSession session, String[] ids){
         logger.info("开始上传数据生成文件...");
         logger.debug("param ids.size():" + ids.length);

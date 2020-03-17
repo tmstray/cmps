@@ -12,7 +12,11 @@
     <script type="text/javascript" src="/scripts/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
     <link rel="stylesheet" type="text/css" href="/style/authority/jquery.fancybox-1.3.4.css" media="screen"></link>
     <script type="text/javascript" src="/scripts/artDialog/artDialog.js?skin=default"></script>
+<<<<<<< HEAD
     <script type="text/javascript" src="/js/eqds_fun.js"></script>
+=======
+    <script type="text/javascript" src="/js/eqds_Fun.js"></script>
+>>>>>>> 2927767b08fc5cb53370df34576053f6cc81e4f0
     <style>
         #datatable th{
             text-transform:none;

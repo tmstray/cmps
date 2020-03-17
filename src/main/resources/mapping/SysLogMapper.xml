@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hx.dao.SysLogMapper">
+    <resultMap id="BaseResultMap" type="com.hx.entity.SysLog">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="business_module" jdbcType="VARCHAR" property="businessModule"/>
+        <result column="business_type" jdbcType="VARCHAR" property="businessType"/>
+        <result column="method" jdbcType="VARCHAR" property="method"/>
+        <result column="ip" jdbcType="VARCHAR" property="ip"/>
+        <result column="remarks" jdbcType="VARCHAR" property="remarks"/>
+        <result column="create_by" jdbcType="VARCHAR" property="createBy"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="delete_flag" jdbcType="INTEGER" property="deleteFlag"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, business_module,business_type,request_method, method, ip,
+         remarks, create_by, create_time,
+        delete_flag, error_msg,status
+  </sql>
+    <select id="selectSysLogList" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from sys_log
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from sys_log
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insertSysLog" parameterType="com.hx.entity.SysLog">
+		insert into sys_log(business_module, business_type, method, request_method, ip,status, error_msg, remarks, create_by, create_time)
+        values (#{businessModule}, #{businessType}, #{method}, #{requestMethod}, #{ip}, #{status}, #{errorMsg}, #{remarks}, #{createBy}, sysdate())
+  </insert>
+
+    <insert id="insertSelective" parameterType="com.hx.entity.SysLog">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into sys_log
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="businessType != null">
+                business_type,
+            </if>
+            <if test="businessModule != null">
+                business_module,
+            </if>
+            <if test="method != null">
+                method,
+            </if>
+            <if test="ip != null">
+                ip,
+            </if>
+            <if test="remarks != null">
+                remarks,
+            </if>
+            <if test="createBy != null">
+                create_by,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="deleteFlag != null">
+                delete_flag,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="businessType != null">
+                #{businessType,jdbcType=VARCHAR},
+            </if>
+            <if test="businessModule != null">
+                #{businessModule,jdbcType=VARCHAR},
+            </if>
+            <if test="method != null">
+                #{method,jdbcType=VARCHAR},
+            </if>
+            <if test="ip != null">
+                #{ip,jdbcType=VARCHAR},
+            </if>
+            <if test="remarks != null">
+                #{remarks,jdbcType=VARCHAR},
+            </if>
+            <if test="createBy != null">
+                #{createBy,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="deleteFlag != null">
+                #{deleteFlag,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.hx.entity.SysLog">
+        update sys_log
+        <set>
+            <if test="businessType != null">
+                business_type = #{businessType,jdbcType=VARCHAR},
+            </if>
+            <if test="businessModule != null">
+                business_module = #{businessModule,jdbcType=VARCHAR},
+            </if>
+            <if test="method != null">
+                method = #{method,jdbcType=VARCHAR},
+            </if>
+            <if test="ip != null">
+                ip = #{ip,jdbcType=VARCHAR},
+            </if>
+            <if test="remarks != null">
+                remarks = #{remarks,jdbcType=VARCHAR},
+            </if>
+            <if test="createBy != null">
+                create_by = #{createBy,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="deleteFlag != null">
+                delete_flag = #{deleteFlag,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.hx.entity.SysLog">
+    update sys_log
+      set business_type = #{businessType,jdbcType=VARCHAR},
+          business_module = #{businessModule,jdbcType=VARCHAR},
+          method = #{method,jdbcType=VARCHAR},
+          ip = #{ip,jdbcType=VARCHAR},
+          remarks = #{remarks,jdbcType=VARCHAR},
+          create_by = #{createBy,jdbcType=VARCHAR},
+          create_time = #{createTime,jdbcType=TIMESTAMP},
+          delete_flag = #{deleteFlag,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
