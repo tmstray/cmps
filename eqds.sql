@@ -103,7 +103,6 @@ CREATE TABLE `eqds_lastcount` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
-
 CREATE TABLE `sys_log` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `business_module` varchar(100) DEFAULT NULL COMMENT '业务模块',
@@ -137,3 +136,4 @@ CREATE TABLE `sys_user` (
   `remarks` varchar(500) DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
