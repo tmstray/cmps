@@ -45,8 +45,9 @@ public class LoginController {
             logger.info("登录同步数据完成...");*/
             session.setAttribute("USER_SESSION", user);
             //重定向到主页面的跳转方法
+            return "main";
 //            return "redirect:/eqds/getByPage";
-            return "redirect:/cement/getByPage";
+//            return "redirect:/cement/getByPage";
         }
         return "login";
     }

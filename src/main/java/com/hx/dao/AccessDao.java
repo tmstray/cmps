@@ -1,19 +1,6 @@
 package com.hx.dao;
 
-import com.hx.config.AccessConfig;
-import com.hx.config.Constants;
-import com.hx.entity.CementLastcount;
-import com.hx.entity.CementStrength;
-import com.hx.entity.MainData;
-import com.hx.utils.DbUtil;
-import com.hx.utils.StringUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-
 import java.io.BufferedOutputStream;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.Connection;
@@ -21,7 +8,23 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.hx.config.AccessConfig;
+import com.hx.config.Constants;
+import com.hx.entity.CementStrength;
+import com.hx.entity.MainData;
+import com.hx.utils.DbUtil;
 
 @Repository
 public class AccessDao {

@@ -1,13 +1,11 @@
 package com.hx.dao;
 
-import com.hx.entity.CementLastcount;
-import com.hx.entity.CementLastcountExample;
+import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
+import com.hx.entity.CementLastcount;
+import com.hx.entity.CementLastcountExample;
 
 @Repository
 @Mapper
