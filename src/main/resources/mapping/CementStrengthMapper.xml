@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hx.dao.CementStrengthMapper" >
+  <resultMap id="BaseResultMap" type="com.hx.entity.CementStrength" >
+    <id column="ID" property="ID" jdbcType="INTEGER" />
+    <result column="sampleID" property="sampleID" jdbcType="INTEGER" />
+    <result column="sampleNo" property="sampleNo" jdbcType="VARCHAR" />
+    <result column="kind" property="kind" jdbcType="VARCHAR" />
+    <result column="sampleTime" property="sampleTime" jdbcType="VARCHAR" />
+    <result column="shapeTime" property="shapeTime" jdbcType="VARCHAR" />
+    <result column="destructTime" property="destructTime" jdbcType="VARCHAR" />
+    <result column="duration" property="duration" jdbcType="VARCHAR" />
+    <result column="hour" property="hour" jdbcType="VARCHAR" />
+    <result column="temperature" property="temperature" jdbcType="VARCHAR" />
+    <result column="experimentStand" property="experimentStand" jdbcType="VARCHAR" />
+    <result column="stressType" property="stressType" jdbcType="VARCHAR" />
+    <result column="flexureType" property="flexureType" jdbcType="VARCHAR" />
+    <result column="stressNo" property="stressNo" jdbcType="VARCHAR" />
+    <result column="flexureNo" property="flexureNo" jdbcType="VARCHAR" />
+    <result column="stressSta" property="stressSta" jdbcType="VARCHAR" />
+    <result column="flexureSta" property="flexureSta" jdbcType="VARCHAR" />
+    <result column="stressVail" property="stressVail" jdbcType="VARCHAR" />
+    <result column="flexureVail" property="flexureVail" jdbcType="VARCHAR" />
+    <result column="stressCKS" property="stressCKS" jdbcType="VARCHAR" />
+    <result column="flexureCKS" property="flexureCKS" jdbcType="VARCHAR" />
+    <result column="notes" property="notes" jdbcType="VARCHAR" />
+    <result column="stress1" property="stress1" jdbcType="VARCHAR" />
+    <result column="stress2" property="stress2" jdbcType="VARCHAR" />
+    <result column="stress3" property="stress3" jdbcType="VARCHAR" />
+    <result column="stress4" property="stress4" jdbcType="VARCHAR" />
+    <result column="stress5" property="stress5" jdbcType="VARCHAR" />
+    <result column="stress6" property="stress6" jdbcType="VARCHAR" />
+    <result column="pressure1" property="pressure1" jdbcType="VARCHAR" />
+    <result column="pressure2" property="pressure2" jdbcType="VARCHAR" />
+    <result column="pressure3" property="pressure3" jdbcType="VARCHAR" />
+    <result column="pressure4" property="pressure4" jdbcType="VARCHAR" />
+    <result column="pressure5" property="pressure5" jdbcType="VARCHAR" />
+    <result column="pressure6" property="pressure6" jdbcType="VARCHAR" />
+    <result column="avgPressure" property="avgPressure" jdbcType="VARCHAR" />
+    <result column="flexure1" property="flexure1" jdbcType="VARCHAR" />
+    <result column="flexure2" property="flexure2" jdbcType="VARCHAR" />
+    <result column="flexure3" property="flexure3" jdbcType="VARCHAR" />
+    <result column="avgFlexure" property="avgFlexure" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="createTime" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="updateTime" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    ID, sampleID, sampleNo, kind, sampleTime, shapeTime, destructTime, duration, hour, 
+    temperature, experimentStand, stressType, flexureType, stressNo, flexureNo, stressSta, 
+    flexureSta, stressVail, flexureVail, stressCKS, flexureCKS, notes, stress1, stress2, 
+    stress3, stress4, stress5, stress6, pressure1, pressure2, pressure3, pressure4, pressure5, 
+    pressure6, avgPressure, flexure1, flexure2, flexure3, avgFlexure, status, createTime, 
+    updateTime
+  </sql>
+  <select id="selectCountBySampleNo"  resultType="java.lang.Integer">
+    select count(1) from cement_strength where sampleNo = #{sampleNo} AND duration = #{duration}
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.hx.entity.CementStrengthExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from cement_strength
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from cement_strength
+    where ID = #{ID,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from cement_strength
+    where ID = #{ID,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.hx.entity.CementStrengthExample" >
+    delete from cement_strength
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.hx.entity.CementStrength" >
+    insert into cement_strength (ID, sampleID, sampleNo, 
+      kind, sampleTime, shapeTime, 
+      destructTime, duration, hour, 
+      temperature, experimentStand, stressType, 
+      flexureType, stressNo, flexureNo, 
+      stressSta, flexureSta, stressVail, 
+      flexureVail, stressCKS, flexureCKS, 
+      notes, stress1, stress2, 
+      stress3, stress4, stress5, 
+      stress6, pressure1, pressure2, 
+      pressure3, pressure4, pressure5, 
+      pressure6, avgPressure, flexure1, 
+      flexure2, flexure3, avgFlexure, 
+      status, createTime, updateTime
+      )
+    values (#{ID,jdbcType=INTEGER}, #{sampleID,jdbcType=INTEGER}, #{sampleNo,jdbcType=VARCHAR}, 
+      #{kind,jdbcType=VARCHAR}, #{sampleTime,jdbcType=VARCHAR}, #{shapeTime,jdbcType=VARCHAR}, 
+      #{destructTime,jdbcType=VARCHAR}, #{duration,jdbcType=VARCHAR}, #{hour,jdbcType=VARCHAR}, 
+      #{temperature,jdbcType=VARCHAR}, #{experimentStand,jdbcType=VARCHAR}, #{stressType,jdbcType=VARCHAR}, 
+      #{flexureType,jdbcType=VARCHAR}, #{stressNo,jdbcType=VARCHAR}, #{flexureNo,jdbcType=VARCHAR}, 
+      #{stressSta,jdbcType=VARCHAR}, #{flexureSta,jdbcType=VARCHAR}, #{stressVail,jdbcType=VARCHAR}, 
+      #{flexureVail,jdbcType=VARCHAR}, #{stressCKS,jdbcType=VARCHAR}, #{flexureCKS,jdbcType=VARCHAR}, 
+      #{notes,jdbcType=VARCHAR}, #{stress1,jdbcType=VARCHAR}, #{stress2,jdbcType=VARCHAR}, 
+      #{stress3,jdbcType=VARCHAR}, #{stress4,jdbcType=VARCHAR}, #{stress5,jdbcType=VARCHAR}, 
+      #{stress6,jdbcType=VARCHAR}, #{pressure1,jdbcType=VARCHAR}, #{pressure2,jdbcType=VARCHAR}, 
+      #{pressure3,jdbcType=VARCHAR}, #{pressure4,jdbcType=VARCHAR}, #{pressure5,jdbcType=VARCHAR}, 
+      #{pressure6,jdbcType=VARCHAR}, #{avgPressure,jdbcType=VARCHAR}, #{flexure1,jdbcType=VARCHAR}, 
+      #{flexure2,jdbcType=VARCHAR}, #{flexure3,jdbcType=VARCHAR}, #{avgFlexure,jdbcType=VARCHAR}, 
+      #{status,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.hx.entity.CementStrength" >
+    insert into cement_strength
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="ID != null" >
+        ID,
+      </if>
+      <if test="sampleID != null" >
+        sampleID,
+      </if>
+      <if test="sampleNo != null" >
+        sampleNo,
+      </if>
+      <if test="kind != null" >
+        kind,
+      </if>
+      <if test="sampleTime != null" >
+        sampleTime,
+      </if>
+      <if test="shapeTime != null" >
+        shapeTime,
+      </if>
+      <if test="destructTime != null" >
+        destructTime,
+      </if>
+      <if test="duration != null" >
+        duration,
+      </if>
+      <if test="hour != null" >
+        hour,
+      </if>
+      <if test="temperature != null" >
+        temperature,
+      </if>
+      <if test="experimentStand != null" >
+        experimentStand,
+      </if>
+      <if test="stressType != null" >
+        stressType,
+      </if>
+      <if test="flexureType != null" >
+        flexureType,
+      </if>
+      <if test="stressNo != null" >
+        stressNo,
+      </if>
+      <if test="flexureNo != null" >
+        flexureNo,
+      </if>
+      <if test="stressSta != null" >
+        stressSta,
+      </if>
+      <if test="flexureSta != null" >
+        flexureSta,
+      </if>
+      <if test="stressVail != null" >
+        stressVail,
+      </if>
+      <if test="flexureVail != null" >
+        flexureVail,
+      </if>
+      <if test="stressCKS != null" >
+        stressCKS,
+      </if>
+      <if test="flexureCKS != null" >
+        flexureCKS,
+      </if>
+      <if test="notes != null" >
+        notes,
+      </if>
+      <if test="stress1 != null" >
+        stress1,
+      </if>
+      <if test="stress2 != null" >
+        stress2,
+      </if>
+      <if test="stress3 != null" >
+        stress3,
+      </if>
+      <if test="stress4 != null" >
+        stress4,
+      </if>
+      <if test="stress5 != null" >
+        stress5,
+      </if>
+      <if test="stress6 != null" >
+        stress6,
+      </if>
+      <if test="pressure1 != null" >
+        pressure1,
+      </if>
+      <if test="pressure2 != null" >
+        pressure2,
+      </if>
+      <if test="pressure3 != null" >
+        pressure3,
+      </if>
+      <if test="pressure4 != null" >
+        pressure4,
+      </if>
+      <if test="pressure5 != null" >
+        pressure5,
+      </if>
+      <if test="pressure6 != null" >
+        pressure6,
+      </if>
+      <if test="avgPressure != null" >
+        avgPressure,
+      </if>
+      <if test="flexure1 != null" >
+        flexure1,
+      </if>
+      <if test="flexure2 != null" >
+        flexure2,
+      </if>
+      <if test="flexure3 != null" >
+        flexure3,
+      </if>
+      <if test="avgFlexure != null" >
+        avgFlexure,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="createTime != null" >
+        createTime,
+      </if>
+      <if test="updateTime != null" >
+        updateTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="ID != null" >
+        #{ID,jdbcType=INTEGER},
+      </if>
+      <if test="sampleID != null" >
+        #{sampleID,jdbcType=INTEGER},
+      </if>
+      <if test="sampleNo != null" >
+        #{sampleNo,jdbcType=VARCHAR},
+      </if>
+      <if test="kind != null" >
+        #{kind,jdbcType=VARCHAR},
+      </if>
+      <if test="sampleTime != null" >
+        #{sampleTime,jdbcType=VARCHAR},
+      </if>
+      <if test="shapeTime != null" >
+        #{shapeTime,jdbcType=VARCHAR},
+      </if>
+      <if test="destructTime != null" >
+        #{destructTime,jdbcType=VARCHAR},
+      </if>
+      <if test="duration != null" >
+        #{duration,jdbcType=VARCHAR},
+      </if>
+      <if test="hour != null" >
+        #{hour,jdbcType=VARCHAR},
+      </if>
+      <if test="temperature != null" >
+        #{temperature,jdbcType=VARCHAR},
+      </if>
+      <if test="experimentStand != null" >
+        #{experimentStand,jdbcType=VARCHAR},
+      </if>
+      <if test="stressType != null" >
+        #{stressType,jdbcType=VARCHAR},
+      </if>
+      <if test="flexureType != null" >
+        #{flexureType,jdbcType=VARCHAR},
+      </if>
+      <if test="stressNo != null" >
+        #{stressNo,jdbcType=VARCHAR},
+      </if>
+      <if test="flexureNo != null" >
+        #{flexureNo,jdbcType=VARCHAR},
+      </if>
+      <if test="stressSta != null" >
+        #{stressSta,jdbcType=VARCHAR},
+      </if>
+      <if test="flexureSta != null" >
+        #{flexureSta,jdbcType=VARCHAR},
+      </if>
+      <if test="stressVail != null" >
+        #{stressVail,jdbcType=VARCHAR},
+      </if>
+      <if test="flexureVail != null" >
+        #{flexureVail,jdbcType=VARCHAR},
+      </if>
+      <if test="stressCKS != null" >
+        #{stressCKS,jdbcType=VARCHAR},
+      </if>
+      <if test="flexureCKS != null" >
+        #{flexureCKS,jdbcType=VARCHAR},
+      </if>
+      <if test="notes != null" >
+        #{notes,jdbcType=VARCHAR},
+      </if>
+      <if test="stress1 != null" >
+        #{stress1,jdbcType=VARCHAR},
+      </if>
+      <if test="stress2 != null" >
+        #{stress2,jdbcType=VARCHAR},
+      </if>
+      <if test="stress3 != null" >
+        #{stress3,jdbcType=VARCHAR},
+      </if>
+      <if test="stress4 != null" >
+        #{stress4,jdbcType=VARCHAR},
+      </if>
+      <if test="stress5 != null" >
+        #{stress5,jdbcType=VARCHAR},
+      </if>
+      <if test="stress6 != null" >
+        #{stress6,jdbcType=VARCHAR},
+      </if>
+      <if test="pressure1 != null" >
+        #{pressure1,jdbcType=VARCHAR},
+      </if>
+      <if test="pressure2 != null" >
+        #{pressure2,jdbcType=VARCHAR},
+      </if>
+      <if test="pressure3 != null" >
+        #{pressure3,jdbcType=VARCHAR},
+      </if>
+      <if test="pressure4 != null" >
+        #{pressure4,jdbcType=VARCHAR},
+      </if>
+      <if test="pressure5 != null" >
+        #{pressure5,jdbcType=VARCHAR},
+      </if>
+      <if test="pressure6 != null" >
+        #{pressure6,jdbcType=VARCHAR},
+      </if>
+      <if test="avgPressure != null" >
+        #{avgPressure,jdbcType=VARCHAR},
+      </if>
+      <if test="flexure1 != null" >
+        #{flexure1,jdbcType=VARCHAR},
+      </if>
+      <if test="flexure2 != null" >
+        #{flexure2,jdbcType=VARCHAR},
+      </if>
+      <if test="flexure3 != null" >
+        #{flexure3,jdbcType=VARCHAR},
+      </if>
+      <if test="avgFlexure != null" >
+        #{avgFlexure,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.hx.entity.CementStrengthExample" resultType="java.lang.Integer" >
+    select count(*) from cement_strength
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update cement_strength
+    <set >
+      <if test="record.ID != null" >
+        ID = #{record.ID,jdbcType=INTEGER},
+      </if>
+      <if test="record.sampleID != null" >
+        sampleID = #{record.sampleID,jdbcType=INTEGER},
+      </if>
+      <if test="record.sampleNo != null" >
+        sampleNo = #{record.sampleNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.kind != null" >
+        kind = #{record.kind,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sampleTime != null" >
+        sampleTime = #{record.sampleTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.shapeTime != null" >
+        shapeTime = #{record.shapeTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.destructTime != null" >
+        destructTime = #{record.destructTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.duration != null" >
+        duration = #{record.duration,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hour != null" >
+        hour = #{record.hour,jdbcType=VARCHAR},
+      </if>
+      <if test="record.temperature != null" >
+        temperature = #{record.temperature,jdbcType=VARCHAR},
+      </if>
+      <if test="record.experimentStand != null" >
+        experimentStand = #{record.experimentStand,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stressType != null" >
+        stressType = #{record.stressType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.flexureType != null" >
+        flexureType = #{record.flexureType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stressNo != null" >
+        stressNo = #{record.stressNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.flexureNo != null" >
+        flexureNo = #{record.flexureNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stressSta != null" >
+        stressSta = #{record.stressSta,jdbcType=VARCHAR},
+      </if>
+      <if test="record.flexureSta != null" >
+        flexureSta = #{record.flexureSta,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stressVail != null" >
+        stressVail = #{record.stressVail,jdbcType=VARCHAR},
+      </if>
+      <if test="record.flexureVail != null" >
+        flexureVail = #{record.flexureVail,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stressCKS != null" >
+        stressCKS = #{record.stressCKS,jdbcType=VARCHAR},
+      </if>
+      <if test="record.flexureCKS != null" >
+        flexureCKS = #{record.flexureCKS,jdbcType=VARCHAR},
+      </if>
+      <if test="record.notes != null" >
+        notes = #{record.notes,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stress1 != null" >
+        stress1 = #{record.stress1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stress2 != null" >
+        stress2 = #{record.stress2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stress3 != null" >
+        stress3 = #{record.stress3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stress4 != null" >
+        stress4 = #{record.stress4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stress5 != null" >
+        stress5 = #{record.stress5,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stress6 != null" >
+        stress6 = #{record.stress6,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pressure1 != null" >
+        pressure1 = #{record.pressure1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pressure2 != null" >
+        pressure2 = #{record.pressure2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pressure3 != null" >
+        pressure3 = #{record.pressure3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pressure4 != null" >
+        pressure4 = #{record.pressure4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pressure5 != null" >
+        pressure5 = #{record.pressure5,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pressure6 != null" >
+        pressure6 = #{record.pressure6,jdbcType=VARCHAR},
+      </if>
+      <if test="record.avgPressure != null" >
+        avgPressure = #{record.avgPressure,jdbcType=VARCHAR},
+      </if>
+      <if test="record.flexure1 != null" >
+        flexure1 = #{record.flexure1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.flexure2 != null" >
+        flexure2 = #{record.flexure2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.flexure3 != null" >
+        flexure3 = #{record.flexure3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.avgFlexure != null" >
+        avgFlexure = #{record.avgFlexure,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.createTime != null" >
+        createTime = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateTime != null" >
+        updateTime = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateBySampleNoSelective" parameterType="map" >
+    update cement_strength
+    <set >
+      <if test="record.ID != null" >
+        ID = #{record.ID,jdbcType=INTEGER},
+      </if>
+      <if test="record.sampleID != null" >
+        sampleID = #{record.sampleID,jdbcType=INTEGER},
+      </if>
+      <if test="record.sampleNo != null" >
+        sampleNo = #{record.sampleNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.kind != null" >
+        kind = #{record.kind,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sampleTime != null" >
+        sampleTime = #{record.sampleTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.shapeTime != null" >
+        shapeTime = #{record.shapeTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.destructTime != null" >
+        destructTime = #{record.destructTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.duration != null" >
+        duration = #{record.duration,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hour != null" >
+        hour = #{record.hour,jdbcType=VARCHAR},
+      </if>
+      <if test="record.temperature != null" >
+        temperature = #{record.temperature,jdbcType=VARCHAR},
+      </if>
+      <if test="record.experimentStand != null" >
+        experimentStand = #{record.experimentStand,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stressType != null" >
+        stressType = #{record.stressType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.flexureType != null" >
+        flexureType = #{record.flexureType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stressNo != null" >
+        stressNo = #{record.stressNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.flexureNo != null" >
+        flexureNo = #{record.flexureNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stressSta != null" >
+        stressSta = #{record.stressSta,jdbcType=VARCHAR},
+      </if>
+      <if test="record.flexureSta != null" >
+        flexureSta = #{record.flexureSta,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stressVail != null" >
+        stressVail = #{record.stressVail,jdbcType=VARCHAR},
+      </if>
+      <if test="record.flexureVail != null" >
+        flexureVail = #{record.flexureVail,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stressCKS != null" >
+        stressCKS = #{record.stressCKS,jdbcType=VARCHAR},
+      </if>
+      <if test="record.flexureCKS != null" >
+        flexureCKS = #{record.flexureCKS,jdbcType=VARCHAR},
+      </if>
+      <if test="record.notes != null" >
+        notes = #{record.notes,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stress1 != null" >
+        stress1 = #{record.stress1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stress2 != null" >
+        stress2 = #{record.stress2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stress3 != null" >
+        stress3 = #{record.stress3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stress4 != null" >
+        stress4 = #{record.stress4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stress5 != null" >
+        stress5 = #{record.stress5,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stress6 != null" >
+        stress6 = #{record.stress6,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pressure1 != null" >
+        pressure1 = #{record.pressure1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pressure2 != null" >
+        pressure2 = #{record.pressure2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pressure3 != null" >
+        pressure3 = #{record.pressure3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pressure4 != null" >
+        pressure4 = #{record.pressure4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pressure5 != null" >
+        pressure5 = #{record.pressure5,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pressure6 != null" >
+        pressure6 = #{record.pressure6,jdbcType=VARCHAR},
+      </if>
+      <if test="record.avgPressure != null" >
+        avgPressure = #{record.avgPressure,jdbcType=VARCHAR},
+      </if>
+      <if test="record.flexure1 != null" >
+        flexure1 = #{record.flexure1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.flexure2 != null" >
+        flexure2 = #{record.flexure2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.flexure3 != null" >
+        flexure3 = #{record.flexure3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.avgFlexure != null" >
+        avgFlexure = #{record.avgFlexure,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.createTime != null" >
+        createTime = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateTime != null" >
+        updateTime = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where sampleNo = #{sampleNo,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update cement_strength
+    set ID = #{record.ID,jdbcType=INTEGER},
+      sampleID = #{record.sampleID,jdbcType=INTEGER},
+      sampleNo = #{record.sampleNo,jdbcType=VARCHAR},
+      kind = #{record.kind,jdbcType=VARCHAR},
+      sampleTime = #{record.sampleTime,jdbcType=VARCHAR},
+      shapeTime = #{record.shapeTime,jdbcType=VARCHAR},
+      destructTime = #{record.destructTime,jdbcType=VARCHAR},
+      duration = #{record.duration,jdbcType=VARCHAR},
+      hour = #{record.hour,jdbcType=VARCHAR},
+      temperature = #{record.temperature,jdbcType=VARCHAR},
+      experimentStand = #{record.experimentStand,jdbcType=VARCHAR},
+      stressType = #{record.stressType,jdbcType=VARCHAR},
+      flexureType = #{record.flexureType,jdbcType=VARCHAR},
+      stressNo = #{record.stressNo,jdbcType=VARCHAR},
+      flexureNo = #{record.flexureNo,jdbcType=VARCHAR},
+      stressSta = #{record.stressSta,jdbcType=VARCHAR},
+      flexureSta = #{record.flexureSta,jdbcType=VARCHAR},
+      stressVail = #{record.stressVail,jdbcType=VARCHAR},
+      flexureVail = #{record.flexureVail,jdbcType=VARCHAR},
+      stressCKS = #{record.stressCKS,jdbcType=VARCHAR},
+      flexureCKS = #{record.flexureCKS,jdbcType=VARCHAR},
+      notes = #{record.notes,jdbcType=VARCHAR},
+      stress1 = #{record.stress1,jdbcType=VARCHAR},
+      stress2 = #{record.stress2,jdbcType=VARCHAR},
+      stress3 = #{record.stress3,jdbcType=VARCHAR},
+      stress4 = #{record.stress4,jdbcType=VARCHAR},
+      stress5 = #{record.stress5,jdbcType=VARCHAR},
+      stress6 = #{record.stress6,jdbcType=VARCHAR},
+      pressure1 = #{record.pressure1,jdbcType=VARCHAR},
+      pressure2 = #{record.pressure2,jdbcType=VARCHAR},
+      pressure3 = #{record.pressure3,jdbcType=VARCHAR},
+      pressure4 = #{record.pressure4,jdbcType=VARCHAR},
+      pressure5 = #{record.pressure5,jdbcType=VARCHAR},
+      pressure6 = #{record.pressure6,jdbcType=VARCHAR},
+      avgPressure = #{record.avgPressure,jdbcType=VARCHAR},
+      flexure1 = #{record.flexure1,jdbcType=VARCHAR},
+      flexure2 = #{record.flexure2,jdbcType=VARCHAR},
+      flexure3 = #{record.flexure3,jdbcType=VARCHAR},
+      avgFlexure = #{record.avgFlexure,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=INTEGER},
+      createTime = #{record.createTime,jdbcType=TIMESTAMP},
+      updateTime = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hx.entity.CementStrength" >
+    update cement_strength
+    <set >
+      <if test="sampleID != null" >
+        sampleID = #{sampleID,jdbcType=INTEGER},
+      </if>
+      <if test="sampleNo != null" >
+        sampleNo = #{sampleNo,jdbcType=VARCHAR},
+      </if>
+      <if test="kind != null" >
+        kind = #{kind,jdbcType=VARCHAR},
+      </if>
+      <if test="sampleTime != null" >
+        sampleTime = #{sampleTime,jdbcType=VARCHAR},
+      </if>
+      <if test="shapeTime != null" >
+        shapeTime = #{shapeTime,jdbcType=VARCHAR},
+      </if>
+      <if test="destructTime != null" >
+        destructTime = #{destructTime,jdbcType=VARCHAR},
+      </if>
+      <if test="duration != null" >
+        duration = #{duration,jdbcType=VARCHAR},
+      </if>
+      <if test="hour != null" >
+        hour = #{hour,jdbcType=VARCHAR},
+      </if>
+      <if test="temperature != null" >
+        temperature = #{temperature,jdbcType=VARCHAR},
+      </if>
+      <if test="experimentStand != null" >
+        experimentStand = #{experimentStand,jdbcType=VARCHAR},
+      </if>
+      <if test="stressType != null" >
+        stressType = #{stressType,jdbcType=VARCHAR},
+      </if>
+      <if test="flexureType != null" >
+        flexureType = #{flexureType,jdbcType=VARCHAR},
+      </if>
+      <if test="stressNo != null" >
+        stressNo = #{stressNo,jdbcType=VARCHAR},
+      </if>
+      <if test="flexureNo != null" >
+        flexureNo = #{flexureNo,jdbcType=VARCHAR},
+      </if>
+      <if test="stressSta != null" >
+        stressSta = #{stressSta,jdbcType=VARCHAR},
+      </if>
+      <if test="flexureSta != null" >
+        flexureSta = #{flexureSta,jdbcType=VARCHAR},
+      </if>
+      <if test="stressVail != null" >
+        stressVail = #{stressVail,jdbcType=VARCHAR},
+      </if>
+      <if test="flexureVail != null" >
+        flexureVail = #{flexureVail,jdbcType=VARCHAR},
+      </if>
+      <if test="stressCKS != null" >
+        stressCKS = #{stressCKS,jdbcType=VARCHAR},
+      </if>
+      <if test="flexureCKS != null" >
+        flexureCKS = #{flexureCKS,jdbcType=VARCHAR},
+      </if>
+      <if test="notes != null" >
+        notes = #{notes,jdbcType=VARCHAR},
+      </if>
+      <if test="stress1 != null" >
+        stress1 = #{stress1,jdbcType=VARCHAR},
+      </if>
+      <if test="stress2 != null" >
+        stress2 = #{stress2,jdbcType=VARCHAR},
+      </if>
+      <if test="stress3 != null" >
+        stress3 = #{stress3,jdbcType=VARCHAR},
+      </if>
+      <if test="stress4 != null" >
+        stress4 = #{stress4,jdbcType=VARCHAR},
+      </if>
+      <if test="stress5 != null" >
+        stress5 = #{stress5,jdbcType=VARCHAR},
+      </if>
+      <if test="stress6 != null" >
+        stress6 = #{stress6,jdbcType=VARCHAR},
+      </if>
+      <if test="pressure1 != null" >
+        pressure1 = #{pressure1,jdbcType=VARCHAR},
+      </if>
+      <if test="pressure2 != null" >
+        pressure2 = #{pressure2,jdbcType=VARCHAR},
+      </if>
+      <if test="pressure3 != null" >
+        pressure3 = #{pressure3,jdbcType=VARCHAR},
+      </if>
+      <if test="pressure4 != null" >
+        pressure4 = #{pressure4,jdbcType=VARCHAR},
+      </if>
+      <if test="pressure5 != null" >
+        pressure5 = #{pressure5,jdbcType=VARCHAR},
+      </if>
+      <if test="pressure6 != null" >
+        pressure6 = #{pressure6,jdbcType=VARCHAR},
+      </if>
+      <if test="avgPressure != null" >
+        avgPressure = #{avgPressure,jdbcType=VARCHAR},
+      </if>
+      <if test="flexure1 != null" >
+        flexure1 = #{flexure1,jdbcType=VARCHAR},
+      </if>
+      <if test="flexure2 != null" >
+        flexure2 = #{flexure2,jdbcType=VARCHAR},
+      </if>
+      <if test="flexure3 != null" >
+        flexure3 = #{flexure3,jdbcType=VARCHAR},
+      </if>
+      <if test="avgFlexure != null" >
+        avgFlexure = #{avgFlexure,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        createTime = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        updateTime = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where ID = #{ID,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hx.entity.CementStrength" >
+    update cement_strength
+    set sampleID = #{sampleID,jdbcType=INTEGER},
+      sampleNo = #{sampleNo,jdbcType=VARCHAR},
+      kind = #{kind,jdbcType=VARCHAR},
+      sampleTime = #{sampleTime,jdbcType=VARCHAR},
+      shapeTime = #{shapeTime,jdbcType=VARCHAR},
+      destructTime = #{destructTime,jdbcType=VARCHAR},
+      duration = #{duration,jdbcType=VARCHAR},
+      hour = #{hour,jdbcType=VARCHAR},
+      temperature = #{temperature,jdbcType=VARCHAR},
+      experimentStand = #{experimentStand,jdbcType=VARCHAR},
+      stressType = #{stressType,jdbcType=VARCHAR},
+      flexureType = #{flexureType,jdbcType=VARCHAR},
+      stressNo = #{stressNo,jdbcType=VARCHAR},
+      flexureNo = #{flexureNo,jdbcType=VARCHAR},
+      stressSta = #{stressSta,jdbcType=VARCHAR},
+      flexureSta = #{flexureSta,jdbcType=VARCHAR},
+      stressVail = #{stressVail,jdbcType=VARCHAR},
+      flexureVail = #{flexureVail,jdbcType=VARCHAR},
+      stressCKS = #{stressCKS,jdbcType=VARCHAR},
+      flexureCKS = #{flexureCKS,jdbcType=VARCHAR},
+      notes = #{notes,jdbcType=VARCHAR},
+      stress1 = #{stress1,jdbcType=VARCHAR},
+      stress2 = #{stress2,jdbcType=VARCHAR},
+      stress3 = #{stress3,jdbcType=VARCHAR},
+      stress4 = #{stress4,jdbcType=VARCHAR},
+      stress5 = #{stress5,jdbcType=VARCHAR},
+      stress6 = #{stress6,jdbcType=VARCHAR},
+      pressure1 = #{pressure1,jdbcType=VARCHAR},
+      pressure2 = #{pressure2,jdbcType=VARCHAR},
+      pressure3 = #{pressure3,jdbcType=VARCHAR},
+      pressure4 = #{pressure4,jdbcType=VARCHAR},
+      pressure5 = #{pressure5,jdbcType=VARCHAR},
+      pressure6 = #{pressure6,jdbcType=VARCHAR},
+      avgPressure = #{avgPressure,jdbcType=VARCHAR},
+      flexure1 = #{flexure1,jdbcType=VARCHAR},
+      flexure2 = #{flexure2,jdbcType=VARCHAR},
+      flexure3 = #{flexure3,jdbcType=VARCHAR},
+      avgFlexure = #{avgFlexure,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      createTime = #{createTime,jdbcType=TIMESTAMP},
+      updateTime = #{updateTime,jdbcType=TIMESTAMP}
+    where ID = #{ID,jdbcType=INTEGER}
+  </update>
+
+  <!--根据id更新数据状态为已上传-->
+  <update id="updateStatusById">
+    update cement_strength set status = 2 where ID = #{id}
+  </update>
+</mapper>

@@ -1,0 +1,18 @@
+S QS-PO42.5-20200015                       2002072002665
+D 12Autocoal  9000                10.00  10.20
+C SampleNo            QS-PO42.	%    SampleNo                                8000
+C SampleTime          2020/1/2	%    SampleTime                              8000
+C Kind                  P042.5	%    Kind                                    8000
+C ShapeTime           2020-01-	%    ShapeTime                               8000
+C DestructTime        2020-01-	%    DestructTime                            8000
+C Duration                   3	%    Duration                                8000
+C Flexure1                 5.3	%    Flexure1                                8000
+C Flexure2                 5.4	%    Flexure2                                8000
+C Flexure3                 5.3	%    Flexure3                                8000
+C AvgFlexure               5.3	%    AvgFlexure                              8000
+C Pressure1               26.1	%    Pressure1                               8000
+C Pressure2               25.7	%    Pressure2                               8000
+C Pressure3               25.0	%    Pressure3                               8000
+C Pressure4               26.9	%    Pressure4                               8000
+C Pressure5               27.4	%    Pressure5                               8000
+C AvgPressure             26.2	%    AvgPressure                             8000

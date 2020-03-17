@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hx.dao.MainDataMapper" >
+  <resultMap id="BaseResultMap" type="com.hx.entity.MainData" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="gid" property="gid" jdbcType="INTEGER" />
+    <result column="sampleNoG" property="samplenog" jdbcType="VARCHAR" />
+    <result column="drags" property="drags" jdbcType="VARCHAR" />
+    <result column="mar" property="mar" jdbcType="VARCHAR" />
+    <result column="mad" property="mad" jdbcType="VARCHAR" />
+    <result column="vad" property="vad" jdbcType="VARCHAR" />
+    <result column="aad" property="aad" jdbcType="VARCHAR" />
+    <result column="had" property="had" jdbcType="VARCHAR" />
+    <result column="createTimeG" property="createtimeg" jdbcType="VARCHAR" />
+    <result column="yid" property="yid" jdbcType="INTEGER" />
+    <result column="sampleNoY" property="samplenoy" jdbcType="VARCHAR" />
+    <result column="stad" property="stad" jdbcType="DOUBLE" />
+    <result column="createTimeY" property="createtimey" jdbcType="VARCHAR" />
+    <result column="lid" property="lid" jdbcType="INTEGER" />
+    <result column="sampleNoL" property="samplenol" jdbcType="VARCHAR" />
+    <result column="qbad" property="qbad" jdbcType="DOUBLE" />
+    <result column="createTimeL" property="createtimel" jdbcType="VARCHAR" />
+    <result column="createTime" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="updateTime" property="updatetime" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="qnetar" property="qnetar" jdbcType="VARCHAR" />
+    <result column="qnetad" property="qnetad" jdbcType="VARCHAR" />
+    <result column="qgrd" property="qgrd" jdbcType="VARCHAR" />
+    <result column="fcad" property="fcad" jdbcType="VARCHAR" />
+    <result column="keed" property="keed" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, gid, sampleNoG, drags, mar, mad, vad, aad, had, createTimeG, yid, sampleNoY, stad, createTimeY,
+    lid, sampleNoL, qbad, createTimeL, createTime, updateTime, status, qnetar, qnetad,
+    qgrd, fcad, keed
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from eqds_data
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from eqds_data
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.hx.entity.MainData" >
+    insert into eqds_data (id, gid, sampleNoG, drags,
+      mar, mad, vad, aad,
+      had, createTimeG, yid, sampleNoY,
+      stad, createTimeY, lid, sampleNoL,
+      qbad, createTimeL, createTime,
+      updateTime, status, qnetar,
+      qnetad, qgrd, keed)
+    values (#{id,jdbcType=VARCHAR}, #{gid,jdbcType=INTEGER}, #{samplenog,jdbcType=VARCHAR}, #{drags,jdbcType=VARCHAR},
+      #{mar,jdbcType=VARCHAR}, #{mad,jdbcType=VARCHAR}, #{vad,jdbcType=VARCHAR}, #{aad,jdbcType=VARCHAR},
+      #{had,jdbcType=VARCHAR}, #{createtimeg,jdbcType=VARCHAR}, #{yid,jdbcType=INTEGER}, #{samplenoy,jdbcType=VARCHAR},
+      #{stad,jdbcType=DOUBLE}, #{createtimey,jdbcType=VARCHAR}, #{lid,jdbcType=INTEGER}, #{samplenol,jdbcType=VARCHAR},
+      #{qbad,jdbcType=DOUBLE}, #{createtimel,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP},
+      #{updatetime,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER}, #{qnetar,jdbcType=VARCHAR},
+      #{qnetad,jdbcType=VARCHAR}, #{qgrd,jdbcType=VARCHAR}, #{keed,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hx.entity.MainData" >
+    insert into eqds_data
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="gid != null" >
+        gid,
+      </if>
+      <if test="samplenog != null" >
+        sampleNoG,
+      </if>
+      <if test="drags != null" >
+        drags,
+      </if>
+      <if test="mar != null" >
+        mar,
+      </if>
+      <if test="mad != null" >
+        mad,
+      </if>
+      <if test="vad != null" >
+        vad,
+      </if>
+      <if test="aad != null" >
+        aad,
+      </if>
+      <if test="had != null" >
+        had,
+      </if>
+      <if test="createtimeg != null" >
+        createTimeG,
+      </if>
+      <if test="yid != null" >
+        yid,
+      </if>
+      <if test="samplenoy != null" >
+        sampleNoY,
+      </if>
+      <if test="stad != null" >
+        stad,
+      </if>
+      <if test="createtimey != null" >
+        createTimeY,
+      </if>
+      <if test="lid != null" >
+        lid,
+      </if>
+      <if test="samplenol != null" >
+        sampleNoL,
+      </if>
+      <if test="qbad != null" >
+        qbad,
+      </if>
+      <if test="createtimel != null" >
+        createTimeL,
+      </if>
+      <if test="createtime != null" >
+        createTime,
+      </if>
+      <if test="updatetime != null" >
+        updateTime,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="qnetar != null" >
+        qnetar,
+      </if>
+      <if test="qnetad != null" >
+        qnetad,
+      </if>
+      <if test="qgrd != null" >
+        qgrd,
+      </if>
+      <if test="fcad != null" >
+        fcad,
+      </if>
+      <if test="keed != null" >
+        keed,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="gid != null" >
+        #{gid,jdbcType=INTEGER},
+      </if>
+      <if test="samplenog != null" >
+        #{samplenog,jdbcType=VARCHAR},
+      </if>
+      <if test="drags != null" >
+        #{drags,jdbcType=VARCHAR},
+      </if>
+      <if test="mar != null" >
+        #{mar,jdbcType=VARCHAR},
+      </if>
+      <if test="mad != null" >
+        #{mad,jdbcType=VARCHAR},
+      </if>
+      <if test="vad != null" >
+        #{vad,jdbcType=VARCHAR},
+      </if>
+      <if test="aad != null" >
+        #{aad,jdbcType=VARCHAR},
+      </if>
+      <if test="had != null" >
+        #{had,jdbcType=VARCHAR},
+      </if>
+      <if test="createtimeg != null" >
+        #{createtimeg,jdbcType=VARCHAR},
+      </if>
+      <if test="yid != null" >
+        #{yid,jdbcType=INTEGER},
+      </if>
+      <if test="samplenoy != null" >
+        #{samplenoy,jdbcType=VARCHAR},
+      </if>
+      <if test="stad != null" >
+        #{stad,jdbcType=DOUBLE},
+      </if>
+      <if test="createtimey != null" >
+        #{createtimey,jdbcType=VARCHAR},
+      </if>
+      <if test="lid != null" >
+        #{lid,jdbcType=INTEGER},
+      </if>
+      <if test="samplenol != null" >
+        #{samplenol,jdbcType=VARCHAR},
+      </if>
+      <if test="qbad != null" >
+        #{qbad,jdbcType=DOUBLE},
+      </if>
+      <if test="createtimel != null" >
+        #{createtimel,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="qnetar != null" >
+        #{qnetar,jdbcType=VARCHAR},
+      </if>
+      <if test="qnetad != null" >
+        #{qnetad,jdbcType=VARCHAR},
+      </if>
+      <if test="qgrd != null" >
+        #{qgrd,jdbcType=VARCHAR},
+      </if>
+      <if test="fcad != null" >
+        #{fcad,jdbcType=VARCHAR},
+      </if>
+      <if test="keed != null" >
+        #{keed,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hx.entity.MainData" >
+    update eqds_data
+    <set >
+      <if test="gid != null" >
+        gid = #{gid,jdbcType=INTEGER},
+      </if>
+      <if test="samplenog != null" >
+        sampleNoG = #{samplenog,jdbcType=VARCHAR},
+      </if>
+      <if test="drags != null" >
+        drags = #{drags,jdbcType=VARCHAR},
+      </if>
+      <if test="mar != null" >
+        mar = #{mar,jdbcType=VARCHAR},
+      </if>
+      <if test="mad != null" >
+        mad = #{mad,jdbcType=VARCHAR},
+      </if>
+      <if test="vad != null" >
+        vad = #{vad,jdbcType=VARCHAR},
+      </if>
+      <if test="aad != null" >
+        aad = #{aad,jdbcType=VARCHAR},
+      </if>
+      <if test="had != null" >
+        had = #{had,jdbcType=VARCHAR},
+      </if>
+      <if test="createtimeg != null" >
+        createTimeG = #{createtimeg,jdbcType=VARCHAR},
+      </if>
+      <if test="yid != null" >
+        yid = #{yid,jdbcType=INTEGER},
+      </if>
+      <if test="samplenoy != null" >
+        sampleNoY = #{samplenoy,jdbcType=VARCHAR},
+      </if>
+      <if test="stad != null" >
+        stad = #{stad,jdbcType=DOUBLE},
+      </if>
+      <if test="createtimey != null" >
+        createTimeY = #{createtimey,jdbcType=VARCHAR},
+      </if>
+      <if test="lid != null" >
+        lid = #{lid,jdbcType=INTEGER},
+      </if>
+      <if test="samplenol != null" >
+        sampleNoL = #{samplenol,jdbcType=VARCHAR},
+      </if>
+      <if test="qbad != null" >
+        qbad = #{qbad,jdbcType=DOUBLE},
+      </if>
+      <if test="createtimel != null" >
+        createTimeL = #{createtimel,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="qnetar != null" >
+        qnetar = #{qnetar,jdbcType=VARCHAR},
+      </if>
+      <if test="qnetad != null" >
+        qnetad = #{qnetad,jdbcType=VARCHAR},
+      </if>
+      <if test="qgrd != null" >
+        qgrd = #{qgrd,jdbcType=VARCHAR},
+      </if>
+      <if test="fcad != null" >
+        fcad = #{fcad,jdbcType=VARCHAR},
+      </if>
+      <if test="keed != null" >
+        keed = #{keed,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hx.entity.MainData" >
+    update eqds_data
+    set gid = #{gid,jdbcType=INTEGER},
+      sampleNoG = #{samplenog,jdbcType=VARCHAR},
+      drags = #{drags,jdbcType=VARCHAR},
+      mar = #{mar,jdbcType=VARCHAR},
+      mad = #{mad,jdbcType=VARCHAR},
+      vad = #{vad,jdbcType=VARCHAR},
+      aad = #{aad,jdbcType=VARCHAR},
+      had = #{had,jdbcType=VARCHAR},
+      <!--createTimeG = #{createtimeg,jdbcType=VARCHAR},-->
+      yid = #{yid,jdbcType=INTEGER},
+      sampleNoY = #{samplenoy,jdbcType=VARCHAR},
+      stad = #{stad,jdbcType=DOUBLE},
+      <!--createTimeY = #{createtimey,jdbcType=VARCHAR},-->
+      lid = #{lid,jdbcType=INTEGER},
+      sampleNoL = #{samplenol,jdbcType=VARCHAR},
+      qbad = #{qbad,jdbcType=DOUBLE},
+      <!--createTimeL = #{createtimel,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=TIMESTAMP},-->
+      updateTime = CURRENT_TIMESTAMP,
+      status = #{status,jdbcType=INTEGER},
+      qnetar = #{qnetar,jdbcType=VARCHAR},
+      qnetad = #{qnetad,jdbcType=VARCHAR},
+      qgrd = #{qgrd,jdbcType=VARCHAR},
+      keed = #{keed,jdbcType=INTEGER},
+      fcad = #{fcad,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+
+  <select id="findByPage" resultMap="BaseResultMap" parameterType="com.hx.model.MainDataModel">
+    select
+    <include refid="Base_Column_List" />
+    from eqds_data
+    <where>
+        <if test="status != null">
+           status = #{status}
+        </if>
+        <if test="condition != null and condition != ''">
+          and (sampleNoG like CONCAT('%', #{condition}, '%')
+          or sampleNoY like CONCAT('%', #{condition}, '%')
+          or sampleNoL like CONCAT('%', #{condition}, '%'))
+        </if>
+    </where>
+    order by createTime desc
+  </select>
+
+  <select id="selectCountBySampleNo" resultType="java.lang.Integer">
+     select count(1) from eqds_data where sampleNoG = #{sampleNo}
+     or sampleNoY = #{sampleNo} or sampleNoL = #{sampleNo}
+  </select>
+
+  <select id="checkBySampleNo" resultType="com.hx.entity.MainData">
+     select * from eqds_data where sampleNoG = #{sampleNo}
+     and sampleNoY = #{sampleNo} and sampleNoL = #{sampleNo}
+  </select>
+
+  <select id="checkBySampleNoForSimpled" resultType="com.hx.entity.MainData">
+     select * from eqds_data where sampleNoG = #{sampleNo}
+     <!-- and sampleNoY = #{sampleNo} -->
+     and keed is not null and drags is not null
+  </select>
+
+  <update id="updateStatus">
+     update eqds_data set status = #{status} where sampleNoG = #{sampleNo}
+     and sampleNoY = #{sampleNo} and sampleNoL = #{sampleNo}
+  </update>
+
+  <!--根据id更新数据状态为已上传-->
+  <update id="updateStatusById">
+     update eqds_data set status = 2 where id = #{id}
+  </update>
+
+  <!--根据样品编号更新数据-->
+  <update id="updateBySampleNoSelective">
+    update eqds_data
+    <set>
+      <if test="data.gid != null" >
+        gid = #{data.gid,jdbcType=INTEGER},
+      </if>
+      <if test="data.samplenog != null" >
+        sampleNoG = #{data.samplenog,jdbcType=VARCHAR},
+      </if>
+      <if test="data.drags != null" >
+        drags = #{data.drags,jdbcType=VARCHAR},
+      </if>
+      <if test="data.mar != null" >
+        mar = #{data.mar,jdbcType=VARCHAR},
+      </if>
+      <if test="data.mad != null" >
+        mad = #{data.mad,jdbcType=VARCHAR},
+      </if>
+      <if test="data.vad != null" >
+        vad = #{data.vad,jdbcType=VARCHAR},
+      </if>
+      <if test="data.aad != null" >
+        aad = #{data.aad,jdbcType=VARCHAR},
+      </if>
+      <if test="data.had != null" >
+        had = #{data.had,jdbcType=VARCHAR},
+      </if>
+      <if test="data.createtimeg != null" >
+        createTimeG = #{data.createtimeg,jdbcType=VARCHAR},
+      </if>
+      <if test="data.yid != null" >
+        yid = #{data.yid,jdbcType=INTEGER},
+      </if>
+      <if test="data.samplenoy != null" >
+        sampleNoY = #{data.samplenoy,jdbcType=VARCHAR},
+      </if>
+      <if test="data.stad != null" >
+        stad = #{data.stad,jdbcType=DOUBLE},
+      </if>
+      <if test="data.createtimey != null" >
+        createTimeY = #{data.createtimey,jdbcType=VARCHAR},
+      </if>
+      <if test="data.lid != null" >
+        lid = #{data.lid,jdbcType=INTEGER},
+      </if>
+      <if test="data.samplenol != null" >
+        sampleNoL = #{data.samplenol,jdbcType=VARCHAR},
+      </if>
+      <if test="data.qbad != null" >
+        qbad = #{data.qbad,jdbcType=DOUBLE},
+      </if>
+      <if test="data.createtimel != null" >
+        createTimeL = #{data.createtimel,jdbcType=VARCHAR},
+      </if>
+      <if test="data.createtime != null" >
+        createTime = #{data.createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="data.updatetime != null" >
+        updateTime = #{data.updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="data.status != null" >
+        status = #{data.status,jdbcType=INTEGER},
+      </if>
+      <if test="data.qnetar != null" >
+        qnetar = #{data.qnetar,jdbcType=VARCHAR},
+      </if>
+      <if test="data.qnetad != null" >
+        qnetad = #{data.qnetad,jdbcType=VARCHAR},
+      </if>
+      <if test="data.qgrd != null" >
+        qgrd = #{data.qgrd,jdbcType=VARCHAR},
+      </if>
+      <if test="data.keed != null" >
+        keed = #{data.keed,jdbcType=INTEGER},
+      </if>
+    </set>
+    where samplenog = #{sampleNo,jdbcType=VARCHAR}
+    or samplenoy = #{sampleNo,jdbcType=VARCHAR}
+    or samplenol = #{sampleNo,jdbcType=VARCHAR}
+  </update>
+
+  <update id="clearResultById" parameterType="com.hx.entity.MainData">
+     update eqds_data set
+        qnetar = #{qnetar,jdbcType=VARCHAR},
+        qnetad = #{qnetad,jdbcType=VARCHAR},
+        fcad = #{qnetad,jdbcType=VARCHAR},
+        status = #{status,jdbcType=INTEGER}
+      where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

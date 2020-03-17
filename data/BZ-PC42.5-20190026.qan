@@ -1,0 +1,18 @@
+S BZ-PC42.5-20190026                       2002190947179
+D 16 Autocoal 9000                10.00  10.20
+C SampleNo       BZ-PC42.5-20190	%    SampleNo                                8000
+C Kind                    PC42.5	%    Kind                                    8000
+C ShapeTime      2020-01-20 11:0	%    ShapeTime                               8000
+C DestructTime   2020-02-17 11:0	%    DestructTime                            8000
+C Duration                    28	%    Duration                                8000
+C Flexure1                   8.3	%    Flexure1                                8000
+C Flexure2                   8.5	%    Flexure2                                8000
+C Flexure3                   8.6	%    Flexure3                                8000
+C AvgFlexure                 8.5	%    AvgFlexure                              8000
+C Pressure1                 49.4	%    Pressure1                               8000
+C Pressure2                 49.3	%    Pressure2                               8000
+C Pressure3                 49.3	%    Pressure3                               8000
+C Pressure4                 50.0	%    Pressure4                               8000
+C Pressure5                 48.8	%    Pressure5                               8000
+C Pressure6                 49.7	%    Pressure6                               8000
+C AvgPressure               49.4	%    AvgPressure                             8000

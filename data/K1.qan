@@ -1,0 +1,18 @@
+S K1                                       2002072205305
+D 12 Autocoal 9000                10.00  10.20
+C SampleNo                    K1	%    SampleNo                                8000
+C SampleTime     2020/1/20 10:51	%    SampleTime                              8000
+C Kind                         K	%    Kind                                    8000
+C ShapeTime      2020-01-20 10:5	%    ShapeTime                               8000
+C DestructTime   2020-01-23 10:5	%    DestructTime                            8000
+C Duration                     3	%    Duration                                8000
+C Flexure1                   5.9	%    Flexure1                                8000
+C Flexure2                   6.1	%    Flexure2                                8000
+C Flexure3                   6.0	%    Flexure3                                8000
+C AvgFlexure                 6.0	%    AvgFlexure                              8000
+C Pressure1                 29.4	%    Pressure1                               8000
+C Pressure2                 30.5	%    Pressure2                               8000
+C Pressure3                 28.8	%    Pressure3                               8000
+C Pressure4                 27.7	%    Pressure4                               8000
+C Pressure5                  0.0	%    Pressure5                               8000
+C AvgPressure               29.1	%    AvgPressure                             8000
