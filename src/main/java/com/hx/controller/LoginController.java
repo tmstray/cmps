@@ -1,8 +1,10 @@
 package com.hx.controller;
 
+import com.hx.config.Log;
 import com.hx.config.LoginConfig;
 import com.hx.entity.User;
 //import com.hx.service.MainDataService;
+import com.hx.model.BusinessType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +36,7 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/dologin", method = RequestMethod.POST)
+    @Log(businessModule = "用户登录", businessType = BusinessType.LOGIN)
     public String login(HttpSession session, User user) {
         logger.debug(user.toString());
         if (user.getUsername().equals(loginConfig.getUsername()) &&
@@ -45,13 +48,14 @@ public class LoginController {
             logger.info("登录同步数据完成...");*/
             session.setAttribute("USER_SESSION", user);
             //重定向到主页面的跳转方法
-//            return "redirect:/eqds/getByPage";
-            return "redirect:/cement/getByPage";
+            return "redirect:/eqds/getByPage";
+//            return "redirect:/cement/getByPage";
         }
         return "login";
     }
 
     @RequestMapping(value = "/logout")
+    @Log(businessModule = "退出登录", businessType = BusinessType.LOGOUT)
     public String logout(HttpSession session) {
         //清除session
         session.invalidate();

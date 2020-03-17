@@ -1,8 +1,10 @@
 package com.hx.controller;
 
 import com.github.pagehelper.PageInfo;
+import com.hx.config.Log;
 import com.hx.entity.CementStrength;
 import com.hx.entity.User;
+import com.hx.model.BusinessType;
 import com.hx.model.MainDataModel;
 import com.hx.model.Response;
 import com.hx.service.CementStrengthService;
@@ -63,8 +65,15 @@ public class CementStrengthController {
         }
         return response;
     }
+
+    /**
+     * 水泥强度数据同步
+     * @param session
+     * @return
+     */
     @ResponseBody
     @PostMapping(value = "/synchronize")
+    @Log(businessModule = "水泥强度", businessType = BusinessType.SYNCHRONIZE)
     public Response dataSynchronize(HttpSession session) {
         logger.info("同步数据开始.....");
         User user = (User) session.getAttribute("USER_SESSION");
@@ -80,8 +89,15 @@ public class CementStrengthController {
 
     }
 
+    /**
+     * 水泥强度：数据上传
+     * @param session
+     * @param ids
+     * @return
+     */
     @PostMapping(value = "/upload")
     @ResponseBody
+    @Log(businessModule = "水泥强度", businessType = BusinessType.UPLOAD)
     public Response calculateAndCreateFile(HttpSession session, String[] ids){
         logger.info("开始上传数据生成文件...");
         logger.debug("param ids.size():" + ids.length);
