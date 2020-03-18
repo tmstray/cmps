@@ -26,15 +26,15 @@
 				text:"水泥强度",
 				attributes:{
 					// url:"list.jsp"
-					method: "POST",
-					url:"cement/getDataByPage"
+					//method: "POST",
+					url:"cement/getByPage"
 				}
 			},{
 				text:"煤炭热值",
 				attributes:{
 					// url:"eqds_list.jsp"
-					method: "POST",
-					url:"eqds/getDataByPage"
+					//method: "POST",
+					url:"eqds/getByPage"
 				}
 			},{
 				text:"操作日志",
@@ -75,7 +75,7 @@
 </head>
 <body class="easyui-layout">
 	<div region="north" style="height: 80px;background-color: #E0EDFF">
-		<div align="left" style="width: 80%;float: left"><img src="images/main.jpg"></div>
+		<div align="left" style="width: 80%;float: left"></div>
 		<div style="padding-top: 50px;padding-right: 20px;">当前用户：&nbsp;<font color="red" >${USER_SESSION.userName }</font></div>
 	</div>
 	<div region="center">

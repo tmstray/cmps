@@ -57,4 +57,7 @@ public class SysUser implements Serializable {
 
     /** 备注 */
     private String remarks;
+    
+    private transient boolean simpled;
+    
 }
