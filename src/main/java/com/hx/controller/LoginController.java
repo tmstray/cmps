@@ -2,9 +2,12 @@ package com.hx.controller;
 
 import com.hx.config.Log;
 import com.hx.config.LoginConfig;
+import com.hx.entity.SysUser;
 import com.hx.entity.User;
 //import com.hx.service.MainDataService;
 import com.hx.model.BusinessType;
+import com.hx.service.SysUserService;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,14 +24,14 @@ import javax.servlet.http.HttpSession;
  * @create: 2019/12/19 15:05
  */
 @Controller
+@Slf4j
 public class LoginController {
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     LoginConfig loginConfig;
 
     @Autowired
- //   MainDataService mainDataService;
+    SysUserService userService;
 
     @RequestMapping(value = "/login")
     public String login() {
@@ -38,7 +41,15 @@ public class LoginController {
     @RequestMapping(value = "/dologin", method = RequestMethod.POST)
     @Log(businessModule = "用户登录", businessType = BusinessType.LOGIN)
     public String login(HttpSession session, User user) {
-        logger.debug(user.toString());
+        log.info(user.toString());
+        String userName=user.getUsername();
+        String password=user.getPassword();
+        SysUser sysUser=userService.selectUserByUserName(userName);
+        if(sysUser !=null ){
+
+        }
+
+
         if (user.getUsername().equals(loginConfig.getUsername()) &&
                 user.getPassword().equals(loginConfig.getPassword())) {
             //将用户对象添加到Session中

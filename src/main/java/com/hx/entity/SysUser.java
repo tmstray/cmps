@@ -1,15 +1,17 @@
 package com.hx.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
 
 /**
+ *用户信息实体
  *
  */
+@Data
 public class SysUser implements Serializable {
-
     private static final long serialVersionUID = 1L;
 
     /** 用户ID */
@@ -39,9 +41,6 @@ public class SysUser implements Serializable {
     /** 创建者  */
     private String createBy;
 
-    /** 备注 */
-    private String remarks;
-
     /** 创建时间 */
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date createTime;
@@ -56,4 +55,6 @@ public class SysUser implements Serializable {
     /** 删除标志 */
     private Integer deleteFlag;
 
+    /** 备注 */
+    private String remarks;
 }

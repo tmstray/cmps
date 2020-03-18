@@ -38,13 +38,6 @@ public class MainDataController {
 
     @GetMapping(value = "/getByPage")
     public ModelAndView findByPage(MainDataModel model){
-
-        /*Integer pageNum = model.getPageNum();
-        Integer pageSize = model.getPageSize();
-
-        Page<MainData> page = PageHelper.startPage(pageNum == null?1:pageNum,
-                pageSize == null?10:pageSize);*/
-
         Page<MainData> page = PageHelper.startPage(model.getPageNum(),model.getPageSize());
         List<MainData> dataList = mainDataService.findByPage(model);
 

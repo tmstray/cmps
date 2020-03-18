@@ -16,10 +16,19 @@ public interface SysUserService
     /**
      * 根据条件分页查询用户列表
      *
-     * @param user 用户信息
+     * @param model 用户信息
      * @return 用户信息集合信息
      */
-    List<SysUser> selectUserList(SysUser user);
+    List<SysUser> selectUserList(MainDataModel model);
+
+
+    /**
+     * 通过用户名查询用户
+     *
+     * @param userName 用户名
+     * @return 用户对象信息
+     */
+    public SysUser selectUserByUserName(String userName);
 
     /**
      * 新增用户信息
@@ -45,4 +54,11 @@ public interface SysUserService
      */
     public int deleteUserById(Long userId);
 
+    /**
+     * 校验用户名称是否唯一
+     *
+     * @param userName 用户名称
+     * @return 结果
+     */
+    public String checkUserNameUnique(String userName);
 }

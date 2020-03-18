@@ -3,22 +3,29 @@
 <mapper namespace="com.hx.dao.SysUserMapper">
 
 	<resultMap id="BaseResultMap" type="com.hx.entity.SysUser">
-		<id     property="userId"       column="user_id"      />
-		<result property="userName"     column="user_name"    />
-		<result property="nickName"     column="nick_name"    />
-		<result property="phoneNumber"  column="phonenumber"  />
-		<result property="password"     column="password"     />
-		<result property="status"       column="status"       />
-		<result property="deleteFlag"      column="delete_flag"     />
-		<result property="createBy"     column="create_by"    />
-		<result property="createTime"   column="create_time"  />
-		<result property="updateBy"     column="update_by"    />
-		<result property="updateTime"   column="update_time"  />
-		<result property="remarks"       column="remarks"       />
+		<id  column="user_id" property="userId"/>
+		<result column="user_name" property="userName"  />
+		<result column="nick_name" property="nickName" />
+		<result column="phone_number"  property="phoneNumber"/>
+		<result column="menu_id"  property="menuId"/>
+		<result column="menu_name"  property="menuName"/>
+		<result column="password" property="password"/>
+		<result column="status" property="status"/>
+		<result column="delete_flag" property="deleteFlag"/>
+		<result column="create_by" property="createBy"/>
+		<result column="create_time" property="createTime"/>
+		<result column="update_by" property="updateBy"/>
+		<result column="update_time" property="updateTime" />
+		<result column="remarks" property="remarks"/>
 	</resultMap>
 
 	<select id="selectUserList"  resultMap="BaseResultMap">
 		select * from syst_user where delete_flag=0
+	</select>
+
+	<select id="selectUserByUserName" parameterType="String" resultMap="BaseResultMap">
+		select * from sys_user
+		where u.user_name = #{userName}
 	</select>
 
 	<insert id="insertUser" parameterType="com.hx.entity.SysUser" useGeneratedKeys="true" keyProperty="userId">
@@ -75,4 +82,7 @@
  		delete from syst_user where user_id = #{userId}
  	</delete>
 
+	<select id="checkUserNameUnique" parameterType="String" resultType="int">
+		select count(1) from tms_sys_user where user_name = #{userName}
+	</select>
 </mapper>

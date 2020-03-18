@@ -1,15 +1,15 @@
 package com.hx.service.impl;
 
 
+import com.hx.config.Constants;
 import com.hx.dao.SysUserMapper;
 import com.hx.entity.SysUser;
+import com.hx.model.MainDataModel;
 import com.hx.service.SysUserService;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -26,20 +26,29 @@ public class SysUserServiceImpl implements SysUserService
     @Autowired
     private SysUserMapper userMapper;
 
-
     /**
      * 根据条件分页查询用户列表
      *
-     * @param user 用户信息
+     * @param model 用户信息
      * @return 用户信息集合信息
      */
     @Override
-    public List<SysUser> selectUserList(SysUser user)
+    public List<SysUser> selectUserList(MainDataModel model)
     {
-        return userMapper.selectUserList(user);
+        return userMapper.selectUserList(model);
     }
 
-
+    /**
+     * 通过用户名查询用户
+     *
+     * @param userName 用户名
+     * @return 用户对象信息
+     */
+    @Override
+    public SysUser selectUserByUserName(String userName)
+    {
+        return userMapper.selectUserByUserName(userName);
+    }
     /**
      * 新增保存用户信息
      *
@@ -53,6 +62,23 @@ public class SysUserServiceImpl implements SysUserService
         // 新增用户信息
         int rows = userMapper.insertUser(user);
         return rows;
+    }
+
+    /**
+     * 校验用户名称是否唯一
+     *
+     * @param userName 用户名称
+     * @return 结果
+     */
+    @Override
+    public String checkUserNameUnique(String userName)
+    {
+        int count = userMapper.checkUserNameUnique(userName);
+        if (count > 0)
+        {
+            return Constants.NOT_UNIQUE;
+        }
+        return Constants.UNIQUE;
     }
 
     /**

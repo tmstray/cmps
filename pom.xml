@@ -101,24 +101,30 @@
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
 
-		<!--业务实体注解-->
+		<!--业务实体注解  新增配置 20200317-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
 
-		<!-- SpringBoot 拦截器 -->
+		<!-- SpringBoot 拦截器   新增配置 20200317-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
 
-		<!-- 阿里JSON解析器 -->
+		<!-- 阿里JSON解析器  新增配置 20200317 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
 			<version>${fastjson.version}</version>
+		</dependency>
+
+		<!-- spring security 安全认证 新增配置 20200317-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
 	</dependencies>
