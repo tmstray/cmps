@@ -7,6 +7,7 @@ import com.github.pagehelper.PageInfo;
 import com.hx.config.Constants;
 import com.hx.config.Log;
 import com.hx.entity.MainData;
+import com.hx.entity.SysLog;
 import com.hx.entity.SysUser;
 import com.hx.entity.User;
 import com.hx.model.BusinessType;
@@ -53,6 +54,27 @@ public class SysUserController
         mv.addObject("pageInfo",pageInfo);
         mv.addObject("requestModel",model);
         return mv;
+    }
+
+    /**
+     * 分页数据查询：
+     * @param model
+     * @return
+     */
+    @ResponseBody
+    @PostMapping(value = "/getDataByPage")
+    public Response getDataByPage(MainDataModel model){
+        Response response = null;
+        try {
+            Page<MainData> page = PageHelper.startPage(model.getPageNum(),model.getPageSize());
+            List<SysUser> dataList = userService.selectUserList(model);
+            PageInfo<SysUser> pageInfo = new PageInfo<>(dataList);
+            response = new Response(200,null,pageInfo,model);
+        }catch (Exception e){
+            e.printStackTrace();
+            response = new Response(500,null,null,null);
+        }
+        return response;
     }
 
     /**
