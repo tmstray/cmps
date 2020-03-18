@@ -22,7 +22,7 @@ function getTotalPage(){
 function queryData(page,pageSize,status,condition) {
     $.ajax({
         type: "POST",
-        url: "/sysLog/getSysLog",
+        url: "/sysLog/getDataByPage",
         data:{
             pageNum:page,
             pageSize:pageSize,
