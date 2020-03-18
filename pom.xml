@@ -121,12 +121,6 @@
 			<version>${fastjson.version}</version>
 		</dependency>
 
-		<!-- spring security 安全认证 新增配置 20200317-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-
 	</dependencies>
 
 	<build>

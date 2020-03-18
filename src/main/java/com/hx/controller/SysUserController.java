@@ -13,7 +13,6 @@ import com.hx.model.BusinessType;
 import com.hx.model.MainDataModel;
 import com.hx.model.Response;
 import com.hx.service.SysUserService;
-import com.hx.utils.SecurityUtils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,6 +55,11 @@ public class SysUserController
         return mv;
     }
 
+    /**
+     * 新增用户
+     * @param sysUser
+     * @return
+     */
     @PostMapping("/addUser")
     @com.hx.config.Log(businessModule = "用户管理", businessType = BusinessType.INSERT)
     public Response add(@Validated @RequestBody SysUser sysUser)
@@ -63,12 +67,12 @@ public class SysUserController
         Response response = null;
         if (Constants.NOT_UNIQUE.equals(userService.checkUserNameUnique(sysUser.getUserName())))
         {
-            response = new Response(500,"\"新增用户'\" + user.getUserName() + \"'失败，登录账号已存在\"");
+            return response = new Response(500,"\"新增用户'\" + user.getUserName() + \"'失败，登录账号已存在\"");
         }
         User user = (User) httpSession.getAttribute("USER_SESSION");
 
         sysUser.setCreateBy(user.getUsername());
-        sysUser.setPassword(SecurityUtils.encryptPassword(user.getPassword()));
+        sysUser.setPassword(user.getPassword());
         int result =userService.insertUser(sysUser);
 
         if(result>0){

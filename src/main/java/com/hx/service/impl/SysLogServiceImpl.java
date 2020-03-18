@@ -1,6 +1,8 @@
 package com.hx.service.impl;
 
+import com.hx.dao.SysLogMapper;
 import com.hx.entity.SysLog;
+import com.hx.model.MainDataModel;
 import com.hx.service.SysLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +17,7 @@ import java.util.List;
 public class SysLogServiceImpl implements SysLogService
 {
     @Autowired
-    private com.hx.dao.SysLogMapper SysLogMapper;
+    private com.hx.dao.SysLogMapper sysLogMapper;
 
     /**
      * 查询托盘管理操作日志
@@ -32,13 +34,13 @@ public class SysLogServiceImpl implements SysLogService
     /**
      * 查询托盘管理操作日志列表
      *
-     * @param SysLog 托盘管理操作日志
+     * @param model 托盘管理操作日志
      * @return 托盘管理操作日志
      */
     @Override
-    public List<SysLog> selectSysLogList(SysLog SysLog)
+    public List<SysLog> selectSysLogList(MainDataModel model)
     {
-        return null;
+        return sysLogMapper.selectSysLogList(model);
     }
 
     /**
@@ -50,7 +52,7 @@ public class SysLogServiceImpl implements SysLogService
     @Override
     public int insertSysLog(SysLog SysLog)
     {
-        return SysLogMapper.insertSysLog(SysLog);
+        return sysLogMapper.insertSysLog(SysLog);
     }
 
     /**
@@ -86,6 +88,6 @@ public class SysLogServiceImpl implements SysLogService
     @Override
     public int deleteSysLogById(Long id)
     {
-        return 0;
+        return sysLogMapper.deleteByPrimaryKey(id);
     }
 }

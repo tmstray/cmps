@@ -21,7 +21,7 @@
 	$(function(){
 		// 数据
 		var treeData=[{
-			text:"根",
+			text:"华新水泥",
 			children:[{
 				text:"水泥强度",
 				attributes:{
@@ -35,11 +35,12 @@
 			},{
 				text:"操作日志",
 				attributes:{
-					url:"log.jsp"
+					// url:"log.jsp"
+					url:"sysLog/getSysLog"
 				}
 			}]
 		}];
-		
+
 		// 实例化树菜单
 		$("#tree").tree({
 			data:treeData,
@@ -50,7 +51,7 @@
 				}
 			}
 		});
-		
+
 		// 新增Tab
 		function openTab(text,url){
 			if($("#tabs").tabs('exists',text)){
@@ -70,8 +71,8 @@
 <body class="easyui-layout">
 	<div region="north" style="height: 80px;background-color: #E0EDFF">
 		<div align="left" style="width: 80%;float: left"><img src="images/main.jpg"></div>
-		<div style="padding-top: 50px;padding-right: 20px;">当前用户：&nbsp;<font color="red" >${USER_SESSION.username }</font></div>
-		
+		<div style="padding-top: 50px;padding-right: 20px;">当前用户：&nbsp;<font color="red" >${USER_SESSION.userName }</font></div>
+
 	</div>
 	<div region="center">
 		<div class="easyui-tabs" fit="true" border="false" id="tabs">

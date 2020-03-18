@@ -1,5 +1,6 @@
 package com.hx.intercepter;
 
+import com.hx.entity.SysUser;
 import com.hx.entity.User;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -26,7 +27,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         }
         //获取session
         HttpSession session = request.getSession();
-        User user = (User) session.getAttribute("USER_SESSION");
+        SysUser user = (SysUser) session.getAttribute("USER_SESSION");
         //判断session中是否有用户数据，如果有，则返回true，继续向下执行
         if (user != null) {
             return true;

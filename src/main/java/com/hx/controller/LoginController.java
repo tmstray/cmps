@@ -43,26 +43,23 @@ public class LoginController {
     public String login(HttpSession session, User user) {
         log.info(user.toString());
         String userName=user.getUsername();
-        String password=user.getPassword();
         SysUser sysUser=userService.selectUserByUserName(userName);
+
         if(sysUser !=null ){
-
-        }
-
-
-        if (user.getUsername().equals(loginConfig.getUsername()) &&
-                user.getPassword().equals(loginConfig.getPassword())) {
-            //将用户对象添加到Session中
-            user.setSimpled(loginConfig.isSimpled());
+            if (user.getUsername().equals(sysUser.getUserName()) &&
+                    user.getPassword().equals(sysUser.getPassword())) {
+                //将用户对象添加到Session中
+                user.setSimpled(loginConfig.isSimpled());
             /*logger.info("登录成功,开始同步数据... and simpled:" + user.isSimpled());
             mainDataService.dataSynchronize(user.isSimpled());
             logger.info("登录同步数据完成...");*/
-            session.setAttribute("USER_SESSION", user);
-            //重定向到主页面的跳转方法
-            return "main";
+                session.setAttribute("USER_SESSION", sysUser);
+                //重定向到主页面的跳转方法
+                return "main";
 //            return "redirect:/eqds/getByPage";
 //            return "redirect:/eqds/getByPage";
 //            return "redirect:/cement/getByPage";
+            }
         }
         return "login";
     }

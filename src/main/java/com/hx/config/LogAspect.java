@@ -2,7 +2,7 @@ package com.hx.config;
 
 import com.alibaba.fastjson.JSON;
 import com.hx.entity.SysLog;
-import com.hx.entity.User;
+import com.hx.entity.SysUser;
 import com.hx.model.BusinessStatus;
 import com.hx.utils.IpUtils;
 import com.hx.utils.ServletUtils;
@@ -72,11 +72,11 @@ public class LogAspect
     {
         try
         {
-            User user = (User) httpSession.getAttribute("USER_SESSION");
-            log.info("登录用户："+ user.getUsername());
+            SysUser user = (SysUser) httpSession.getAttribute("USER_SESSION");
+            log.info("登录用户："+ user.getUserName());
             if(null ==user){
-                user = new User();
-                user.setUsername("SysAdmin");
+                user = new SysUser();
+                user.setUserName("SysAdmin");
             }
 
             // 获得注解
@@ -92,7 +92,7 @@ public class LogAspect
             // 请求的地址
             String ip = IpUtils.getIpAddr(ServletUtils.getRequest());
             sysLog.setIp(ip);
-            sysLog.setCreateBy(user.getUsername());
+            sysLog.setCreateBy(user.getUserName());
             if (e != null)
             {
             	sysLog.setStatus(BusinessStatus.FAIL.ordinal());
