@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>学生信息管理系统主界面</title>
+<title>华新管理系统主界面</title>
 <%
 	// 权限验证
 	if(session.getAttribute("USER_SESSION")==null){
@@ -31,6 +31,11 @@
 				text:"煤炭热值",
 				attributes:{
 					url:"eqds_list.jsp"
+				}
+			},{
+				text:"操作日志",
+				attributes:{
+					url:"log.jsp"
 				}
 			}]
 		}];
@@ -78,6 +83,6 @@
 	<div region="west" style="width: 150px;" title="导航菜单" split="true">
 		<ul id="tree"></ul>
 	</div>
-	<div region="south" style="height: 25px;" align="center">版权所有<a href="http://www.java1234.com">www.huaxin.com</a></div>
+	<div region="south" style="height: 25px;" align="center">版权所有<a href="http://www.huaxin.com">www.huaxin.com</a></div>
 </body>
 </html>
