@@ -5,7 +5,6 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.hx.entity.MainData;
 import com.hx.entity.SysLog;
-import com.hx.entity.SysUser;
 import com.hx.model.MainDataModel;
 import com.hx.service.SysLogService;
 import lombok.extern.slf4j.Slf4j;
@@ -17,12 +16,14 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
-@Controller
-@Slf4j
+
+
 /**
  * 日志控制器
  *
  */
+@Controller
+@Slf4j
 @RequestMapping("/sysLog")
 public class SysLogController {
    @Autowired
@@ -40,7 +41,13 @@ public class SysLogController {
         return mv;
     }
 
-
-
+//    @GetMapping(value = "/getSysLog")
+//    @ResponseBody
+//    public DataGrid<SysLog> list(MainDataModel model) {
+//        Page<MainData> page = PageHelper.startPage(model.getPageNum(),model.getPageSize());
+//        List<SysLog> dataList = logService.selectSysLogList(model);
+//        ModelAndView mv = new ModelAndView("log");
+//        return new DataGrid<>(dataList);
+//    }
 }
 

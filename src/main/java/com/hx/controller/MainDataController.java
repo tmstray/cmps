@@ -34,8 +34,6 @@ public class MainDataController {
 
     @Autowired
     MainDataService mainDataService;
-
-
     @GetMapping(value = "/getByPage")
     public ModelAndView findByPage(MainDataModel model){
         Page<MainData> page = PageHelper.startPage(model.getPageNum(),model.getPageSize());

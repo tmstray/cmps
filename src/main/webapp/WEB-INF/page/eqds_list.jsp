@@ -79,8 +79,8 @@
             var condition = $("#condition").val().trim();
             //queryData(null,status,condition);
             $.ajax({
-                type: "POST",
-                url: "/eqds/getDataByPage",
+                type: "GET",
+                url: "eqds/getDataByPage",
                 data:{
                     status:status,
                     condition:condition

@@ -84,8 +84,8 @@
            // queryData(page,pageSize,status,condition);
            // alert(status);
             $.ajax({
-                type: "POST",
-                url: "/cement/getDataByPage",
+                type: "GET",
+                url: "cement/getDataByPage",
                 data:{
                     pageNum:1,
                     pageSize:pageSize,

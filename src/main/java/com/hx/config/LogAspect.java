@@ -73,11 +73,11 @@ public class LogAspect
         try
         {
             SysUser user = (SysUser) httpSession.getAttribute("USER_SESSION");
-            log.info("登录用户："+ user.getUserName());
             if(null ==user){
                 user = new SysUser();
                 user.setUserName("SysAdmin");
             }
+            log.info("登录用户："+ user.getUserName());
 
             // 获得注解
             Log controllerLog = getAnnotationLog(joinPoint);

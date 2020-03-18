@@ -25,17 +25,22 @@
 			children:[{
 				text:"水泥强度",
 				attributes:{
-					url:"list.jsp"
+					// url:"list.jsp"
+					method: "POST",
+					url:"cement/getDataByPage"
 				}
 			},{
 				text:"煤炭热值",
 				attributes:{
-					url:"eqds_list.jsp"
+					// url:"eqds_list.jsp"
+					method: "POST",
+					url:"eqds/getDataByPage"
 				}
 			},{
 				text:"操作日志",
 				attributes:{
 					// url:"log.jsp"
+					method: "POST",
 					url:"sysLog/getSysLog"
 				}
 			}]
@@ -72,7 +77,6 @@
 	<div region="north" style="height: 80px;background-color: #E0EDFF">
 		<div align="left" style="width: 80%;float: left"><img src="images/main.jpg"></div>
 		<div style="padding-top: 50px;padding-right: 20px;">当前用户：&nbsp;<font color="red" >${USER_SESSION.userName }</font></div>
-
 	</div>
 	<div region="center">
 		<div class="easyui-tabs" fit="true" border="false" id="tabs">

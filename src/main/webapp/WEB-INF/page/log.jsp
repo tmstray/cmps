@@ -1,194 +1,392 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-		 pageEncoding="utf-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>日志管理</title>
-	<link rel="stylesheet" type="text/css" href="jquery-easyui-1.3.3/themes/default/easyui.css">
-	<link rel="stylesheet" type="text/css" href="jquery-easyui-1.3.3/themes/icon.css">
-	<script type="text/javascript" src="jquery-easyui-1.3.3/jquery.min.js"></script>
-	<script type="text/javascript" src="jquery-easyui-1.3.3/jquery.easyui.min.js"></script>
-	<script type="text/javascript" src="jquery-easyui-1.3.3/locale/easyui-lang-zh_CN.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<script type="text/javascript" src="/scripts/jquery/jquery-1.7.1.js"></script>
+	<link href="/style/authority/basic_layout.css" rel="stylesheet" type="text/css">
+	<link href="/style/authority/common_style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="/scripts/authority/commonAll.js"></script>
+	<script type="text/javascript" src="/scripts/fancybox/jquery.fancybox-1.3.4.js"></script>
+	<script type="text/javascript" src="/scripts/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<link rel="stylesheet" type="text/css" href="/style/authority/jquery.fancybox-1.3.4.css" media="screen"></link>
+	<script type="text/javascript" src="/scripts/artDialog/artDialog.js?skin=default"></script>
+	<script type="text/javascript" src="/js/funscripts.js"></script>
+	<style>
+		#datatable th{
+			text-transform:none;
+		}
+		#datatable .succeed{
+			color: #00B83F;
+		}
+		#datatable .readyd{
+			color: #1677D2;
+		}
+		#datatable .errord{
+			color: red;
+		}
+	</style>
+	<title></title>
+	<!-- Favicon  -->
+	<link rel="icon" href="/images/favicon.png">
 	<script type="text/javascript">
-		var url;
+		/** 用户角色   **/
+		var userRole = '';
 
-		function deleteStudent(){
-			var selectedRows=$("#dg").datagrid('getSelections');
-			if(selectedRows.length==0){
-				$.messager.alert("系统提示","请选择要删除的数据！");
-				return;
-			}
-			var strIds=[];
-			for(var i=0;i<selectedRows.length;i++){
-				strIds.push(selectedRows[i].stuId);
-			}
-			var ids=strIds.join(",");
-			$.messager.confirm("系统提示","您确认要删掉这<font color=red>"+selectedRows.length+"</font>条数据吗？",function(r){
-				if(r){
-					$.post("studentDelete",{delIds:ids},function(result){
-						if(result.success){
-							$.messager.alert("系统提示","您已成功删除<font color=red>"+result.delNums+"</font>条数据！");
-							$("#dg").datagrid("reload");
-						}else{
-							$.messager.alert('系统提示',result.errorMsg);
-						}
-					},"json");
-				}
-			});
-		}
-
-		function searchStudent(){
-			$('#dg').datagrid('load',{
-				stuNo:$('#s_stuNo').val(),
-				stuName:$('#s_stuName').val(),
-				sex:$('#s_sex').combobox("getValue"),
-				bbirthday:$('#s_bbirthday').datebox("getValue"),
-				ebirthday:$('#s_ebirthday').datebox("getValue"),
-				gradeId:$('#s_gradeId').combobox("getValue")
-			});
-		}
-
-
-		function openStudentAddDialog(){
-			$("#dlg").dialog("open").dialog("setTitle","添加学生信息");
-			url="studentSave";
-		}
-
-		function saveStudent(){
-			$("#fm").form("submit",{
-				url:url,
-				onSubmit:function(){
-					if($('#sex').combobox("getValue")==""){
-						$.messager.alert("系统提示","请选择性别");
-						return false;
-					}
-					if($('#gradeId').combobox("getValue")==""){
-						$.messager.alert("系统提示","请选择所属班级");
-						return false;
-					}
-					return $(this).form("validate");
+		/** 模糊查询 **/
+		function search() {
+			var status = $("#fyStatus").val();
+			var condition = $("#condition").val().trim();
+			var pageSize = $("#pageSize").val().trim();
+			//queryData(null,status,condition);
+			// queryData(page,pageSize,status,condition);
+			// alert(status);
+			$.ajax({
+				type: "GET",
+				url: "sysLog/getSysLog",
+				data:{
+					pageNum:1,
+					pageSize:pageSize,
+					status:status,
+					condition:condition
 				},
-				success:function(result){
-					if(result.errorMsg){
-						$.messager.alert("系统提示",result.errorMsg);
-						return;
-					}else{
-						$.messager.alert("系统提示","保存成功");
-						resetValue();
-						$("#dlg").dialog("close");
-						$("#dg").datagrid("reload");
+				success: function (response) {
+					console.log("response==>",response)
+					if (response.resCode == 200) {
+						//  art.dialog({time: 3, content: "数据上传成功! 模糊查询"});
+						console.log("success");
+						var dataHtml = refreshTable(response);
+						$("#datatable").html(dataHtml);
+						//更改分页数据信息
+						$("#total").text(response.pageInfo.total);
+						$("#pageInfo").text(response.pageInfo.pageNum + " / "
+								+ response.pageInfo.pages);
+					} else {
+						// art.dialog({time: 3, content: "数据上传失败! 模糊查询"});
+						console.log("fail...");
 					}
+				},error: function(data){
+					art.dialog({time: 3, content: "出错啦!!!"});
 				}
 			});
 		}
 
-		function resetValue(){
-			$("#stuNo").val("");
-			$("#stuName").val("");
-			$("#sex").combobox("setValue","");
-			$("#birthday").datebox("setValue","");
-			$("#gradeId").combobox("setValue","");
-			$("#email").val("");
-			$("#stuDesc").val("");
+		/** 新增   **/
+		function add() {
+			$("#submitForm").attr("action", "/xngzf/archives/luruFangyuan.action").submit();
 		}
 
-		function closeStudentDialog(){
-			$("#dlg").dialog("close");
-			resetValue();
+		/** Excel导出  **/
+		function exportExcel() {
+			if (confirm('您确定要导出吗？')) {
+				var fyXqCode = $("#fyXq").val();
+				var fyXqName = $('#fyXq option:selected').text();
+//	 		alert(fyXqCode);
+				if (fyXqCode == "" || fyXqCode == null) {
+					$("#fyXqName").val("");
+				} else {
+//	 			alert(fyXqCode);
+					$("#fyXqName").val(fyXqName);
+				}
+				$("#submitForm").attr("action", "/xngzf/archives/exportExcelFangyuan.action").submit();
+			}
 		}
 
-		function openStudentModifyDialog(){
-			var selectedRows=$("#dg").datagrid('getSelections');
-			if(selectedRows.length!=1){
-				$.messager.alert("系统提示","请选择一条要编辑的数据！");
+		/** 删除 **/
+		function del(fyID) {
+			// 非空判断
+			if (fyID == '') return;
+			if (confirm("您确定要删除吗？")) {
+				$("#submitForm").attr("action", "/xngzf/archives/delFangyuan.action?fyID=" + fyID).submit();
+			}
+		}
+
+		/** 批量删除 **/
+		function batchDel() {
+			if ($("input[name='IDCheck']:checked").size() <= 0) {
+				art.dialog({icon: 'error', title: '友情提示', drag: false, resize: false, content: '至少选择一条', ok: true,});
 				return;
 			}
-			var row=selectedRows[0];
-			$("#dlg").dialog("open").dialog("setTitle","编辑学生信息");
-			$("#fm").form("load",row);
-			url="studentSave?stuId="+row.stuId;
+			// 1）取出用户选中的checkbox放入字符串传给后台,form提交
+			var allIDCheck = "";
+			$("input[name='IDCheck']:checked").each(function (index, domEle) {
+				bjText = $(domEle).parent("td").parent("tr").last().children("td").last().prev().text();
+// 			alert(bjText);
+				// 用户选择的checkbox, 过滤掉“已审核”的，记住哦
+				if ($.trim(bjText) == "已审核") {
+// 				$(domEle).removeAttr("checked");
+					$(domEle).parent("td").parent("tr").css({color: "red"});
+					$("#resultInfo").html("已审核的是不允许您删除的，请联系管理员删除！！！");
+// 				return;
+				} else {
+					allIDCheck += $(domEle).val() + ",";
+				}
+			});
+			// 截掉最后一个","
+			if (allIDCheck.length > 0) {
+				allIDCheck = allIDCheck.substring(0, allIDCheck.length - 1);
+				// 赋给隐藏域
+				$("#allIDCheck").val(allIDCheck);
+				if (confirm("您确定要批量删除这些记录吗？")) {
+					// 提交form
+					$("#submitForm").attr("action", "/xngzf/archives/batchDelFangyuan.action").submit();
+				}
+			}
+		}
+
+		/** 普通跳转 **/
+		function jumpNormalPage(page) {
+			if(page == 0 || page > getTotalPage() || getCurrentPage() == page){
+				console.log("page===>",page);
+				return;
+			}
+			var status = $("#fyStatus").val();
+			var condition = $("#condition").val().trim();
+			var pageSize = $("#pageSize").val().trim();
+			//   var msg = status +"==" + condition + "==" + page +"===" + pageSize;
+			//  art.dialog({time: 3, content: msg});
+			queryData(page,pageSize,status,condition);
+		}
+
+		/** 输入页跳转 **/
+		function jumpInputPage(totalPage) {
+			var inputNumStr = $("#jumpNumTxt").val();
+			if(inputNumStr.trim() == '' || isNaN(inputNumStr)){
+				art.dialog({
+					icon: 'error',
+					title: '友情提示',
+					drag: false,
+					resize: false,
+					content: '请输入正确的页数!',
+					ok: true,
+					time: 2,
+				});
+				return;
+			}
+			// 如果“跳转页数”不为空
+			if ($("#jumpNumTxt").val() != '') {
+				var pageNum = parseInt($("#jumpNumTxt").val());
+				// 如果跳转页数在不合理范围内，则置为1
+				if (pageNum < 1 || pageNum > totalPage) {
+					art.dialog({
+						icon: 'error',
+						title: '友情提示',
+						drag: false,
+						resize: false,
+						content: '请输入合适的页数，\n自动为您跳到首页',
+						ok: true,
+						time: 3,
+					},function(){
+						jumpNormalPage(1);
+						//window.location.href = "/getByPage?pageNum=" + pageNum;
+					});
+				}else{
+					//$("#submitForm").attr("action", "house_list.html?page=" + pageNum).submit();
+					//window.location.href = "/getByPage?pageNum=" + pageNum;
+					jumpNormalPage(pageNum);
+				}
+			} else {
+				// “跳转页数”为空
+				art.dialog({
+					icon: 'error',
+					title: '友情提示',
+					drag: false,
+					resize: false,
+					content: '请输入合适的页数，\n自动为您跳到首页',
+					ok: true,
+				});
+				jumpNormalPage(1);
+			}
 		}
 	</script>
+	<style>
+		.alt td {
+			background: black !important;
+		}
+	</style>
 </head>
-<body style="margin: 5px;">
-<table id="dg" title="日志信息" class="easyui-datagrid" fitColumns="true"
-	   pagination="true" rownumbers="true" url="sysLog/getSysLog" fit="true" toolbar="#tb">
-	<thead>
-	<tr>
-		<th field="cb" checkbox="true"></th>
-		<th field="id" width="50" align="center">ID</th>
-		<th field="businessModule" width="100" align="center">业务模块名称</th>
-		<th field="businessType" width="100" align="center">业务类型</th>
-		<th field="method" width="100" align="center">操作方法</th>
-		<th field="ip" width="100" align="center">IP地址</th>
-		<th field="requestMethod" width="100" align="center" hidden="true">请求方式</th>
-		<th field="status" width="100" align="center">操作状态</th>
-		<th field="createBy" width="150" align="center">操作人</th>
-		<th field="createTime" width="250" align="center">创建时间</th>
-	</tr>
-	</thead>
-</table>
+<body>
+<form id="submitForm" name="submitForm" action="" method="post">
+	<input type="hidden" name="allIDCheck" value="" id="allIDCheck"/>
+	<input type="hidden" name="fangyuanEntity.fyXqName" value="" id="fyXqName"/>
+	<input type="hidden" id="pageSize"  name="pageSize" value="${pageInfo.pageSize}">
+	<div id="container">
+		<div class="ui_content">
+			<div class="ui_text_indent">
+				<div id="box_border">
+					<div id="box_top" style="text-align: right;padding-right: 20px;">欢迎您:${USER_SESSION.userName}
+						<a href="${pageContext.request.contextPath}/logout"><span style="color: black">退出</span></a></div>
+					<div id="box_center">
+						数据状态
+						<select name="status" id="fyStatus" class="ui_select01">
+							<option value="">--请选择--</option>
+							<option value="1">未上传</option>
+							<option value="2">已上传</option>
+							<option value="0">异常</option>
+						</select>
+						样品编号<input type="text" name="sampleNo" id="condition" value="${requestModel.condition}" class="ui_input_txt02"/>
+						<input type="button" value="查询" class="ui_input_btn01" onclick="search();"/>
+					</div>
+					<div id="box_bottom">
+						<input type="button" id="synchronizeBtn" value="同步数据" class="ui_input_btn01" onclick="dataSynchronize();"/>
+						<input type="button" value="数据上传" class="ui_input_btn01" onclick="dataUpload();"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui_content">
+			<div class="ui_tb">
+				<table id="datatable" class="table" cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+					<tr>
+						<th width="30"><input type="checkbox" id="all" onclick="selectOrClearAllCheckbox(this);"/>
+						</th>
+						<th>ID</th>
+						<th>业务模块名称</th>
+						<th>业务类型</th>
+						<th>操作方法</th>
+						<th>IP地址</th>
+						<th>请求方式</th>
+						<th>操作状态</th>
+						<th>操作人</th>
+						<th>创建时间</th>
+					</tr>
+					<c:forEach var="item" items="${pageInfo.list}">
+						<tr>
+							<td><input type="checkbox" name="IDCheck" value="${item.id}" status="${item.status}"
+									   class="acb"/></td>
+							<td>${item.id}</td>
+							<td>${item.businessModule}</td>
+							<td>
+								<c:choose>
+									<c:when test="${item.businessType==0}">
+										<span>其他</span>
+									</c:when>
+									<c:when test="${item.businessType==1}">
+										<span>新增</span>
+									</c:when>
+									<c:when test="${item.businessType==2}">
+										<span>修改</span>
+									</c:when>
+									<c:when test="${item.businessType==3}">
+										<span>删除</span>
+									</c:when>
+									<c:when test="${item.businessType==4}">
+										<span>同步数据</span>
+									</c:when>
+									<c:when test="${item.businessType==5}">
+										<span>上传数据</span>
+									</c:when>
+									<c:when test="${item.businessType==6}">
+										<span>登录</span>
+									</c:when>
+									<c:when test="${item.businessType==7}">
+										<span>退出</span>
+									</c:when>
+								</c:choose>
+							</td>
+							<td>${item.method}</td>
+							<td>${item.ip}</td>
+							<td>${item.requestMethod}</td>
+							<td>${item.status}</td>
+							<td>${item.createBy}</td>
+							<td>
+								<fmt:formatDate value="${item.createTime}" pattern="yyyy-MM-dd HH:mm:ss"/>
+							</td>
+						</tr>
+					</c:forEach>
 
-<div id="tb">
-	<div>
-		<a href="javascript:openStudentAddDialog()" class="easyui-linkbutton" iconCls="icon-add" plain="true">添加</a>
-		<a href="javascript:openStudentModifyDialog()" class="easyui-linkbutton" iconCls="icon-edit" plain="true">修改</a>
-		<a href="javascript:deleteStudent()" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
+				</table>
+			</div>
+			<div class="ui_tb_h30">
+				<div class="ui_flt" style="height: 30px; line-height: 30px;">
+					共有
+					<span class="ui_txt_bold04" id="total">${pageInfo.total}</span>
+					条记录，当前第
+					<span class="ui_txt_bold04" id="pageInfo">${pageInfo.pageNum}
+						/
+						${pageInfo.pages}</span>
+					页
+				</div>
+				<div class="ui_frt">
+					<!--    如果是第一页，则只显示下一页、尾页 -->
+					<input type="button" value="首页" class="ui_input_btn01"
+						   onclick="jumpNormalPage(1);"/>
+
+					<input type="button" value="上一页" class="ui_input_btn01"
+						   onclick="jumpNormalPage(getCurrentPage() - 1);"/>
+					<input type="button" value="下一页" class="ui_input_btn01"
+						   onclick="jumpNormalPage(getCurrentPage() + 1);"/>
+
+					<input type="button" value="尾页" class="ui_input_btn01"
+						   onclick="jumpNormalPage(getTotalPage());"/>
+
+					<!--     如果是最后一页，则只显示首页、上一页 -->
+
+					转到第<input type="text" id="jumpNumTxt" class="ui_input_txt01"/>页
+					<input type="button" class="ui_input_btn01" value="跳转" onclick="jumpInputPage(${pageInfo.pages});"/>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div>&nbsp;学号：&nbsp;<input type="text" name="s_stuNo" id="s_stuNo" size="10"/>
-		&nbsp;姓名：&nbsp;<input type="text" name="s_stuName" id="s_stuName" size="10"/>
-		&nbsp;性别：&nbsp;<select class="easyui-combobox" id="s_sex" name="s_sex" editable="false" panelHeight="auto">
-			<option value="">请选择...</option>
-			<option value="男">男</option>
-			<option value="女">女</option>
-		</select>
-		&nbsp;出生日期：&nbsp;<input class="easyui-datebox" name="s_bbirthday" id="s_bbirthday" editable="false" size="10"/>-><input class="easyui-datebox" name="s_ebirthday" id="s_ebirthday" editable="false" size="10"/>
-		&nbsp;所属班级：&nbsp;<input class="easyui-combobox" id="s_gradeId" name="s_gradeId" size="10" data-options="panelHeight:'auto',editable:false,valueField:'id',textField:'gradeName',url:'gradeComboList'"/>
+	<!---暂存程序模式变量--->
+</form>
+<script>
+	//表格重绘
+	function refreshTable(response) {
+		var hrhead = "<tr>" +
+				"<th width=\"30\"><input type=\"checkbox\" onclick=\"selectOrClearAllCheckbox(this);\"/>" +
+				"</th>" +
+				"<th>ID</th>" +
+				"<th>业务模块名称</th>" +
+				"<th>业务类型</th>" +
+				"<th>操作方法</th>" +
+				"<th>IP地址</th>" +
+				"<th>请求方式</th>" +
+				"<th>操作状态</th>" +
+				"<th>操作人</th>" +
+				"<th>创建时间</th>" +
+				"</tr>";
 
-		<a href="javascript:searchStudent()" class="easyui-linkbutton" iconCls="icon-search" plain="true">搜索</a></div>
-</div>
+		var bodyStr = "";
+		for(i in response.pageInfo.list){
+			var item = response.pageInfo.list[i];
+			bodyStr += "<tr><td><input type=\"checkbox\" name=\"IDCheck\" value=" + item.id
+					+" qbad="+" class=\"acb\"/></td>";
 
-<div id="dlg" class="easyui-dialog" style="width: 570px;height: 350px;padding: 10px 20px"
-	 closed="true" buttons="#dlg-buttons">
-	<form id="fm" method="post">
-		<table cellspacing="5px;">
-			<tr>
-				<td>学号：</td>
-				<td><input type="text" name="stuNo" id="stuNo" class="easyui-validatebox" required="true"/></td>
-				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-				<td>姓名：</td>
-				<td><input type="text" name="stuName" id="stuName" class="easyui-validatebox" required="true"/></td>
-			</tr>
-			<tr>
-				<td>性别：</td>
-				<td><select class="easyui-combobox" id="sex" name="sex" editable="false" panelHeight="auto" style="width: 155px">
-					<option value="">请选择...</option>
-					<option value="男">男</option>
-					<option value="女">女</option>
-				</select></td>
-				<td></td>
-				<td>出生日期：</td>
-				<td><input class="easyui-datebox" name="birthday" id="birthday" required="true" editable="false" /></td>
-			</tr>
-			<tr>
-				<td>班级名称：</td>
-				<td><input class="easyui-combobox" id="gradeId" name="gradeId"  data-options="panelHeight:'auto',editable:false,valueField:'id',textField:'gradeName',url:'gradeComboList'"/></td>
-				<td></td>
-				<td>Email：</td>
-				<td><input type="text" name="email" id="email" class="easyui-validatebox" required="true" validType="email"/></td>
-			</tr>
-			<tr>
-				<td valign="top">学生备注：</td>
-				<td colspan="4"><textarea rows="7" cols="50" name="stuDesc" id="stuDesc"></textarea></td>
-			</tr>
-		</table>
-	</form>
-</div>
-
-<div id="dlg-buttons">
-	<a href="javascript:saveStudent()" class="easyui-linkbutton" iconCls="icon-ok">保存</a>
-	<a href="javascript:closeStudentDialog()" class="easyui-linkbutton" iconCls="icon-cancel">关闭</a>
-</div>
+			bodyStr += "<td>"+item.id+"</td>";
+			bodyStr += "<td>"+item.businessModule+"</td>";
+			bodyStr += "<td>";
+			if(item.businessType==0){
+				bodyStr += "<span>其他</span>";
+			}else if(item.businessType==1){
+				bodyStr += "<span class='readyd'>新增</span>";
+			}else if(item.businessType==2){
+				bodyStr += "<span class='succeed'>修改</span>";
+			}else if(item.businessType==3){
+				bodyStr += "<span class='succeed'>删除</span>";
+			}else if(item.businessType==4){
+				bodyStr += "<span class='succeed'>同步数</span>";
+			}else if(item.businessType==5){
+				bodyStr += "<span class='succeed'>数据上传</span>";
+			}else if(item.businessType==6){
+				bodyStr += "<span class='succeed'>登录</span>";
+			}else if(item.businessType==7){
+				bodyStr += "<span class='succeed'>退出</span>";
+			}
+			bodyStr += "</td>";
+			bodyStr += "<td>"+item.method+"</td>";
+			bodyStr += "<td>"+item.ip+"</td>";
+			bodyStr += "<td>"+item.requestMethod+"</td>";
+			bodyStr += "<td>"+item.status+"</td>";
+			bodyStr += "<td>"+item.createBy+"</td>";
+			bodyStr += "<td>"+item.createTime+"</td>";
+			bodyStr += "</tr>"
+		}
+		return hrhead + bodyStr;
+	}
+</script>
 </body>
 </html>
