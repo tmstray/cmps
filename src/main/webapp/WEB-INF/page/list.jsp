@@ -80,11 +80,8 @@
             var status = $("#fyStatus").val();
             var condition = $("#condition").val().trim();
             var pageSize = $("#pageSize").val().trim();
-            //queryData(null,status,condition);
-           // queryData(page,pageSize,status,condition);
-           // alert(status);
             $.ajax({
-                type: "GET",
+                type: "POST",
                 url: "${pageContext.request.contextPath}/cement/getDataByPage",
                 data:{
                     pageNum:1,
