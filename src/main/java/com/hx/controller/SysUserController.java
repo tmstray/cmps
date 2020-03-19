@@ -55,6 +55,7 @@ public class SysUserController
         mv.addObject("requestModel",model);
         return mv;
     }
+    
 
     /**
      * 分页数据查询：
@@ -84,17 +85,16 @@ public class SysUserController
      */
     @PostMapping("/addUser")
     @com.hx.config.Log(businessModule = "用户管理", businessType = BusinessType.INSERT)
-    public Response add(@Validated @RequestBody SysUser sysUser)
+    public Response add(SysUser sysUser)
     {
         Response response = null;
         if (Constants.NOT_UNIQUE.equals(userService.checkUserNameUnique(sysUser.getUserName())))
         {
             return response = new Response(500,"\"新增用户'\" + user.getUserName() + \"'失败，登录账号已存在\"");
         }
-        User user = (User) httpSession.getAttribute("USER_SESSION");
-
-        sysUser.setCreateBy(user.getUsername());
-        sysUser.setPassword(user.getPassword());
+//        User user = (User) httpSession.getAttribute("USER_SESSION");
+        User user = new User();
+        sysUser.setPassword(sysUser.getPassword());
         int result =userService.insertUser(sysUser);
 
         if(result>0){
