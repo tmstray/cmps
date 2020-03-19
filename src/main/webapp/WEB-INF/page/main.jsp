@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -18,18 +19,42 @@
 <script type="text/javascript" src="jquery-easyui-1.3.3/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="jquery-easyui-1.3.3/locale/easyui-lang-zh_CN.js"></script>
 <script type="text/javascript">
+
+	var str = "${USER_SESSION.menuId}";
+	//str="2,2,3,5,6,6"; //这是一字符串 
+	var strs= new Array(); //定义一数组 
+	strs=str.split(","); //字符分割 
+	//alert(strs)
+	for (i=0;i<strs.length ;i++ ) 
+	{ 
+	//document.write(strs[i]+"<br/>"); //分割后的字符输出
+		//alert(strs[i]) 
+		//var xx = strs[i];
+	} 
+	//var xx = aa.split(" ");
+	//alert(xx);
 	$(function(){
+		
 		// 数据
 		var treeData=[{
 			text:"华新水泥",
-			children:[{
-				text:"水泥强度",
-				attributes:{
-					// url:"list.jsp"
-					//method: "POST",
-					url:"cement/getByPage"
-				}
-			},{
+			children:[
+
+
+				<c:forEach items="${USER_SESSION.menuId}" varStatus="status" var="item">
+	                <c:if test="${'2'==item}">
+					{
+					text:"水泥强度",
+					attributes:{
+						// url:"list.jsp"
+						//method: "POST",
+						url:"cement/getByPage"
+					}
+				},
+				</c:if>
+		       	</c:forEach>
+				
+				{
 				text:"煤炭热值",
 				attributes:{
 					// url:"eqds_list.jsp"
