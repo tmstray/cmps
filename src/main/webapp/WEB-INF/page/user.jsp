@@ -38,21 +38,25 @@
 
 		/** 模糊查询 **/
 		function search() {
-			var businessType = $("#businessType").val();
-			var businessModule = $("#businessModule").val().trim();
+			var status = $("#fyStatus").val();
+			var condition = $("#condition").val().trim();
 			var pageSize = $("#pageSize").val().trim();
+			//queryData(null,status,condition);
+			// queryData(page,pageSize,status,condition);
+			// alert(status);
 			$.ajax({
-				type: "POST",
-				url: "${pageContext.request.contextPath}/sysLog/getDataByPage",
+				type: "GET",
+				url: "user/getByUse",
 				data:{
 					pageNum:1,
 					pageSize:pageSize,
-					businessType:businessType,
-					businessModule:businessModule
+					status:status,
+					condition:condition
 				},
 				success: function (response) {
 					console.log("response==>",response)
 					if (response.resCode == 200) {
+						//  art.dialog({time: 3, content: "数据上传成功! 模糊查询"});
 						console.log("success");
 						var dataHtml = refreshTable(response);
 						$("#datatable").html(dataHtml);
@@ -61,6 +65,7 @@
 						$("#pageInfo").text(response.pageInfo.pageNum + " / "
 								+ response.pageInfo.pages);
 					} else {
+						// art.dialog({time: 3, content: "数据上传失败! 模糊查询"});
 						console.log("fail...");
 					}
 				},error: function(data){
@@ -75,9 +80,11 @@
 				console.log("page===>",page);
 				return;
 			}
-			var businessModule = $("#businessModule").val();
-			var businessType = $("#businessType").val().trim();
+			var status = $("#fyStatus").val();
+			var condition = $("#condition").val().trim();
 			var pageSize = $("#pageSize").val().trim();
+			//   var msg = status +"==" + condition + "==" + page +"===" + pageSize;
+			//  art.dialog({time: 3, content: msg});
 			queryData(page,pageSize,status,condition);
 		}
 
@@ -111,8 +118,11 @@
 						time: 3,
 					},function(){
 						jumpNormalPage(1);
+						//window.location.href = "/getByPage?pageNum=" + pageNum;
 					});
 				}else{
+					//$("#submitForm").attr("action", "house_list.html?page=" + pageNum).submit();
+					//window.location.href = "/getByPage?pageNum=" + pageNum;
 					jumpNormalPage(pageNum);
 				}
 			} else {
@@ -144,29 +154,21 @@
 		<div class="ui_content">
 			<div class="ui_text_indent">
 				<div id="box_border">
+					
 					<div id="box_center">
-						业务模块
-						<select name="businessModule" id="businessModule" class="ui_select01">
+						数据状态
+						<select name="status" id="fyStatus" class="ui_select01">
 							<option value="">--请选择--</option>
-							<option value="用户管理">用户管理</option>
-							<option value="用户登录">用户登录</option>
-							<option value="日志管理">日志管理</option>
-							<option value="煤炭热值">煤炭热值</option>
-							<option value="水泥强度">水泥强度</option>
+							<option value="1">未上传</option>
+							<option value="2">已上传</option>
+							<option value="0">异常</option>
 						</select>
-						操作类型
-						<select name="businessType" id="businessType" class="ui_select01">
-							<option value="">--请选择--</option>
-							<option value="0">其他</option>
-							<option value="1">新增</option>
-							<option value="2">修改</option>
-							<option value="3">删除</option>
-							<option value="4">同步数据</option>
-							<option value="5">上传数据</option>
-							<option value="6">登录</option>
-							<option value="7">退出</option>
-						</select>
+						样品编号<input type="text" name="sampleNo" id="condition" value="${requestModel.condition}" class="ui_input_txt02"/>
 						<input type="button" value="查询" class="ui_input_btn01" onclick="search();"/>
+					</div>
+					<div id="box_bottom">
+						<input type="button" id="synchronizeBtn" value="同步数据" class="ui_input_btn01" onclick="dataSynchronize();"/>
+						<input type="button" value="数据上传" class="ui_input_btn01" onclick="dataUpload();"/>
 					</div>
 				</div>
 			</div>
@@ -177,67 +179,25 @@
 					<tr>
 						<th width="30"><input type="checkbox" id="all" onclick="selectOrClearAllCheckbox(this);"/>
 						</th>
-						<th>ID</th>
-						<th>模块名称</th>
-						<th>操作类型</th>
-						<th>接口方法</th>
-						<th>IP地址</th>
-						<th>请求方式</th>
-						<th>操作状态</th>
-						<th>操作人</th>
-						<th>操作时间</th>
+						<th>用户ID</th>
+						<th>用户账号</th>
+						<th>用户昵称</th>
+						<th>手机号码</th>
+						<th>帐号状态</th>
+						<th>创建者</th>
+						<th>创建时间 </th>
 					</tr>
 					<c:forEach var="item" items="${pageInfo.list}">
 						<tr>
-							<td><input type="checkbox" name="IDCheck" value="${item.id}" status="${item.status}"
+							<td><input type="checkbox" name="IDCheck" value="${item.userId}" status="${item.status}"
 									   class="acb"/></td>
-							<td>${item.id}</td>
-							<td>${item.businessModule}</td>
-							<td>
-								<c:choose>
-									<c:when test="${item.businessType==0}">
-										<span>其他</span>
-									</c:when>
-									<c:when test="${item.businessType==1}">
-										<span>新增</span>
-									</c:when>
-									<c:when test="${item.businessType==2}">
-										<span>修改</span>
-									</c:when>
-									<c:when test="${item.businessType==3}">
-										<span>删除</span>
-									</c:when>
-									<c:when test="${item.businessType==4}">
-										<span>同步数据</span>
-									</c:when>
-									<c:when test="${item.businessType==5}">
-										<span>上传数据</span>
-									</c:when>
-									<c:when test="${item.businessType==6}">
-										<span>登录</span>
-									</c:when>
-									<c:when test="${item.businessType==7}">
-										<span>退出</span>
-									</c:when>
-								</c:choose>
-							</td>
-							<td>${item.method}</td>
-							<td>${item.ip}</td>
-							<td>${item.requestMethod}</td>
-							<td>
-								<c:choose>
-									<c:when test="${item.status==0}">
-										<span>正常</span>
-									</c:when>
-									<c:when test="${item.status==1}">
-										<span>异常</span>
-									</c:when>
-								</c:choose>
-							</td>
+							<td>${item.userId}</td>
+							<td>${item.userName}</td>
+							<td>${item.nickName}</td>
+							<td>${item.phoneNumber}</td>
+							<td>${item.status}</td>
 							<td>${item.createBy}</td>
-							<td>
-								<fmt:formatDate value="${item.createTime}" pattern="yyyy-MM-dd HH:mm:ss"/>
-							</td>
+							<td>${item.createTime}</td>
 						</tr>
 					</c:forEach>
 
@@ -283,45 +243,24 @@
 		var hrhead = "<tr>" +
 				"<th width=\"30\"><input type=\"checkbox\" onclick=\"selectOrClearAllCheckbox(this);\"/>" +
 				"</th>" +
-				"<th>ID</th>" +
-				"<th>业务模块名称</th>" +
-				"<th>业务类型</th>" +
-				"<th>操作方法</th>" +
-				"<th>IP地址</th>" +
-				"<th>请求方式</th>" +
-				"<th>操作状态</th>" +
-				"<th>操作人</th>" +
-				"<th>创建时间</th>" +
+				"<th>用户ID</th>" +
+				"<th>用户账户</th>" +
+				"<th>用户昵称</th>" +
+				"<th>手机号码</th>" +
+				"<th>账号状态</th>" +
+				"<th>创建者</th>" +
+				"<th>创建时间 </th>" +
 				"</tr>";
 
 		var bodyStr = "";
 		for(i in response.pageInfo.list){
 			var item = response.pageInfo.list[i];
-			bodyStr += "<tr><td><input type=\"checkbox\" name=\"IDCheck\" value=" + item.id	+" qbad="+" class=\"acb\"/></td>";
-			bodyStr += "<td>"+item.id+"</td>";
-			bodyStr += "<td>"+item.businessModule+"</td>";
-			bodyStr += "<td>";
-			if(item.businessType==0){
-				bodyStr += "<span>其他</span>";
-			}else if(item.businessType==1){
-				bodyStr += "<span class='readyd'>新增</span>";
-			}else if(item.businessType==2){
-				bodyStr += "<span class='succeed'>修改</span>";
-			}else if(item.businessType==3){
-				bodyStr += "<span class='succeed'>删除</span>";
-			}else if(item.businessType==4){
-				bodyStr += "<span class='succeed'>同步数</span>";
-			}else if(item.businessType==5){
-				bodyStr += "<span class='succeed'>数据上传</span>";
-			}else if(item.businessType==6){
-				bodyStr += "<span class='succeed'>登录</span>";
-			}else if(item.businessType==7){
-				bodyStr += "<span class='succeed'>退出</span>";
-			}
-			bodyStr += "</td>";
-			bodyStr += "<td>"+item.method+"</td>";
-			bodyStr += "<td>"+item.ip+"</td>";
-			bodyStr += "<td>"+item.requestMethod+"</td>";
+			bodyStr += "<tr><td><input type=\"checkbox\" name=\"IDCheck\" value=" + item.userId
+					+" qbad="+" class=\"acb\"/></td>";
+			bodyStr += "<td>"+item.userId+"</td>";
+			bodyStr += "<td>"+item.userName+"</td>";
+			bodyStr += "<td>"+item.nickName+"</td>";
+			bodyStr += "<td>"+item.phoneNumber+"</td>";
 			bodyStr += "<td>"+item.status+"</td>";
 			bodyStr += "<td>"+item.createBy+"</td>";
 			bodyStr += "<td>"+item.createTime+"</td>";

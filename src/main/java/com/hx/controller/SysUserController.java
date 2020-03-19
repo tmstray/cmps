@@ -50,7 +50,7 @@ public class SysUserController
         List<SysUser> dataList = userService.selectUserList(model);
         log.info("size:" + dataList.size());
         PageInfo<SysUser> pageInfo = new PageInfo<>(dataList);
-        ModelAndView mv = new ModelAndView("userList");
+        ModelAndView mv = new ModelAndView("user");
         mv.addObject("pageInfo",pageInfo);
         mv.addObject("requestModel",model);
         return mv;
