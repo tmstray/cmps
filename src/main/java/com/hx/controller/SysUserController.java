@@ -125,8 +125,9 @@ public class SysUserController
      * 删除用户
      */
     @Log(businessModule = "用户管理", businessType = BusinessType.DELETE)
-    @DeleteMapping("/{userIds}")
-    public Response remove(@PathVariable Long userIds)
+    @PostMapping(value ="/userIds")
+//    @GetMapping(value = "/getByUser")
+    public Response remove(Long userIds)
     {
         Response response = null;
         int result = userService.deleteUserById(userIds);
