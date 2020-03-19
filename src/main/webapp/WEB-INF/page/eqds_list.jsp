@@ -275,8 +275,6 @@
         <div class="ui_content">
             <div class="ui_text_indent">
                 <div id="box_border">
-                    <div id="box_top" style="text-align: right;padding-right: 20px;">欢迎您:${USER_SESSION.userName}
-                        <a href="${pageContext.request.contextPath}/logout"><span style="color: black">退出</span></a></div>
                     <div id="box_center">
                         数据状态
                         <select id="fyStatus" class="ui_select01">

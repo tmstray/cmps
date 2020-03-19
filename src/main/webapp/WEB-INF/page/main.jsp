@@ -40,8 +40,15 @@
 				text:"操作日志",
 				attributes:{
 					// url:"log.jsp"
-					method: "POST",
+					//method: "POST",
 					url:"sysLog/getSysLog"
+				}
+			},{
+				text:"用户管理",
+				attributes:{
+					// url:"log.jsp"
+					//method: "POST",
+					url:"user/getByUser"
 				}
 			}]
 		}];
@@ -74,9 +81,10 @@
 </script>
 </head>
 <body class="easyui-layout">
-	<div region="north" style="height: 80px;background-color: #E0EDFF">
-		<div align="left" style="width: 80%;float: left"></div>
-		<div style="padding-top: 50px;padding-right: 20px;">当前用户：&nbsp;<font color="red" >${USER_SESSION.userName }</font></div>
+	<div region="north" style="height: 100px;background-color: #E0EDFF">
+		<div style="padding-top: 50px;">当前用户：&nbsp;<font color="red" >${USER_SESSION.userName }</font></div>
+		<div id="box_top" style="text-align: right;padding-right: 50px;paddingpadding-bottom:50px;">欢迎您:${USER_SESSION.userName}
+		<a href="${pageContext.request.contextPath}/logout"><span style="color: black">退出</span></a></div>
 	</div>
 	<div region="center">
 		<div class="easyui-tabs" fit="true" border="false" id="tabs">
