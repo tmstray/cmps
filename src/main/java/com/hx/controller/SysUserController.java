@@ -127,6 +127,7 @@ public class SysUserController
     @Log(businessModule = "用户管理", businessType = BusinessType.DELETE)
     @PostMapping(value ="/userIds")
 //    @GetMapping(value = "/getByUser")
+    @ResponseBody
     public Response remove(Long userIds)
     {
         Response response = null;

@@ -36,8 +36,8 @@
 		$.messager.confirm("系统提示","您确认要删掉这<font color=red>"+selectedRows.size()+"</font>条数据吗？",function(r){
 			if(r){
 				$.post("${pageContext.request.contextPath}/user/userIds",{userIds:userid},function(result){
-					if(result.success){
-						$.messager.alert("删除成功");
+					if(result.resCode==200){
+						$.messager.alert("系统提示","保存成功");
 						location.replace(location.href);
 					}else{
 						$.messager.alert("删除失败");
