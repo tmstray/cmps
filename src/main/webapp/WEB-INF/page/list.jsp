@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="/style/authority/jquery.fancybox-1.3.4.css" media="screen"></link>
     <script type="text/javascript" src="/scripts/artDialog/artDialog.js?skin=default"></script>
     <script type="text/javascript" src="/js/funscripts.js"></script>
+    <script type="text/javascript" src="/js/page.js"></script>
     <style>
         #datatable th{
             text-transform:none;
@@ -33,47 +34,6 @@
     <!-- Favicon  -->
     <link rel="icon" href="/images/favicon.png">
     <script type="text/javascript">
-        $(document).ready(function () {
-            /** 新增   **/
-            $("#addBtn").fancybox({
-                'href': 'house_edit.html',
-                'width': 733,
-                'height': 530,
-                'type': 'iframe',
-                'hideOnOverlayClick': false,
-                'showCloseButton': false,
-                'onClosed': function () {
-                    window.location.href = 'house_list.html';
-                }
-            });
-
-            /** 导入  **/
-            $("#importBtn").fancybox({
-                'href': '/xngzf/archives/importFangyuan.action',
-                'width': 633,
-                'height': 260,
-                'type': 'iframe',
-                'hideOnOverlayClick': false,
-                'showCloseButton': false,
-                'onClosed': function () {
-                    window.location.href = 'house_list.html';
-                }
-            });
-
-            /**编辑   **/
-            $("a.edit").fancybox({
-                'width': 733,
-                'height': 530,
-                'type': 'iframe',
-                'hideOnOverlayClick': false,
-                'showCloseButton': false,
-                'onClosed': function () {
-                    window.location.href = 'house_list.html';
-                }
-            });
-        });
-        /** 用户角色   **/
-        var userRole = '';
 
         /** 模糊查询 **/
         function search() {
@@ -182,8 +142,6 @@
             var status = $("#fyStatus").val();
             var condition = $("#condition").val().trim();
             var pageSize = $("#pageSize").val().trim();
-         //   var msg = status +"==" + condition + "==" + page +"===" + pageSize;
-          //  art.dialog({time: 3, content: msg});
             queryData(page,pageSize,status,condition);
          }
 
@@ -217,11 +175,8 @@
                         time: 3,
                     },function(){
                         jumpNormalPage(1);
-                        //window.location.href = "/getByPage?pageNum=" + pageNum;
                     });
                 }else{
-                    //$("#submitForm").attr("action", "house_list.html?page=" + pageNum).submit();
-                    //window.location.href = "/getByPage?pageNum=" + pageNum;
                     jumpNormalPage(pageNum);
                 }
             } else {

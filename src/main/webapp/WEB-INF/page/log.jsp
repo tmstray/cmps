@@ -15,27 +15,11 @@
 	<link rel="stylesheet" type="text/css" href="/style/authority/jquery.fancybox-1.3.4.css" media="screen"></link>
 	<script type="text/javascript" src="/scripts/artDialog/artDialog.js?skin=default"></script>
 	<script type="text/javascript" src="/js/log.js"></script>
-	<style>
-		#datatable th{
-			text-transform:none;
-		}
-		#datatable .succeed{
-			color: #00B83F;
-		}
-		#datatable .readyd{
-			color: #1677D2;
-		}
-		#datatable .errord{
-			color: red;
-		}
-	</style>
+	<script type="text/javascript" src="/js/page.js"></script>
 	<title></title>
 	<!-- Favicon  -->
 	<link rel="icon" href="/images/favicon.png">
 	<script type="text/javascript">
-		/** 用户角色   **/
-		var userRole = '';
-
 		/** 模糊查询 **/
 		function search() {
 			var businessType = $("#businessType").val();
@@ -78,7 +62,7 @@
 			var businessModule = $("#businessModule").val();
 			var businessType = $("#businessType").val().trim();
 			var pageSize = $("#pageSize").val().trim();
-			queryData(page,pageSize,status,condition);
+			queryData(page,pageSize,businessModule,businessType);
 		}
 
 		/** 输入页跳转 **/
@@ -304,19 +288,19 @@
 			if(item.businessType==0){
 				bodyStr += "<span>其他</span>";
 			}else if(item.businessType==1){
-				bodyStr += "<span class='readyd'>新增</span>";
+				bodyStr += "<span>新增</span>";
 			}else if(item.businessType==2){
-				bodyStr += "<span class='succeed'>修改</span>";
+				bodyStr += "<span>修改</span>";
 			}else if(item.businessType==3){
-				bodyStr += "<span class='succeed'>删除</span>";
+				bodyStr += "<span>删除</span>";
 			}else if(item.businessType==4){
-				bodyStr += "<span class='succeed'>同步数</span>";
+				bodyStr += "<span>同步数</span>";
 			}else if(item.businessType==5){
-				bodyStr += "<span class='succeed'>数据上传</span>";
+				bodyStr += "<span>数据上传</span>";
 			}else if(item.businessType==6){
-				bodyStr += "<span class='succeed'>登录</span>";
+				bodyStr += "<span>登录</span>";
 			}else if(item.businessType==7){
-				bodyStr += "<span class='succeed'>退出</span>";
+				bodyStr += "<span>退出</span>";
 			}
 			bodyStr += "</td>";
 			bodyStr += "<td>"+item.method+"</td>";

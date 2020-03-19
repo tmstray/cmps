@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="/style/authority/jquery.fancybox-1.3.4.css" media="screen"></link>
     <script type="text/javascript" src="/scripts/artDialog/artDialog.js?skin=default"></script>
     <script type="text/javascript" src="/js/eqds_Fun.js"></script>
+    <script type="text/javascript" src="/js/page.js"></script>
     <style>
         #datatable th{
             text-transform:none;
@@ -31,45 +32,7 @@
     <!-- Favicon  -->
     <link rel="icon" href="/images/favicon.png">
     <script type="text/javascript">
-        $(document).ready(function () {
-            /** 新增   **/
-            $("#addBtn").fancybox({
-                'href': 'house_edit.html',
-                'width': 733,
-                'height': 530,
-                'type': 'iframe',
-                'hideOnOverlayClick': false,
-                'showCloseButton': false,
-                'onClosed': function () {
-                    window.location.href = 'house_list.html';
-                }
-            });
 
-            /** 导入  **/
-            $("#importBtn").fancybox({
-                'href': '/xngzf/archives/importFangyuan.action',
-                'width': 633,
-                'height': 260,
-                'type': 'iframe',
-                'hideOnOverlayClick': false,
-                'showCloseButton': false,
-                'onClosed': function () {
-                    window.location.href = 'house_list.html';
-                }
-            });
-
-            /**编辑   **/
-            $("a.edit").fancybox({
-                'width': 733,
-                'height': 530,
-                'type': 'iframe',
-                'hideOnOverlayClick': false,
-                'showCloseButton': false,
-                'onClosed': function () {
-                    window.location.href = 'house_list.html';
-                }
-            });
-        });
         /** 用户角色   **/
         var userRole = '';
 
@@ -77,7 +40,6 @@
         function search() {
             var status = $("#fyStatus").val();
             var condition = $("#condition").val().trim();
-            //queryData(null,status,condition);
             $.ajax({
                 type: "POST",
                 url: "${pageContext.request.contextPath}/eqds/getDataByPage",
@@ -178,35 +140,6 @@
             var status = $("#fyStatus").val();
             var condition = $("#condition").val().trim();
             queryData(page,status,condition);
-            /*$.ajax({
-                type: "POST",
-                url: "/getDataByPage",
-                data:{
-                    pageNum:page,
-                    status:status,
-                    condition:condition
-                },
-                success: function (response) {
-                    console.log("response==>",response)
-                    if (response.resCode == 200) {
-                        //art.dialog({time: 3, content: "数据上传成功!"});
-                        console.log("success");
-                        var dataHtml = refreshTable(response);
-                        $("#datatable").html(dataHtml);
-                        //更改分页数据信息
-                        $("#total").text(response.pageInfo.total);
-                        $("#pageInfo").text(response.pageInfo.pageNum + " / "
-                            + response.pageInfo.pages);
-                    } else {
-                        //art.dialog({time: 3, content: "数据上传失败!"});
-                        console.log("fail...");
-                    }
-                },error: function(data){
-                    art.dialog({time: 3, content: "出错啦!!!"});
-                }
-            });*/
-            //window.location.href = "/getByPage?pageNum=" + page;
-            //$("#submitForm").attr("action", "/getByPage?pageNum=" + page).submit();
         }
 
         /** 输入页跳转 **/

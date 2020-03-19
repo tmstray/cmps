@@ -1,13 +1,31 @@
+/**
+ * 获取当前页数
+ */
+function getCurrentPage(){
+    var pageInfoText = $("#pageInfo").text();
+    var currPageText = pageInfoText.split("/")[0];
+    var currPage = parseInt(currPageText.trim());
+    return currPage;
+}
+
+/**
+ * 获取总页数
+ */
+function getTotalPage(){
+    var pageInfoText = $("#pageInfo").text();
+    var totalPageText = pageInfoText.split("/")[1];
+    var totalPage = parseInt(totalPageText.trim());
+    return totalPage;
+}
+
 //ajax数据请求
-function queryData(page,pageSize,businessModule,businessType) {
+function queryData(page,pageSize) {
     $.ajax({
         type: "POST",
-        url: "/sysLog/getDataByPage",
+        url: "/user/getDataByPage",
         data:{
             pageNum:page,
-            pageSize:pageSize,
-            businessModule:businessModule,
-            businessType:businessType
+            pageSize:pageSize
         },
         success: function (response) {
             if (response.resCode == 200) {
@@ -18,6 +36,7 @@ function queryData(page,pageSize,businessModule,businessType) {
                 $("#pageInfo").text(response.pageInfo.pageNum + " / "
                     + response.pageInfo.pages);
             } else {
+                //  art.dialog({time: 3, content: "数据上传失败!"});
                 console.log("fail...");
             }
         },error: function(data){
