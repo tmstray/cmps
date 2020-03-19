@@ -2,6 +2,7 @@ package com.hx.controller;
 
 import javax.servlet.http.HttpSession;
 
+import com.hx.entity.SysUser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,7 +64,7 @@ public class CementStrengthController {
             response = new Response(200,null,pageInfo,model);
         }catch (Exception e){
             e.printStackTrace();
-            response = new Response(500,null,null,null);
+            response = new Response(500,null,null,model);
         }
         return response;
     }
@@ -78,7 +79,7 @@ public class CementStrengthController {
     @Log(businessModule = "水泥强度", businessType = BusinessType.SYNCHRONIZE)
     public Response dataSynchronize(HttpSession session) {
         logger.info("同步数据开始.....");
-        User user = (User) session.getAttribute("USER_SESSION");
+        SysUser user = (SysUser) session.getAttribute("USER_SESSION");
         boolean result = cementStrengthService.dataSynchronize();
         logger.info("同步数据结束......");
         Response response = null;

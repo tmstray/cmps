@@ -85,7 +85,7 @@
            // alert(status);
             $.ajax({
                 type: "GET",
-                url: "cement/getDataByPage",
+                url: "${pageContext.request.contextPath}/cement/getDataByPage",
                 data:{
                     pageNum:1,
                     pageSize:pageSize,

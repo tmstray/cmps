@@ -4,7 +4,7 @@ function dataSynchronize() {
     $("#synchronizeBtn").attr('disabled',true);
     $.ajax({
         type: "POST",
-        url: "/eqds/synchronize",
+        url: "${pageContext.request.contextPath}/eqds/synchronize",
         data: {},
         success: function (response) {
             if (response.resCode == 200) {
@@ -63,7 +63,7 @@ function dataUpload() {
 
     $.ajax({
         type: "POST",
-        url: "/eqds/upload?ids=" + ids,
+        url: "${pageContext.request.contextPath}/eqds/upload?ids=" + ids,
         success: function (response) {
             if (response.resCode == 200) {
                 var page = getCurrentPage();
@@ -169,7 +169,7 @@ function getTotalPage(){
 function queryData(page,status,condition) {
     $.ajax({
         type: "POST",
-        url: "/eqds/getDataByPage",
+        url: "${pageContext.request.contextPath}/eqds/getDataByPage",
         data:{
             pageNum:page,
             status:status,

@@ -38,25 +38,21 @@
 
 		/** 模糊查询 **/
 		function search() {
-			var status = $("#fyStatus").val();
-			var condition = $("#condition").val().trim();
+			var businessType = $("#businessType").val();
+			var businessModule = $("#businessModule").val().trim();
 			var pageSize = $("#pageSize").val().trim();
-			//queryData(null,status,condition);
-			// queryData(page,pageSize,status,condition);
-			// alert(status);
 			$.ajax({
-				type: "GET",
-				url: "sysLog/getSysLog",
+				type: "POST",
+				url: "${pageContext.request.contextPath}/sysLog/getDataByPage",
 				data:{
 					pageNum:1,
 					pageSize:pageSize,
-					status:status,
-					condition:condition
+					businessType:businessType,
+					businessModule:businessModule
 				},
 				success: function (response) {
 					console.log("response==>",response)
 					if (response.resCode == 200) {
-						//  art.dialog({time: 3, content: "数据上传成功! 模糊查询"});
 						console.log("success");
 						var dataHtml = refreshTable(response);
 						$("#datatable").html(dataHtml);
@@ -65,7 +61,6 @@
 						$("#pageInfo").text(response.pageInfo.pageNum + " / "
 								+ response.pageInfo.pages);
 					} else {
-						// art.dialog({time: 3, content: "数据上传失败! 模糊查询"});
 						console.log("fail...");
 					}
 				},error: function(data){
@@ -80,11 +75,9 @@
 				console.log("page===>",page);
 				return;
 			}
-			var status = $("#fyStatus").val();
-			var condition = $("#condition").val().trim();
+			var businessModule = $("#businessModule").val();
+			var businessType = $("#businessType").val().trim();
 			var pageSize = $("#pageSize").val().trim();
-			//   var msg = status +"==" + condition + "==" + page +"===" + pageSize;
-			//  art.dialog({time: 3, content: msg});
 			queryData(page,pageSize,status,condition);
 		}
 
@@ -118,11 +111,8 @@
 						time: 3,
 					},function(){
 						jumpNormalPage(1);
-						//window.location.href = "/getByPage?pageNum=" + pageNum;
 					});
 				}else{
-					//$("#submitForm").attr("action", "house_list.html?page=" + pageNum).submit();
-					//window.location.href = "/getByPage?pageNum=" + pageNum;
 					jumpNormalPage(pageNum);
 				}
 			} else {
@@ -157,19 +147,28 @@
 					<div id="box_top" style="text-align: right;padding-right: 20px;">欢迎您:${USER_SESSION.userName}
 						<a href="${pageContext.request.contextPath}/logout"><span style="color: black">退出</span></a></div>
 					<div id="box_center">
-						数据状态
-						<select name="status" id="fyStatus" class="ui_select01">
+						业务模块
+						<select name="businessModule" id="businessModule" class="ui_select01">
 							<option value="">--请选择--</option>
-							<option value="1">未上传</option>
-							<option value="2">已上传</option>
-							<option value="0">异常</option>
+							<option value="用户管理">用户管理</option>
+							<option value="用户登录">用户登录</option>
+							<option value="日志管理">日志管理</option>
+							<option value="煤炭热值">煤炭热值</option>
+							<option value="水泥强度">水泥强度</option>
 						</select>
-						样品编号<input type="text" name="sampleNo" id="condition" value="${requestModel.condition}" class="ui_input_txt02"/>
+						操作类型
+						<select name="businessType" id="businessType" class="ui_select01">
+							<option value="">--请选择--</option>
+							<option value="0">其他</option>
+							<option value="1">新增</option>
+							<option value="2">修改</option>
+							<option value="3">删除</option>
+							<option value="4">同步数据</option>
+							<option value="5">上传数据</option>
+							<option value="6">登录</option>
+							<option value="7">退出</option>
+						</select>
 						<input type="button" value="查询" class="ui_input_btn01" onclick="search();"/>
-					</div>
-					<div id="box_bottom">
-						<input type="button" id="synchronizeBtn" value="同步数据" class="ui_input_btn01" onclick="dataSynchronize();"/>
-						<input type="button" value="数据上传" class="ui_input_btn01" onclick="dataUpload();"/>
 					</div>
 				</div>
 			</div>
@@ -181,14 +180,14 @@
 						<th width="30"><input type="checkbox" id="all" onclick="selectOrClearAllCheckbox(this);"/>
 						</th>
 						<th>ID</th>
-						<th>业务模块名称</th>
-						<th>业务类型</th>
-						<th>操作方法</th>
+						<th>模块名称</th>
+						<th>操作类型</th>
+						<th>接口方法</th>
 						<th>IP地址</th>
 						<th>请求方式</th>
 						<th>操作状态</th>
 						<th>操作人</th>
-						<th>创建时间</th>
+						<th>操作时间</th>
 					</tr>
 					<c:forEach var="item" items="${pageInfo.list}">
 						<tr>
@@ -227,7 +226,16 @@
 							<td>${item.method}</td>
 							<td>${item.ip}</td>
 							<td>${item.requestMethod}</td>
-							<td>${item.status}</td>
+							<td>
+								<c:choose>
+									<c:when test="${item.status==0}">
+										<span>正常</span>
+									</c:when>
+									<c:when test="${item.status==1}">
+										<span>异常</span>
+									</c:when>
+								</c:choose>
+							</td>
 							<td>${item.createBy}</td>
 							<td>
 								<fmt:formatDate value="${item.createTime}" pattern="yyyy-MM-dd HH:mm:ss"/>
@@ -291,8 +299,7 @@
 		var bodyStr = "";
 		for(i in response.pageInfo.list){
 			var item = response.pageInfo.list[i];
-			bodyStr += "<tr><td><input type=\"checkbox\" name=\"IDCheck\" value=" + item.id
-					+" qbad="+" class=\"acb\"/></td>";
+			bodyStr += "<tr><td><input type=\"checkbox\" name=\"IDCheck\" value=" + item.id	+" qbad="+" class=\"acb\"/></td>";
 			bodyStr += "<td>"+item.id+"</td>";
 			bodyStr += "<td>"+item.businessModule+"</td>";
 			bodyStr += "<td>";

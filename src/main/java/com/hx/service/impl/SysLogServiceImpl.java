@@ -3,6 +3,7 @@ package com.hx.service.impl;
 import com.hx.dao.SysLogMapper;
 import com.hx.entity.SysLog;
 import com.hx.model.MainDataModel;
+import com.hx.model.SysLogDataModel;
 import com.hx.service.SysLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,7 +39,7 @@ public class SysLogServiceImpl implements SysLogService
      * @return 托盘管理操作日志
      */
     @Override
-    public List<SysLog> selectSysLogList(MainDataModel model)
+    public List<SysLog> selectSysLogList(SysLogDataModel model)
     {
         return sysLogMapper.selectSysLogList(model);
     }

@@ -72,7 +72,7 @@ public class SysUserController
             response = new Response(200,null,pageInfo,model);
         }catch (Exception e){
             e.printStackTrace();
-            response = new Response(500,null,null,null);
+            response = new Response(500,null,null,model);
         }
         return response;
     }

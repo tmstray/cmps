@@ -65,7 +65,7 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/logout")
-    @Log(businessModule = "退出登录", businessType = BusinessType.LOGOUT)
+    @Log(businessModule = "用户登录", businessType = BusinessType.LOGOUT)
     public String logout(HttpSession session) {
         //清除session
         session.invalidate();

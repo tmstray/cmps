@@ -6,6 +6,7 @@ import com.github.pagehelper.PageInfo;
 
 import com.hx.config.Log;
 import com.hx.entity.MainData;
+import com.hx.entity.SysLog;
 import com.hx.entity.User;
 import com.hx.model.BusinessType;
 import com.hx.model.MainDataModel;
@@ -69,7 +70,7 @@ public class MainDataController {
             response = new Response(200,null,pageInfo,model);
         }catch (Exception e){
             e.printStackTrace();
-            response = new Response(500,null,null,null);
+            response = new Response(500,null,null, model);
         }
         return response;
     }

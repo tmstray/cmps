@@ -80,7 +80,7 @@
             //queryData(null,status,condition);
             $.ajax({
                 type: "GET",
-                url: "eqds/getByPage",
+                url: "${pageContext.request.contextPath}/eqds/getByPage",
                 data:{
                     status:status,
                     condition:condition

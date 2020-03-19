@@ -22,12 +22,12 @@ function getTotalPage(){
 function queryData(page,pageSize,status,condition) {
     $.ajax({
         type: "POST",
-        url: "/sysLog/getDataByPage",
+        url: "${pageContext.request.contextPath}/sysLog/getDataByPage",
         data:{
             pageNum:page,
             pageSize:pageSize,
-            status:status,
-            condition:condition
+            businessType:businessType,
+            businessModule:businessModule
         },
         success: function (response) {
             if (response.resCode == 200) {

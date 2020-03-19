@@ -3,10 +3,9 @@ package com.hx.controller;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.hx.entity.MainData;
 import com.hx.entity.SysLog;
-import com.hx.model.MainDataModel;
 import com.hx.model.Response;
+import com.hx.model.SysLogDataModel;
 import com.hx.service.SysLogService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,8 +32,8 @@ public class SysLogController {
     SysLogService logService;
 
     @GetMapping(value = "/getSysLog")
-    public ModelAndView findByPage(MainDataModel model){
-        Page<MainData> page = PageHelper.startPage(model.getPageNum(),model.getPageSize());
+    public ModelAndView findByPage(SysLogDataModel model){
+        Page<SysLog> page = PageHelper.startPage(model.getPageNum(),model.getPageSize());
         List<SysLog> dataList = logService.selectSysLogList(model);
         log.info("size:" + dataList.size());
         PageInfo<SysLog> pageInfo = new PageInfo<>(dataList);
@@ -47,16 +46,16 @@ public class SysLogController {
 
     @ResponseBody
     @PostMapping(value = "/getDataByPage")
-    public Response getDataByPage(MainDataModel model){
+    public Response getDataByPage(SysLogDataModel model){
         Response response = null;
         try {
-            Page<MainData> page = PageHelper.startPage(model.getPageNum(),model.getPageSize());
+            Page<SysLog> page = PageHelper.startPage(model.getPageNum(),model.getPageSize());
             List<SysLog> dataList = logService.selectSysLogList(model);
             PageInfo<SysLog> pageInfo = new PageInfo<>(dataList);
-            response = new Response(200,null,pageInfo,model);
+            response = new Response(200,"查询成功",pageInfo,model);
         }catch (Exception e){
             e.printStackTrace();
-            response = new Response(500,null,null,null);
+            response = new Response(500,"查询异常",null,model);
         }
         return response;
     }

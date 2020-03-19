@@ -2,7 +2,8 @@ package com.hx.dao;
 
 
 import com.hx.entity.SysLog;
-import com.hx.model.MainDataModel;
+import com.hx.model.SysLogDataModel;
+import com.hx.model.SysLogDataModel;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
 @Mapper
 public interface SysLogMapper {
 
-    List<SysLog> selectSysLogList(MainDataModel model);
+    List<SysLog> selectSysLogList(SysLogDataModel model);
 
     int deleteByPrimaryKey(Long id);
 

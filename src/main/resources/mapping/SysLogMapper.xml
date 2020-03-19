@@ -6,6 +6,7 @@
         <result column="business_module" jdbcType="VARCHAR" property="businessModule"/>
         <result column="business_type" jdbcType="VARCHAR" property="businessType"/>
         <result column="method" jdbcType="VARCHAR" property="method"/>
+        <result column="request_method" jdbcType="VARCHAR" property="requestMethod"/>
         <result column="ip" jdbcType="VARCHAR" property="ip"/>
         <result column="remarks" jdbcType="VARCHAR" property="remarks"/>
         <result column="create_by" jdbcType="VARCHAR" property="createBy"/>
@@ -20,7 +21,13 @@
     <select id="selectSysLogList" resultMap="BaseResultMap">
         select
             <include refid="Base_Column_List"/>
-        from sys_log
+        from sys_log where 1=1
+        <if test="businessType != null and businessType !=''">
+             and business_type=#{businessType,jdbcType=INTEGER}
+        </if>
+        <if test="businessModule != null and businessModule !=''">
+            and business_module=#{businessModule,jdbcType=VARCHAR}
+        </if>
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from sys_log

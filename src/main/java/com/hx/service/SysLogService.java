@@ -2,7 +2,7 @@ package com.hx.service;
 
 
 import com.hx.entity.SysLog;
-import com.hx.model.MainDataModel;
+import com.hx.model.SysLogDataModel;
 
 import java.util.List;
 
@@ -26,7 +26,7 @@ public interface SysLogService
      * @param model 托盘管理操作日志
      * @return 托盘管理操作日志集合
      */
-    public List<SysLog> selectSysLogList(MainDataModel model);
+    public List<SysLog> selectSysLogList(SysLogDataModel model);
 
     /**
      * 新增托盘管理操作日志

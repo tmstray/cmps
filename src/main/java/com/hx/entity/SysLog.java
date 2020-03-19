@@ -1,5 +1,6 @@
 package com.hx.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -46,5 +47,6 @@ public class SysLog  implements Serializable {
     private String createBy;
 
     /** 创建时间 */
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date createTime;
 }

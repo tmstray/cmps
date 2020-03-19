@@ -7,6 +7,7 @@ public class Response {
     private String resMessage;
     private PageInfo<?> pageInfo;
     private MainDataModel model;
+    private SysLogDataModel logModel;
 
     public Response() {
     }
@@ -16,6 +17,13 @@ public class Response {
         this.resMessage = resMessage;
         this.pageInfo = pageInfo;
         this.model = model;
+    }
+
+    public Response(Integer resCode, String resMessage, PageInfo<?> pageInfo, SysLogDataModel logModel) {
+        this.resCode = resCode;
+        this.resMessage = resMessage;
+        this.pageInfo = pageInfo;
+        this.logModel = logModel;
     }
 
     public Response(Integer resCode, String resMessage) {
@@ -53,5 +61,13 @@ public class Response {
 
     public void setModel(MainDataModel model) {
         this.model = model;
+    }
+
+    public SysLogDataModel getLogModel() {
+        return logModel;
+    }
+
+    public void setLogModel(SysLogDataModel logModel) {
+        this.logModel = logModel;
     }
 }
