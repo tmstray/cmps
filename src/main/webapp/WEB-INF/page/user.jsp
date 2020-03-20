@@ -38,13 +38,16 @@
 				$.post("${pageContext.request.contextPath}/user/userIds",{userIds:userid},function(result){
 					if(result.resCode==200){
 						$.messager.alert("系统提示","保存成功");
-						location.replace(location.href);
+						//location.replace(location.href);
+						//location.reload();
+						search();
 					}else{
 						$.messager.alert("删除失败");
 					}
 				},"json");
 			}
 		});
+		
 	}
 
 		function openStudentAddDialog(){
@@ -60,17 +63,29 @@
 				},
 				success:function(result){
 					if(result.errorMsg){
-						$.messager.alert("系统提示",result.errorMsg);
+						$.messager.alert("系统提示",result.resMessage);
 						return;
 					}else{
-						$.messager.alert("系统提示","保存成功");
 
+						//layer.msg('保存成功', {icon: 2});
+						layer.msg('保存成功', {
+							  icon: 1,
+							  time: 1000 //2秒关闭（如果不配置，默认是3秒）
+							}, function(){
+							  //do something
+							});
+						//layer.msg('有表情地提示', {icon: 6});
+						//$.messager.alert("系统提示","保存成功");
+						//location.reload();
 						$("#dlg").dialog("close");
-						location.replace(location.href);
+						search();
+						//location.reload(true);
+						//location.replace(location.href);
 						//$("#dg").datagrid("reload");
 					}
 				}
 			}).serialize();
+			
 		}
 
 
