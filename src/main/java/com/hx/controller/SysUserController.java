@@ -90,7 +90,7 @@ public class SysUserController
         String isExists=userService.checkUserNameUnique(sysUser.getUserName());
         if (Constants.NOT_UNIQUE.equals(isExists))
         {
-            return response = new Response(500,"\"新增用户'\" + user.getUserName() + \"'失败，登录账号已存在\"");
+            return response = new Response(500,"新增失败，账号已存在");
         }
         SysUser user = (SysUser) httpSession.getAttribute("USER_SESSION");
         sysUser.setPassword(sysUser.getPassword());

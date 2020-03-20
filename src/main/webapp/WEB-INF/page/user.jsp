@@ -43,7 +43,6 @@
 				},"json");
 			}
 		});
-
 	}
 
 		function openStudentAddDialog(){
@@ -53,40 +52,39 @@
 		}
 
 		function saveStudent(){
-			// var flag=false;
-			// $("input[name='menuId']:checkbox").each(function(){
-			// 	if($(this).attr('checked')){
-			// 		flag=true;
-			// 	}
-			// })
-			// if(!flag){
-			// 	$.messager.alert("系统提示","没未用户配置菜单权限!");
-			// 	return
-			// }
-
+			var menuIdSelect=$("input[name='menuId']:checked");
+			alert(menuIdSelect.val())
+			if(menuIdSelect.val()=='' || menuIdSelect.val()==undefined){
+				layer.msg('未勾选菜单权限不能保存！', {
+					icon: 1,
+					time: 2000 //2秒关闭（如果不配置，默认是3秒）
+				}, function(){
+				});
+				return ;
+			}
 			$("#fm").form("submit",{
 				url:url,
 				onSubmit:function(){
 					return $(this).form("validate");
 				},
 				success:function(result){
-					console.log("result=0000000000=>",result)
-					if(result.resCode==500){
-						// $.messager.alert("系统提示",result.resMessage);
-						layer.msg("系统提示"+result.resMessage,{
+					var response =JSON.parse(result);
+					if(response.resCode==200){
+						layer.msg('保存成功', {
+							icon: 1,
+							time: 2000 //2秒关闭（如果不配置，默认是3秒）
+						}, function(){
+						});
+						$("#dlg").dialog("close");
+						search();
+
+					}else{
+						layer.msg("系统提示"+response.resMessage,{
 							icon: 1,
 							time: 2000 //2秒关闭（如果不配置，默认是3秒）
 						}, function(){
 						});
 						return;
-					}else{
-						layer.msg('保存成功', {
-							  icon: 1,
-							  time: 2000 //2秒关闭（如果不配置，默认是3秒）
-							}, function(){
-							});
-						$("#dlg").dialog("close");
-						search();
 					}
 				}
 			}).serialize();
@@ -178,7 +176,6 @@
 				jumpNormalPage(1);
 			}
 		}
-
 		function closeStudentDialog(){
 			$("#dlg").dialog("close");
 		}
@@ -187,9 +184,12 @@
 		$("#userName").val("");
 		$("#password").val("");
 		$("#nickName").val("");
-		// $("#phoneNumber").datebox("setValue","");
-		// $("#gradeId").combobox("setValue","");
 		$("#phoneNumber").val("");
+
+		$("#menuId1").attr("checked",false);
+		$("#menuId2").attr("checked",false);
+		$("#menuId3").attr("checked",false);
+		$("#menuId4").attr("checked",false);
 	}
 
 	</script>
@@ -245,10 +245,10 @@
 					<tr>
 						<td>菜单权限：</td>
 						<td colspan="4">
-							<input type="checkbox" name="menuId"  value="1" />水泥强度&nbsp;&nbsp;
-							<input type="checkbox" name="menuId"  value="2" />煤炭热值&nbsp;&nbsp;
-							<input type="checkbox" name="menuId"  value="3" />操作日志&nbsp;&nbsp;
-							<input type="checkbox" name="menuId"  value="4" />用户管理&nbsp;&nbsp;
+							<input type="checkbox" name="menuId" id="menuId1" value="1" />水泥强度&nbsp;&nbsp;
+							<input type="checkbox" name="menuId" id="menuId2" value="2" />煤炭热值&nbsp;&nbsp;
+							<input type="checkbox" name="menuId" id="menuId3" value="3" />操作日志&nbsp;&nbsp;
+							<input type="checkbox" name="menuId" id="menuId4" value="4" />用户管理&nbsp;&nbsp;
 						</td>
 					</tr>
 				</table>
