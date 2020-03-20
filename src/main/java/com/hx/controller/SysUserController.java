@@ -82,11 +82,13 @@ public class SysUserController
      * @return
      */
     @PostMapping("/addUser")
+    @ResponseBody
     @Log(businessModule = "用户管理", businessType = BusinessType.INSERT)
     public Response add(SysUser sysUser)
     {
         Response response = null;
-        if (Constants.NOT_UNIQUE.equals(userService.checkUserNameUnique(sysUser.getUserName())))
+        String isExists=userService.checkUserNameUnique(sysUser.getUserName());
+        if (Constants.NOT_UNIQUE.equals(isExists))
         {
             return response = new Response(500,"\"新增用户'\" + user.getUserName() + \"'失败，登录账号已存在\"");
         }
@@ -94,6 +96,7 @@ public class SysUserController
         sysUser.setPassword(sysUser.getPassword());
         sysUser.setCreateBy(user.getUserName());
         int result =userService.insertUser(sysUser);
+
         if(result>0){
             response = new Response(200,"success:新增用户成功!");
         }else {

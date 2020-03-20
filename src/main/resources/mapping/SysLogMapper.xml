@@ -28,6 +28,7 @@
         <if test="businessModule != null and businessModule !=''">
             and business_module=#{businessModule,jdbcType=VARCHAR}
         </if>
+        order by create_time desc
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from sys_log
