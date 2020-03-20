@@ -79,7 +79,7 @@ public class CementStrengthController {
     @Log(businessModule = "水泥强度", businessType = BusinessType.SYNCHRONIZE)
     public Response dataSynchronize(HttpSession session) {
         logger.info("同步数据开始.....");
-        SysUser user = (SysUser) session.getAttribute("USER_SESSION");
+//        SysUser user = (SysUser) session.getAttribute("USER_SESSION");
         boolean result = cementStrengthService.dataSynchronize();
         logger.info("同步数据结束......");
         Response response = null;

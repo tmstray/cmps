@@ -7,14 +7,12 @@ import com.github.pagehelper.PageInfo;
 import com.hx.config.Constants;
 import com.hx.config.Log;
 import com.hx.entity.MainData;
-import com.hx.entity.SysLog;
 import com.hx.entity.SysUser;
 import com.hx.entity.User;
 import com.hx.model.BusinessType;
 import com.hx.model.MainDataModel;
 import com.hx.model.Response;
 import com.hx.service.SysUserService;
-
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -55,7 +53,7 @@ public class SysUserController
         mv.addObject("requestModel",model);
         return mv;
     }
-    
+
 
     /**
      * 分页数据查询：
@@ -84,7 +82,7 @@ public class SysUserController
      * @return
      */
     @PostMapping("/addUser")
-    @com.hx.config.Log(businessModule = "用户管理", businessType = BusinessType.INSERT)
+    @Log(businessModule = "用户管理", businessType = BusinessType.INSERT)
     public Response add(SysUser sysUser)
     {
         Response response = null;
@@ -92,11 +90,10 @@ public class SysUserController
         {
             return response = new Response(500,"\"新增用户'\" + user.getUserName() + \"'失败，登录账号已存在\"");
         }
-//        User user = (User) httpSession.getAttribute("USER_SESSION");
-        User user = new User();
+        SysUser user = (SysUser) httpSession.getAttribute("USER_SESSION");
         sysUser.setPassword(sysUser.getPassword());
+        sysUser.setCreateBy(user.getUserName());
         int result =userService.insertUser(sysUser);
-
         if(result>0){
             response = new Response(200,"success:新增用户成功!");
         }else {
@@ -126,7 +123,6 @@ public class SysUserController
      */
     @Log(businessModule = "用户管理", businessType = BusinessType.DELETE)
     @PostMapping(value ="/userIds")
-//    @GetMapping(value = "/getByUser")
     @ResponseBody
     public Response remove(Long userIds)
     {
