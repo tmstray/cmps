@@ -4,21 +4,16 @@ package com.hx.controller;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -26,7 +21,6 @@ import com.hx.config.Constants;
 import com.hx.config.Log;
 import com.hx.entity.MainData;
 import com.hx.entity.SysUser;
-import com.hx.entity.User;
 import com.hx.model.BusinessType;
 import com.hx.model.MainDataModel;
 import com.hx.model.Response;
@@ -34,9 +28,7 @@ import com.hx.service.SysUserService;
 import com.hx.utils.ResultUtil;
 import com.hx.utils.page.object.BaseConditionVO;
 import com.hx.utils.page.object.PageResult;
-
 import lombok.extern.slf4j.Slf4j;
-
 /**
  *
  * @Description: 用户管理
