@@ -25,7 +25,7 @@
 			text:"华新水泥",
 			children:[
 				<c:forEach items="${USER_SESSION.menuId}" varStatus="status" var="item">
-	                <c:if test="${'2'==item}">
+	                <c:if test="${'1'==item}">
 					{
                         text:"水泥强度",
                         attributes:{

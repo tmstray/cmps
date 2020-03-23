@@ -105,18 +105,19 @@ public class SysUserController
         return response;
     }
 
+    @ResponseBody
     @PostMapping("/updateUser")
     @Log(businessModule = "用户管理", businessType = BusinessType.UPDATE)
-    public Response edit(@Validated @RequestBody SysUser sysUser)
+    public Response edit(SysUser sysUser)
     {
         Response response = null;
-        User user = (User) httpSession.getAttribute("USER_SESSION");
-        sysUser.setUpdateBy(user.getUsername());
+        SysUser sessionUser = (SysUser) httpSession.getAttribute("USER_SESSION");
+        sysUser.setUpdateBy(sessionUser.getUserName());
         int result =userService.updateUser(sysUser);
         if(result>0){
-            response = new Response(200,"success:新增用户成功!");
+            response = new Response(200,"success:修改用户成功!");
         }else {
-            response = new Response(500,"fail:新增用户失败!");
+            response = new Response(500,"fail:修改用户失败!");
         }
         return response;
     }
