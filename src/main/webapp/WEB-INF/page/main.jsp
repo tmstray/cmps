@@ -27,38 +27,6 @@
 				<c:forEach items="${USER_SESSION.menuId}" varStatus="status" var="item">
 	                <c:if test="${'1'==item}">
 					{
-					text:"水泥强度",
-					attributes:{
-						// url:"list.jsp"
-						//method: "POST",
-						url:"cement/getByPage"
-					}
-				},
-				</c:if>
-		       	</c:forEach>
-				
-				{
-				text:"煤炭热值",
-				attributes:{
-					// url:"eqds_list.jsp"
-					//method: "POST",
-					url:"eqds/getByPage"
-				}
-			},{
-				text:"操作日志",
-				attributes:{
-					// url:"log.jsp"
-					//method: "POST",
-					url:"sysLog/getSysLog"
-				}
-			},{
-				text:"用户管理",
-				attributes:{
-					// url:"log.jsp"
-					//method: "POST",
-					url:"user/goSysUserListView"
-				}
-			}]
                         text:"水泥强度",
                         attributes:{
                             url:"cement/getByPage"
