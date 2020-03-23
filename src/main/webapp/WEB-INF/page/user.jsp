@@ -61,6 +61,8 @@
 				return ;
 			}
 
+			alert(document.getElementById("userId").value);
+
 			if(document.getElementById("userId").value!=null && document.getElementById("userId").value!=''){
 				url="${pageContext.request.contextPath}/user/updateUser";
 			}
@@ -116,32 +118,32 @@
 			$("#phoneNumber").val(result[4]);
 		}
 
-		// $("#menuId1").attr("checked",false);
-		// $("#menuId2").attr("checked",false);
-		// $("#menuId3").attr("checked",false);
-		// $("#menuId4").attr("checked",false);
+		$("#menuId1").prop("checked",false);
+		$("#menuId2").prop("checked",false);
+		$("#menuId3").prop("checked",false);
+		$("#menuId4").prop("checked",false);
 
 		if(result[5] !=null && result[5] !='') {
 			var menuids = result[5].split(",");
 			for (var i=0;i<menuids.length;i++){
 				if(menuids[i]=="1") {
-					$("#menuId1").attr("checked", true);
+					$("#menuId1").prop("checked", true);
 				}
 				if(menuids[i]=="2") {
-					$("#menuId2").attr("checked", true);
+					$("#menuId2").prop("checked", true);
 				}
 				if(menuids[i]=="3") {
-					$("#menuId3").attr("checked", true);
+					$("#menuId3").prop("checked", true);
 				}
 				if(menuids[i]=="4") {
-					$("#menuId4").attr("checked", true);
+					$("#menuId4").prop("checked", true);
 				}
 			}
 		}else {
-			$("#menuId1").attr("checked",false);
-			$("#menuId2").attr("checked",false);
-			$("#menuId3").attr("checked",false);
-			$("#menuId4").attr("checked",false);
+			$("#menuId1").prop("checked",false);
+			$("#menuId2").prop("checked",false);
+			$("#menuId3").prop("checked",false);
+			$("#menuId4").prop("checked",false);
 		}
 	}
 	function modifySave() {
@@ -274,6 +276,7 @@
 		}
 
 	function resetValue(){
+		$("#userId").val("");
 		$("#userName").val("");
 		$("#password").val("");
 		$("#nickName").val("");
