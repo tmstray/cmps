@@ -282,10 +282,10 @@
 		$("#nickName").val("");
 		$("#phoneNumber").val("");
 
-		$("#menuId1").attr("checked",false);
-		$("#menuId2").attr("checked",false);
-		$("#menuId3").attr("checked",false);
-		$("#menuId4").attr("checked",false);
+		$("#menuId1").prop("checked",false);
+		$("#menuId2").prop("checked",false);
+		$("#menuId3").prop("checked",false);
+		$("#menuId4").prop("checked",false);
 	}
 
 	</script>
