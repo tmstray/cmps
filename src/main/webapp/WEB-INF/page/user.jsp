@@ -23,23 +23,19 @@
 	<script type="text/javascript">
 
 	var url;
-	
+
 	function deleteStudent(){
 		var selectedRows=$("input[name='IDCheck']:checked");
 		if (selectedRows.size() <= 0) {
 			$.messager.alert("系统提示","请选择要删除的数据！");
 			return;
 	    }
-		//var userid = selectedRows.attr("status").userId;
-		var userid = selectedRows.val();
-		//alert(userid);
+		var userid =selectedRows.val();
 		$.messager.confirm("系统提示","您确认要删掉这<font color=red>"+selectedRows.size()+"</font>条数据吗？",function(r){
 			if(r){
 				$.post("${pageContext.request.contextPath}/user/userIds",{userIds:userid},function(result){
 					if(result.resCode==200){
-						$.messager.alert("系统提示","保存成功");
-						//location.replace(location.href);
-						//location.reload();
+						$.messager.alert("系统提示","删除成功");
 						search();
 					}else{
 						$.messager.alert("删除失败");
@@ -47,15 +43,24 @@
 				},"json");
 			}
 		});
-		
 	}
 
 		function openStudentAddDialog(){
+			resetValue();
 			$("#dlg").dialog("open").dialog("setTitle","添加用户信息");
 			url="${pageContext.request.contextPath}/user/addUser";
 		}
 
 		function saveStudent(){
+			var menuIdSelect=$("input[name='menuId']:checked");
+			if(menuIdSelect.val()=='' || menuIdSelect.val()==undefined){
+				layer.msg('未勾选菜单权限不能保存！', {
+					icon: 1,
+					time: 2000 //2秒关闭（如果不配置，默认是3秒）
+				}, function(){
+				});
+				return ;
+			}
 			$("#fm").form("submit",{
 				url:url,
 				onSubmit:function(){
@@ -69,26 +74,76 @@
 						return;
 					}else{
 						//layer.msg('保存成功', {icon: 2});
+					var response =JSON.parse(result);
+					if(response.resCode==200){
 						layer.msg('保存成功', {
-							  icon: 1,
-							  time: 1000 //2秒关闭（如果不配置，默认是3秒）
-							}, function(){
-							  //do something
-							});
-						//layer.msg('有表情地提示', {icon: 6});
-						//$.messager.alert("系统提示","保存成功");
-						//location.reload();
+							icon: 1,
+							time: 2000 //2秒关闭（如果不配置，默认是3秒）
+						}, function(){
+						});
 						$("#dlg").dialog("close");
 						search();
-						//location.reload(true);
-						//location.replace(location.href);
-						//$("#dg").datagrid("reload");
+
+					}else{
+						layer.msg("系统提示"+response.resMessage,{
+							icon: 1,
+							time: 2000 //2秒关闭（如果不配置，默认是3秒）
+						}, function(){
+						});
+						return;
 					}
 				}
 			});
 			
+			}).serialize();
 		}
 
+	function openModifyDialog(){
+		var selectedRows=$("input[name='IDCheck']:checked");
+		if (selectedRows.size() <= 0) {
+			$.messager.alert("系统提示","请选择要修改的数据！");
+			return;
+		}
+		var row=selectedRows.val().split(",");
+
+
+		$("#dlg").dialog("open").dialog("setTitle","编辑用户信息");
+		$("#userName").val(row[1]);
+		$("#nickName").val(row[2]);
+		$("#phoneNumber").val(row[2]);
+
+		$("#menuId1").attr("checked",false);
+		$("#menuId2").attr("checked",false);
+		$("#menuId3").attr("checked",false);
+		$("#menuId4").attr("checked",false);
+
+		$("#fm").form("submit",{
+			url:url,
+			onSubmit:function(){
+				return $(this).form("validate");
+			},
+			success:function(result){
+				var response =JSON.parse(result);
+				if(response.resCode==200){
+					layer.msg('保存成功', {
+						icon: 1,
+						time: 2000 //2秒关闭（如果不配置，默认是3秒）
+					}, function(){
+					});
+					$("#dlg").dialog("close");
+					search();
+
+				}else{
+					layer.msg("系统提示"+response.resMessage,{
+						icon: 1,
+						time: 2000 //2秒关闭（如果不配置，默认是3秒）
+					}, function(){
+					});
+					return;
+				}
+			}
+		}).serialize();
+	}
 
 		/** 模糊查询 **/
 		function search() {
@@ -112,7 +167,6 @@
 						$("#pageInfo").text(response.pageInfo.pageNum + " / "
 								+ response.pageInfo.pages);
 					} else {
-						// art.dialog({time: 3, content: "数据上传失败! 模糊查询"});
 						console.log("fail...");
 					}
 				},error: function(data){
@@ -128,8 +182,6 @@
 				return;
 			}
 			var pageSize = $("#pageSize").val().trim();
-			//   var msg = status +"==" + condition + "==" + page +"===" + pageSize;
-			//  art.dialog({time: 3, content: msg});
 			queryData(page,pageSize);
 		}
 
@@ -180,10 +232,21 @@
 				jumpNormalPage(1);
 			}
 		}
-
 		function closeStudentDialog(){
 			$("#dlg").dialog("close");
 		}
+
+	function resetValue(){
+		$("#userName").val("");
+		$("#password").val("");
+		$("#nickName").val("");
+		$("#phoneNumber").val("");
+
+		$("#menuId1").attr("checked",false);
+		$("#menuId2").attr("checked",false);
+		$("#menuId3").attr("checked",false);
+		$("#menuId4").attr("checked",false);
+	}
 
 	</script>
 	<style>
@@ -199,15 +262,14 @@
 				<div id="tb">
 					<div>
 						<a href="javascript:openStudentAddDialog()" class="easyui-linkbutton" iconCls="icon-add" plain="true">添加</a>
+						<a href="javascript:openModifyDialog()" class="easyui-linkbutton" iconCls="icon-edit" plain="true">修改</a>
 						<a href="javascript:deleteStudent()" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
 					</div>
 				</div>
-
-				<div id="dlg" class="easyui-dialog" style="width: 570px;height: 350px;padding: 10px 20px"
+				<div id="dlg" class="easyui-dialog" style="width: 750px;height: 550px;padding: 10px 20px"
 					closed="true" buttons="#dlg-buttons">
-			<form id="fm" method="post">
+				<form id="fm" method="post">
 				<input type="hidden" id="pageSize"  name="pageSize" value="${pageInfo.pageSize}">
-
 				<table cellspacing="5px;">
 					<tr>
 						<td>用户名：</td>
@@ -217,25 +279,43 @@
 						<td><input type="password" name="password" id="password" class="easyui-validatebox" required="true"/></td>
 					</tr>
 					<tr>
-						<td>菜单选择：</td>
-						<td>
-							<p><input type="checkbox" name="menuId"  value="1" />水泥强度</p>
-							<p><input type="checkbox" name="menuId"  value="2" />煤炭热值</p>
-							<p><input type="checkbox" name="menuId"  value="3" />操作日志</p>
-							<p><input type="checkbox" name="menuId"  value="4" />用户管理</p>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					</tr>
+					<tr>
+						<td>用户昵称：</td>
+						<td><input type="text" name="nickName" id="nickName" class="easyui-validatebox" maxlength="25"/></td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>手机号码：</td>
+						<td><input type="text" name="phoneNumber" id="phoneNumber" class="easyui-validatebox" maxlength="11"/></td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					</tr>
+					<tr>
+						<td>菜单权限：</td>
+						<td colspan="4">
+							<input type="checkbox" name="menuId" id="menuId1" value="1" />水泥强度&nbsp;&nbsp;
+							<input type="checkbox" name="menuId" id="menuId2" value="2" />煤炭热值&nbsp;&nbsp;
+							<input type="checkbox" name="menuId" id="menuId3" value="3" />操作日志&nbsp;&nbsp;
+							<input type="checkbox" name="menuId" id="menuId4" value="4" />用户管理&nbsp;&nbsp;
 						</td>
-    					
 					</tr>
 				</table>
 		</form>
 	</div>
 
-	<div id="dlg-buttons">
-		<a href="javascript:saveStudent()" class="easyui-linkbutton" iconCls="icon-ok">保存</a>
-		<a href="javascript:closeStudentDialog()" class="easyui-linkbutton" iconCls="icon-cancel">关闭</a>
-	</div>
-
-			</div>
+				<div id="dlg-buttons" align="center">
+					<a href="javascript:saveStudent()" class="easyui-linkbutton" iconCls="icon-ok">保存</a>
+					<a href="javascript:closeStudentDialog()" class="easyui-linkbutton" iconCls="icon-cancel">关闭</a>
+				</div>
 		</div>
 		<div class="ui_content">
 			<div class="ui_tb">
@@ -282,7 +362,6 @@
 							</td>
 						</tr>
 					</c:forEach>
-
 				</table>
 			</div>
 			<div class="ui_tb_h30">
@@ -307,16 +386,13 @@
 
 					<input type="button" value="尾页" class="ui_input_btn01"
 						   onclick="jumpNormalPage(getTotalPage());"/>
-
 					<!--     如果是最后一页，则只显示首页、上一页 -->
-
 					转到第<input type="text" id="jumpNumTxt" class="ui_input_txt01"/>页
 					<input type="button" class="ui_input_btn01" value="跳转" onclick="jumpInputPage(${pageInfo.pages});"/>
 				</div>
 			</div>
 		</div>
 	</div>
-
 
 	<!---暂存程序模式变量--->
 	<input type="hidden" id="simpled" value="${USER_SESSION.simpled}">
@@ -345,9 +421,9 @@
 			bodyStr += "<td>"+item.nickName+"</td>";
 			bodyStr += "<td>"+item.phoneNumber+"</td>";
 			bodyStr += "<td>"
-				if(item.businessType==0){
+				if(item.status==0){
 					bodyStr += "<span>启用</span>";
-				}else if(item.businessType==1){
+				}else if(item.status==1){
 					bodyStr += "<span>停用</span>";
 				}
 			bodyStr += "</td>";
@@ -360,12 +436,10 @@
 </script>
 
 <script type="text/javascript">
-
 $(function () {
     // 设置地市多选下拉框内容
     setCityData();
 });
-
 
 /**
  * 获取选中的值
@@ -375,11 +449,9 @@ function getSearchParams() {
     if (cityIn[0] === '') { // 去除首位空格
         cityIn.splice(0, 1);
     }
-
     console.log(cityIn);
     alert(cityIn);
 }
-
 
 /**
  * 设置地市多选内容
@@ -422,14 +494,6 @@ function combobox_checkbox(_id, optionsJson, hight) {
         onLoadSuccess: function () { // 下拉框数据加载成功调用
             // 正常情况下是默认选中“所有”，但我想实现点击所有全选功能，这这样会冲突，暂时默认都不选
             $("#"+_id).combobox('clear'); //清空
-
-            // var opts = $(this).combobox('options');
-            // var values = $('#'+_id).combobox('getValues');
-            // $.map(opts.data, function (opt) {
-            //     if (opt.id === '') { // 将"所有"的复选框勾选
-            //         $('#'+opt.domId + ' input[type="checkbox"]').prop("checked", true);
-            //     }
-            // });
         },
         onSelect: function (row) { // 选中一个选项时调用
             var opts = $(this).combobox('options');
@@ -459,8 +523,6 @@ function combobox_checkbox(_id, optionsJson, hight) {
                 }
                 $("#"+_id).combobox('clear');//清空选中项
             } else {
-                // 下面是实现全选状态下取消任何一项，则取消勾选所有
-
                 //设置选中选项所对应的复选框为非选中状态
                 $('#'+row.domId + ' input[type="checkbox"]').prop("checked", false);
                 var selectedList = $("#"+_id).combobox('getValues');
@@ -475,7 +537,6 @@ function combobox_checkbox(_id, optionsJson, hight) {
                 $("#"+_id).combobox('setValues', selectedList); // 重新复制选中项
 
             }
-
         }
     });
 }

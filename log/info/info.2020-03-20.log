@@ -1,0 +1,1088 @@
+2020-03-20 09:21:46.330 default [Thread-6] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 09:21:46.956 cementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 792 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 09:21:46.956 cementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 09:21:47.563 cementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 09:21:47.564 cementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 09:21:47.565 cementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 09:21:47.565 cementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 09:21:47.667 cementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 09:21:47.669 cementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 09:21:47.669 cementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 710 ms
+2020-03-20 09:21:47.960 cementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 09:21:48.304 cementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 09:21:48.319 cementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 09:21:48.323 cementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 09:21:48.324 cementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 1.411 seconds (JVM running for 66.134)
+2020-03-20 09:21:48.327 cementStrength [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-03-20 09:22:58.612 cementStrength [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 09:22:58.612 cementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 09:22:58.626 cementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2020-03-20 09:24:11.933 cementStrength [Thread-10] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 09:24:12.831 cementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 792 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 09:24:12.831 cementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 09:24:13.624 cementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 09:24:13.625 cementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 09:24:13.626 cementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 09:24:13.626 cementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 09:24:13.764 cementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 09:24:13.766 cementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 09:24:13.766 cementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 932 ms
+2020-03-20 09:24:14.093 cementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 09:24:14.658 cementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 09:24:14.678 cementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 09:24:14.684 cementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 09:24:14.685 cementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 1.91 seconds (JVM running for 212.495)
+2020-03-20 09:24:14.688 cementStrength [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-03-20 09:24:46.677 cementStrength [Thread-16] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 09:25:22.430 cementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 8112 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 09:25:22.439 cementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 09:25:22.545 cementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 09:25:22.546 cementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 09:25:26.693 cementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 09:25:26.718 cementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 09:25:26.735 cementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 09:25:26.736 cementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 09:25:27.250 cementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 09:25:27.260 cementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 09:25:27.261 cementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4715 ms
+2020-03-20 09:25:28.363 cementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 09:25:29.774 cementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 09:25:29.853 cementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 09:25:29.909 cementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 09:25:29.915 cementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 8.252 seconds (JVM running for 10.649)
+2020-03-20 09:28:47.869 cementStrength [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 09:28:47.870 cementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 09:28:47.883 cementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2020-03-20 09:28:47.973 cementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 09:28:48.021 cementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 09:28:48.765 cementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 09:28:48.857 cementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 09:28:49.784 cementStrength [http-nio-8080-exec-2] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 09:28:49.882 cementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 09:29:03.819 cementStrength [http-nio-8080-exec-5] INFO  c.h.c.CementStrengthController - 同步数据开始.....
+2020-03-20 09:29:03.963 cementStrength [http-nio-8080-exec-5] INFO  c.h.s.impl.CementStrengthServiceImpl - 开始同步匀加荷iso表数据......
+2020-03-20 09:29:04.136 cementStrength [http-nio-8080-exec-5] INFO  c.h.s.impl.CementStrengthServiceImpl - lists.size:0
+2020-03-20 09:29:04.360 cementStrength [http-nio-8080-exec-5] INFO  c.h.c.CementStrengthController - 同步数据结束......
+2020-03-20 09:29:04.360 cementStrength [http-nio-8080-exec-5] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 09:29:27.486 cementStrength [http-nio-8080-exec-5] INFO  com.hx.controller.SysLogController - size:10
+2020-03-20 09:30:57.202 cementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：SysAdmin
+2020-03-20 09:31:04.690 cementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.LoginController - User{id='null', username='huzw', password='123456', simpled='false'}
+2020-03-20 09:31:04.761 cementStrength [http-nio-8080-exec-3] INFO  com.hx.config.LogAspect - 登录用户：huzw
+2020-03-20 09:31:08.578 cementStrength [http-nio-8080-exec-6] INFO  com.hx.config.LogAspect - 登录用户：SysAdmin
+2020-03-20 09:31:24.707 cementStrength [http-nio-8080-exec-8] INFO  com.hx.controller.LoginController - User{id='null', username='test1', password='11111', simpled='false'}
+2020-03-20 09:31:24.802 cementStrength [http-nio-8080-exec-8] INFO  com.hx.config.LogAspect - 登录用户：test1
+2020-03-20 09:31:30.376 cementStrength [http-nio-8080-exec-5] INFO  com.hx.config.LogAspect - 登录用户：SysAdmin
+2020-03-20 09:31:37.965 cementStrength [http-nio-8080-exec-4] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 09:31:38.044 cementStrength [http-nio-8080-exec-4] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 09:32:15.298 cementStrength [http-nio-8080-exec-10] INFO  com.hx.config.LogAspect - 登录用户：SysAdmin
+2020-03-20 09:34:33.921 cementStrength [http-nio-8080-exec-4] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 09:34:34.001 cementStrength [http-nio-8080-exec-4] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 09:35:33.646 cementStrength [http-nio-8080-exec-6] INFO  com.hx.controller.MainDataController - 同步数据开始...
+2020-03-20 09:35:38.311 cementStrength [http-nio-8080-exec-6] INFO  com.hx.controller.MainDataController - simpled:true
+2020-03-20 09:35:43.444 cementStrength [http-nio-8080-exec-6] INFO  c.h.service.impl.MainDataServiceImpl - 开始同步工业分析仪 TValue 表数据...
+2020-03-20 09:35:43.467 cementStrength [http-nio-8080-exec-6] INFO  c.h.service.impl.MainDataServiceImpl - 开始同步定硫仪 stdata 表数据...
+2020-03-20 09:35:43.481 cementStrength [http-nio-8080-exec-6] INFO  c.h.service.impl.MainDataServiceImpl - glist.size:0
+2020-03-20 09:35:43.481 cementStrength [http-nio-8080-exec-6] INFO  c.h.service.impl.MainDataServiceImpl - ylist.size:0
+2020-03-20 09:35:58.042 cementStrength [http-nio-8080-exec-6] INFO  com.hx.controller.MainDataController - 同步数据结束...
+2020-03-20 09:35:58.044 cementStrength [http-nio-8080-exec-6] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 09:35:58.083 cementStrength [Thread-9] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 09:35:58.085 cementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 09:35:58.100 cementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 09:36:06.689 cementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 7772 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 09:36:06.694 cementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 09:36:06.777 cementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 09:36:06.778 cementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 09:36:10.591 cementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 09:36:10.614 cementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 09:36:10.629 cementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 09:36:10.629 cementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 09:36:11.029 cementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 09:36:11.038 cementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 09:36:11.039 cementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4260 ms
+2020-03-20 09:36:11.813 cementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 09:36:12.722 cementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 09:36:12.767 cementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 09:36:12.818 cementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 09:36:12.823 cementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 6.634 seconds (JVM running for 7.471)
+2020-03-20 09:36:19.616 cementStrength [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 09:36:19.616 cementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 09:36:19.632 cementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+2020-03-20 09:36:27.831 cementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 09:36:27.874 cementStrength [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 09:36:28.604 cementStrength [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 09:36:28.700 cementStrength [http-nio-8080-exec-3] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 10:22:42.778 cementStrength [Thread-6] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 10:22:42.779 cementStrength [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 10:22:42.786 cementStrength [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 10:36:27.943 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 16888 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 10:36:27.947 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 10:36:28.023 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 10:36:28.023 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 10:36:31.929 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 10:36:31.957 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 10:36:31.980 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 10:36:31.981 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 10:36:32.426 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 10:36:32.433 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 10:36:32.433 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4409 ms
+2020-03-20 10:36:33.389 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 10:36:34.360 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 10:36:34.417 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 10:36:34.479 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 10:36:34.484 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 6.979 seconds (JVM running for 7.797)
+2020-03-20 10:37:33.045 CementStrength [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 10:37:33.045 CementStrength [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 10:37:33.059 CementStrength [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2020-03-20 10:37:33.148 CementStrength [http-nio-8080-exec-2] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 10:37:33.190 CementStrength [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 10:37:33.864 CementStrength [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 10:37:33.960 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 10:37:37.444 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：SysAdmin
+2020-03-20 10:37:46.441 CementStrength [http-nio-8080-exec-6] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 10:37:46.544 CementStrength [http-nio-8080-exec-6] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 10:38:01.865 CementStrength [http-nio-8080-exec-4] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 10:38:13.955 CementStrength [http-nio-8080-exec-9] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 10:38:51.062 CementStrength [http-nio-8080-exec-4] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 10:38:58.544 CementStrength [http-nio-8080-exec-5] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 10:39:46.301 CementStrength [http-nio-8080-exec-3] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 10:50:39.047 CementStrength [http-nio-8080-exec-5] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 10:50:39.145 CementStrength [http-nio-8080-exec-5] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 10:50:43.707 CementStrength [http-nio-8080-exec-10] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 10:53:16.289 CementStrength [http-nio-8080-exec-9] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 10:53:16.385 CementStrength [http-nio-8080-exec-9] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 10:53:18.506 CementStrength [http-nio-8080-exec-6] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 10:54:14.202 CementStrength [http-nio-8080-exec-6] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 10:54:14.306 CementStrength [http-nio-8080-exec-6] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 10:54:16.268 CementStrength [http-nio-8080-exec-2] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 10:55:03.106 CementStrength [http-nio-8080-exec-5] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 10:55:03.186 CementStrength [http-nio-8080-exec-5] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 10:55:06.266 CementStrength [http-nio-8080-exec-8] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 10:57:06.841 CementStrength [http-nio-8080-exec-7] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 10:57:06.944 CementStrength [http-nio-8080-exec-7] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 10:57:11.869 CementStrength [http-nio-8080-exec-9] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 10:57:12.427 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.SysLogController - size:10
+2020-03-20 11:07:53.013 CementStrength [http-nio-8080-exec-6] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 11:07:53.147 CementStrength [http-nio-8080-exec-6] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:07:54.588 CementStrength [http-nio-8080-exec-10] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 11:13:01.975 CementStrength [http-nio-8080-exec-2] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 11:13:02.069 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:13:04.032 CementStrength [http-nio-8080-exec-4] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 11:13:30.419 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 11:13:30.510 CementStrength [http-nio-8080-exec-3] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:13:32.497 CementStrength [http-nio-8080-exec-10] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 11:15:12.338 CementStrength [http-nio-8080-exec-9] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 11:15:12.434 CementStrength [http-nio-8080-exec-9] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:15:14.032 CementStrength [http-nio-8080-exec-2] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 11:16:46.105 CementStrength [http-nio-8080-exec-10] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 11:16:46.230 CementStrength [http-nio-8080-exec-10] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:17:00.406 CementStrength [http-nio-8080-exec-9] INFO  com.hx.controller.MainDataController - 同步数据开始...
+2020-03-20 11:17:05.312 CementStrength [http-nio-8080-exec-9] INFO  com.hx.controller.MainDataController - simpled:true
+2020-03-20 11:17:05.432 CementStrength [http-nio-8080-exec-9] INFO  c.h.service.impl.MainDataServiceImpl - 开始同步工业分析仪 TValue 表数据...
+2020-03-20 11:17:05.597 CementStrength [http-nio-8080-exec-9] INFO  c.h.service.impl.MainDataServiceImpl - 开始同步定硫仪 stdata 表数据...
+2020-03-20 11:17:05.613 CementStrength [http-nio-8080-exec-9] INFO  c.h.service.impl.MainDataServiceImpl - glist.size:0
+2020-03-20 11:17:05.614 CementStrength [http-nio-8080-exec-9] INFO  c.h.service.impl.MainDataServiceImpl - ylist.size:0
+2020-03-20 11:17:05.755 CementStrength [http-nio-8080-exec-9] INFO  com.hx.controller.MainDataController - 同步数据结束...
+2020-03-20 11:17:05.755 CementStrength [http-nio-8080-exec-9] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:17:15.319 CementStrength [http-nio-8080-exec-10] INFO  com.hx.controller.MainDataController - 同步数据开始...
+2020-03-20 11:17:15.319 CementStrength [http-nio-8080-exec-10] INFO  com.hx.controller.MainDataController - simpled:true
+2020-03-20 11:17:15.471 CementStrength [http-nio-8080-exec-10] INFO  c.h.service.impl.MainDataServiceImpl - 开始同步工业分析仪 TValue 表数据...
+2020-03-20 11:17:15.474 CementStrength [http-nio-8080-exec-10] INFO  c.h.service.impl.MainDataServiceImpl - 开始同步定硫仪 stdata 表数据...
+2020-03-20 11:17:15.476 CementStrength [http-nio-8080-exec-10] INFO  c.h.service.impl.MainDataServiceImpl - glist.size:0
+2020-03-20 11:17:15.476 CementStrength [http-nio-8080-exec-10] INFO  c.h.service.impl.MainDataServiceImpl - ylist.size:0
+2020-03-20 11:17:15.596 CementStrength [http-nio-8080-exec-10] INFO  com.hx.controller.MainDataController - 同步数据结束...
+2020-03-20 11:17:15.596 CementStrength [http-nio-8080-exec-10] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:17:18.878 CementStrength [http-nio-8080-exec-5] INFO  com.hx.controller.SysLogController - size:10
+2020-03-20 11:18:16.886 CementStrength [Thread-6] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:18:16.890 CementStrength [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 11:18:16.901 CementStrength [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 11:18:17.615 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 16888 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 11:18:17.616 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 11:18:18.705 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 11:18:18.707 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:18:18.707 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 11:18:18.707 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 11:18:18.827 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 11:18:18.829 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 11:18:18.829 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1210 ms
+2020-03-20 11:18:19.077 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:18:19.407 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 11:18:19.424 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:18:19.429 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 11:18:19.430 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 1.883 seconds (JVM running for 2512.742)
+2020-03-20 11:18:19.432 CementStrength [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-03-20 11:18:52.618 CementStrength [Thread-15] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:18:53.349 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 16888 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 11:18:53.350 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 11:18:53.889 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 11:18:53.891 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:18:53.896 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 11:18:53.896 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 11:18:54.119 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 11:18:54.129 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 11:18:54.130 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 776 ms
+2020-03-20 11:18:54.450 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:18:54.867 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 11:18:54.884 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:18:54.888 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 11:18:54.889 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 1.575 seconds (JVM running for 2548.201)
+2020-03-20 11:18:54.890 CementStrength [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-03-20 11:23:11.529 CementStrength [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 11:23:11.531 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 11:23:11.536 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2020-03-20 11:23:11.553 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 11:23:11.558 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2020-03-20 11:23:12.119 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2020-03-20 11:23:12.159 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:23:17.122 CementStrength [http-nio-8080-exec-6] INFO  com.hx.controller.SysLogController - size:10
+2020-03-20 11:23:17.721 CementStrength [http-nio-8080-exec-9] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 11:23:36.347 CementStrength [http-nio-8080-exec-10] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:24:59.999 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 11:25:00.079 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:25:01.602 CementStrength [http-nio-8080-exec-5] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 11:25:39.272 CementStrength [http-nio-8080-exec-8] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:26:28.196 CementStrength [Thread-26] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:26:28.197 CementStrength [Thread-26] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2020-03-20 11:26:28.212 CementStrength [Thread-26] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2020-03-20 11:26:31.457 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 7896 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 11:26:31.462 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 11:26:31.550 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 11:26:31.550 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 11:26:34.721 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 11:26:34.741 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:26:34.756 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 11:26:34.757 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 11:26:35.115 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 11:26:35.122 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 11:26:35.123 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3573 ms
+2020-03-20 11:26:35.934 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:26:36.787 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 11:26:36.827 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:26:36.872 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 11:26:36.877 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 5.889 seconds (JVM running for 6.742)
+2020-03-20 11:27:35.592 CementStrength [Thread-9] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:27:38.230 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 9320 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 11:27:38.234 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 11:27:38.341 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 11:27:38.341 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 11:27:43.112 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 11:27:43.136 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:27:43.156 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 11:27:43.157 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 11:27:43.682 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 11:27:43.692 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 11:27:43.692 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5351 ms
+2020-03-20 11:27:44.545 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:27:45.485 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 11:27:45.522 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:27:45.564 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 11:27:45.570 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 7.816 seconds (JVM running for 8.999)
+2020-03-20 11:28:18.605 CementStrength [Thread-6] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:28:19.251 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 9320 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 11:28:19.251 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 11:28:20.090 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 11:28:20.092 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:28:20.093 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 11:28:20.093 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 11:28:20.276 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 11:28:20.285 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 11:28:20.286 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1031 ms
+2020-03-20 11:28:20.765 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:28:21.264 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 11:28:21.287 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:28:21.292 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 11:28:21.293 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 2.098 seconds (JVM running for 44.722)
+2020-03-20 11:28:21.295 CementStrength [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-03-20 11:28:21.927 CementStrength [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 11:28:21.928 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 11:28:21.949 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 21 ms
+2020-03-20 11:28:22.100 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 11:28:22.140 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 11:28:22.885 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 11:28:22.986 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:28:25.802 CementStrength [http-nio-8080-exec-4] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 11:28:36.163 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:30:29.120 CementStrength [Thread-10] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:30:29.121 CementStrength [Thread-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 11:30:29.136 CementStrength [Thread-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 11:30:29.890 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 9320 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 11:30:29.890 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 11:30:30.595 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 11:30:30.596 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:30:30.597 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 11:30:30.597 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 11:30:30.737 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 11:30:30.739 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 11:30:30.739 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 845 ms
+2020-03-20 11:30:31.206 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:30:31.668 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 11:30:31.688 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:30:31.693 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 11:30:31.696 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 1.852 seconds (JVM running for 175.125)
+2020-03-20 11:30:31.698 CementStrength [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-03-20 11:30:34.327 CementStrength [Thread-21] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:30:37.227 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 17992 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 11:30:37.232 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 11:30:37.326 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 11:30:37.327 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 11:30:41.018 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 11:30:41.040 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:30:41.050 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 11:30:41.050 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 11:30:41.387 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 11:30:41.395 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 11:30:41.395 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4068 ms
+2020-03-20 11:30:42.323 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:30:43.525 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 11:30:43.579 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:30:43.634 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 11:30:43.640 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 6.87 seconds (JVM running for 8.105)
+2020-03-20 11:31:42.762 CementStrength [Thread-6] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:31:43.503 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 17992 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 11:31:43.504 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 11:31:44.292 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 11:31:44.293 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:31:44.294 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 11:31:44.294 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 11:31:44.440 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 11:31:44.443 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 11:31:44.443 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 933 ms
+2020-03-20 11:31:44.810 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:31:45.348 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 11:31:45.375 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:31:45.382 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 11:31:45.384 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 1.959 seconds (JVM running for 69.849)
+2020-03-20 11:31:45.389 CementStrength [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-03-20 11:31:46.427 CementStrength [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 11:31:46.428 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 11:31:46.452 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 24 ms
+2020-03-20 11:31:46.573 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 11:31:46.619 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 11:31:47.362 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 11:31:47.468 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:31:54.474 CementStrength [Thread-10] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:31:54.475 CementStrength [Thread-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 11:31:54.499 CementStrength [Thread-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 11:31:55.269 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 17992 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 11:31:55.269 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 11:31:56.075 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 11:31:56.076 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:31:56.077 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 11:31:56.077 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 11:31:56.224 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 11:31:56.226 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 11:31:56.226 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 954 ms
+2020-03-20 11:31:56.629 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:31:57.315 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 11:31:57.339 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:31:57.345 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 11:31:57.346 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 2.11 seconds (JVM running for 81.811)
+2020-03-20 11:31:57.349 CementStrength [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-03-20 11:31:57.381 CementStrength [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 11:31:57.382 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 11:31:57.393 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2020-03-20 11:31:57.426 CementStrength [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2020-03-20 11:31:57.962 CementStrength [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2020-03-20 11:31:58.203 CementStrength [http-nio-8080-exec-2] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 11:32:46.297 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:38:40.447 CementStrength [http-nio-8080-exec-3] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:41:11.984 CementStrength [http-nio-8080-exec-8] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 11:41:12.087 CementStrength [http-nio-8080-exec-8] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:41:14.580 CementStrength [http-nio-8080-exec-6] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 11:41:23.682 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:42:48.964 CementStrength [http-nio-8080-exec-10] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 11:42:49.044 CementStrength [http-nio-8080-exec-10] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:42:52.833 CementStrength [http-nio-8080-exec-4] INFO  com.hx.controller.SysLogController - size:10
+2020-03-20 11:42:54.804 CementStrength [http-nio-8080-exec-8] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 11:43:06.522 CementStrength [http-nio-8080-exec-8] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:44:17.922 CementStrength [Thread-21] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:44:17.923 CementStrength [Thread-21] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2020-03-20 11:44:17.929 CementStrength [Thread-21] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2020-03-20 11:44:20.790 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 14284 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 11:44:20.793 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 11:44:20.903 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 11:44:20.903 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 11:44:24.890 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 11:44:24.915 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:44:24.940 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 11:44:24.941 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 11:44:25.534 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 11:44:25.550 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 11:44:25.550 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4647 ms
+2020-03-20 11:44:26.728 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 11:44:27.734 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 11:44:27.776 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 11:44:27.831 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 11:44:27.838 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 7.497 seconds (JVM running for 9.03)
+2020-03-20 11:45:12.145 CementStrength [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 11:45:12.145 CementStrength [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 11:45:12.159 CementStrength [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2020-03-20 11:45:12.248 CementStrength [http-nio-8080-exec-2] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 11:45:12.297 CementStrength [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 11:45:13.044 CementStrength [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 11:45:13.128 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：SysAdmin
+2020-03-20 11:45:13.153 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：SysAdmin
+2020-03-20 11:45:22.836 CementStrength [http-nio-8080-exec-9] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 11:45:22.925 CementStrength [http-nio-8080-exec-9] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:45:26.845 CementStrength [http-nio-8080-exec-2] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 11:45:36.237 CementStrength [http-nio-8080-exec-6] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:46:37.088 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：SysAdmin
+2020-03-20 11:46:42.732 CementStrength [http-nio-8080-exec-7] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 11:46:42.847 CementStrength [http-nio-8080-exec-7] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:46:50.685 CementStrength [http-nio-8080-exec-4] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 11:47:00.162 CementStrength [http-nio-8080-exec-9] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:47:45.531 CementStrength [http-nio-8080-exec-9] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 11:47:45.604 CementStrength [http-nio-8080-exec-9] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:47:48.205 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 11:48:40.901 CementStrength [http-nio-8080-exec-6] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 11:48:41.004 CementStrength [http-nio-8080-exec-6] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:48:43.047 CementStrength [http-nio-8080-exec-4] INFO  com.hx.controller.SysLogController - size:10
+2020-03-20 11:48:44.965 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 11:48:55.563 CementStrength [http-nio-8080-exec-7] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:55:42.927 CementStrength [http-nio-8080-exec-2] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 11:55:43.005 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:55:45.969 CementStrength [http-nio-8080-exec-5] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 11:55:57.596 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:56:58.106 CementStrength [http-nio-8080-exec-6] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 11:58:32.525 CementStrength [http-nio-8080-exec-9] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:06:47.062 CementStrength [Thread-9] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 12:06:47.064 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 12:06:47.094 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 12:06:51.495 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 2072 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 12:06:51.503 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 12:06:51.608 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 12:06:51.608 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 12:06:57.052 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 12:06:57.090 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 12:06:57.123 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 12:06:57.124 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 12:06:57.809 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 12:06:57.825 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 12:06:57.825 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6217 ms
+2020-03-20 12:06:59.580 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 12:07:01.039 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 12:07:01.090 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 12:07:01.154 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 12:07:01.159 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 10.318 seconds (JVM running for 12.532)
+2020-03-20 12:07:09.935 CementStrength [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 12:07:09.935 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 12:07:09.948 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2020-03-20 12:07:10.002 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：SysAdmin
+2020-03-20 12:07:10.062 CementStrength [schedule-pool-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 12:07:10.857 CementStrength [schedule-pool-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 12:07:17.301 CementStrength [http-nio-8080-exec-4] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 12:07:17.561 CementStrength [http-nio-8080-exec-4] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:07:19.771 CementStrength [http-nio-8080-exec-10] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 12:07:40.329 CementStrength [http-nio-8080-exec-3] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:08:18.536 CementStrength [Thread-9] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 12:08:18.537 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 12:08:18.553 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 12:08:22.329 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 15696 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 12:08:22.336 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 12:08:22.420 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 12:08:22.420 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 12:08:26.132 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 12:08:26.160 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 12:08:26.185 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 12:08:26.186 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 12:08:26.716 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 12:08:26.727 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 12:08:26.727 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4307 ms
+2020-03-20 12:08:27.834 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 12:08:28.990 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 12:08:29.045 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 12:08:29.109 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 12:08:29.115 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 7.27 seconds (JVM running for 8.107)
+2020-03-20 12:08:49.224 CementStrength [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 12:08:49.224 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 12:08:49.237 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2020-03-20 12:08:49.325 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 12:08:49.399 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 12:08:50.090 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 12:08:50.173 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:08:51.294 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：SysAdmin
+2020-03-20 12:08:57.614 CementStrength [http-nio-8080-exec-5] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 12:08:57.689 CementStrength [http-nio-8080-exec-5] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:09:00.815 CementStrength [http-nio-8080-exec-6] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 12:09:20.142 CementStrength [http-nio-8080-exec-10] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:11:35.915 CementStrength [Thread-9] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 12:11:35.916 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 12:11:35.945 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 12:11:40.365 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 8140 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 12:11:40.370 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 12:11:40.507 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 12:11:40.507 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 12:11:44.625 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 12:11:44.647 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 12:11:44.663 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 12:11:44.664 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 12:11:45.046 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 12:11:45.054 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 12:11:45.055 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4548 ms
+2020-03-20 12:11:46.095 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 12:11:47.319 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 12:11:47.373 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 12:11:47.445 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 12:11:47.452 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 7.827 seconds (JVM running for 10.163)
+2020-03-20 12:11:47.528 CementStrength [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 12:11:47.528 CementStrength [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 12:11:47.545 CementStrength [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 17 ms
+2020-03-20 12:11:47.615 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：SysAdmin
+2020-03-20 12:11:47.697 CementStrength [schedule-pool-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 12:11:48.536 CementStrength [schedule-pool-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 12:11:55.085 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 12:11:55.356 CementStrength [http-nio-8080-exec-3] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:11:57.273 CementStrength [http-nio-8080-exec-5] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 12:12:27.376 CementStrength [http-nio-8080-exec-9] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 12:12:27.446 CementStrength [http-nio-8080-exec-9] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:12:32.053 CementStrength [http-nio-8080-exec-10] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 12:12:51.528 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:12:58.477 CementStrength [http-nio-8080-exec-9] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:15:51.022 CementStrength [http-nio-8080-exec-5] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 12:15:51.158 CementStrength [http-nio-8080-exec-5] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:15:54.570 CementStrength [http-nio-8080-exec-9] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 12:16:14.950 CementStrength [http-nio-8080-exec-10] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 12:16:15.156 CementStrength [http-nio-8080-exec-10] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:16:17.624 CementStrength [http-nio-8080-exec-6] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 12:16:26.734 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:17:44.382 CementStrength [Thread-9] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 12:17:44.383 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 12:17:44.403 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 12:17:49.553 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 11364 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 12:17:49.557 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 12:17:49.634 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 12:17:49.634 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 12:17:54.015 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 12:17:54.038 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 12:17:54.058 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 12:17:54.059 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 12:17:54.463 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 12:17:54.472 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 12:17:54.472 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4838 ms
+2020-03-20 12:17:55.553 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 12:17:56.763 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 12:17:56.825 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 12:17:56.895 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 12:17:56.900 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 7.879 seconds (JVM running for 8.849)
+2020-03-20 12:18:41.741 CementStrength [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 12:18:41.741 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 12:18:41.755 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2020-03-20 12:18:41.854 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 12:18:41.911 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 12:18:42.550 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 12:18:42.630 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:18:46.533 CementStrength [http-nio-8080-exec-5] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 12:18:51.852 CementStrength [http-nio-8080-exec-9] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:19:06.488 CementStrength [http-nio-8080-exec-6] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:20:21.918 CementStrength [Thread-9] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 12:20:21.919 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 12:20:21.935 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 12:20:24.932 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 11484 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 12:20:24.935 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 12:20:25.018 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 12:20:25.018 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 12:20:28.887 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 12:20:28.913 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 12:20:28.941 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 12:20:28.944 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 12:20:29.465 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 12:20:29.477 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 12:20:29.477 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4459 ms
+2020-03-20 12:20:30.811 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 12:20:32.710 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 12:20:32.799 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 12:20:32.889 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 12:20:32.896 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 8.547 seconds (JVM running for 9.672)
+2020-03-20 12:21:15.300 CementStrength [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 12:21:15.300 CementStrength [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 12:21:15.315 CementStrength [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2020-03-20 12:21:15.373 CementStrength [http-nio-8080-exec-3] INFO  com.hx.config.LogAspect - 登录用户：SysAdmin
+2020-03-20 12:21:15.447 CementStrength [schedule-pool-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 12:21:15.746 CementStrength [schedule-pool-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 12:21:22.968 CementStrength [http-nio-8080-exec-9] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 12:21:23.168 CementStrength [http-nio-8080-exec-9] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:21:25.391 CementStrength [http-nio-8080-exec-7] INFO  com.hx.controller.SysUserController - size:1
+2020-03-20 12:21:36.166 CementStrength [http-nio-8080-exec-8] INFO  com.hx.controller.SysUserController - size:1
+2020-03-20 12:21:44.419 CementStrength [http-nio-8080-exec-7] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:21:48.887 CementStrength [http-nio-8080-exec-4] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 12:21:48.888 CementStrength [http-nio-8080-exec-4] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:21:51.083 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.SysUserController - size:1
+2020-03-20 12:22:37.777 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:22:42.877 CementStrength [http-nio-8080-exec-6] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 12:22:42.879 CementStrength [http-nio-8080-exec-6] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:22:45.176 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.SysUserController - size:2
+2020-03-20 12:22:59.761 CementStrength [http-nio-8080-exec-5] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:23:42.324 CementStrength [http-nio-8080-exec-7] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:26:13.154 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 12:26:13.156 CementStrength [http-nio-8080-exec-3] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:26:15.583 CementStrength [http-nio-8080-exec-9] INFO  com.hx.controller.SysUserController - size:4
+2020-03-20 12:26:25.846 CementStrength [http-nio-8080-exec-9] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:26:28.512 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:26:30.564 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:26:31.925 CementStrength [http-nio-8080-exec-10] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:26:33.057 CementStrength [http-nio-8080-exec-6] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:26:37.823 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 12:26:37.826 CementStrength [http-nio-8080-exec-3] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:26:40.616 CementStrength [http-nio-8080-exec-8] INFO  com.hx.controller.SysUserController - size:5
+2020-03-20 12:26:58.549 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:28:18.256 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 12:28:18.260 CementStrength [http-nio-8080-exec-3] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:28:32.864 CementStrength [http-nio-8080-exec-4] INFO  com.hx.controller.SysUserController - size:6
+2020-03-20 12:28:44.776 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:30:14.319 CementStrength [http-nio-8080-exec-8] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 12:30:14.324 CementStrength [http-nio-8080-exec-8] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:30:15.907 CementStrength [http-nio-8080-exec-5] INFO  com.hx.controller.SysUserController - size:6
+2020-03-20 12:30:34.899 CementStrength [http-nio-8080-exec-4] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 12:30:34.900 CementStrength [http-nio-8080-exec-4] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:30:36.543 CementStrength [http-nio-8080-exec-6] INFO  com.hx.controller.SysUserController - size:6
+2020-03-20 12:52:58.843 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 12:52:58.852 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:54:02.104 CementStrength [http-nio-8080-exec-9] INFO  com.hx.controller.SysUserController - size:6
+2020-03-20 12:54:46.702 CementStrength [http-nio-8080-exec-7] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 12:54:46.704 CementStrength [http-nio-8080-exec-7] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:54:48.158 CementStrength [http-nio-8080-exec-9] INFO  com.hx.controller.SysUserController - size:6
+2020-03-20 12:54:58.641 CementStrength [http-nio-8080-exec-8] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 12:58:48.208 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:00:30.308 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 13:00:30.309 CementStrength [http-nio-8080-exec-3] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:00:32.583 CementStrength [http-nio-8080-exec-7] INFO  com.hx.controller.SysUserController - size:7
+2020-03-20 13:00:51.427 CementStrength [http-nio-8080-exec-8] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:02:04.062 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:03:11.647 CementStrength [Thread-9] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 13:03:11.649 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 13:03:11.657 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 13:03:15.226 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 7212 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 13:03:15.231 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 13:03:15.324 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 13:03:15.324 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 13:03:19.259 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 13:03:19.326 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 13:03:19.353 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 13:03:19.353 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 13:03:20.116 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 13:03:20.126 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 13:03:20.127 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4802 ms
+2020-03-20 13:03:21.392 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 13:03:22.535 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 13:03:22.603 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 13:03:22.665 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 13:03:22.672 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 7.92 seconds (JVM running for 8.725)
+2020-03-20 13:03:36.910 CementStrength [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 13:03:36.910 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 13:03:36.925 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2020-03-20 13:03:37.031 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 13:03:37.075 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 13:03:37.313 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 13:03:37.371 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:03:42.201 CementStrength [http-nio-8080-exec-2] INFO  com.hx.controller.SysUserController - size:7
+2020-03-20 13:03:51.122 CementStrength [http-nio-8080-exec-4] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:11:07.806 CementStrength [http-nio-8080-exec-8] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 13:11:07.809 CementStrength [http-nio-8080-exec-8] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:11:09.775 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.SysUserController - size:7
+2020-03-20 13:11:23.150 CementStrength [http-nio-8080-exec-5] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:11:55.814 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:12:08.063 CementStrength [http-nio-8080-exec-7] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:12:26.772 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:12:59.687 CementStrength [http-nio-8080-exec-4] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 13:12:59.691 CementStrength [http-nio-8080-exec-4] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:13:04.082 CementStrength [http-nio-8080-exec-8] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 13:15:04.687 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 13:15:04.688 CementStrength [http-nio-8080-exec-3] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:15:06.001 CementStrength [http-nio-8080-exec-6] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 13:15:21.818 CementStrength [http-nio-8080-exec-8] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 13:15:21.820 CementStrength [http-nio-8080-exec-8] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:15:23.108 CementStrength [http-nio-8080-exec-5] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 13:17:35.982 CementStrength [Thread-9] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 13:17:35.985 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 13:17:36.010 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 13:17:40.065 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 12864 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 13:17:40.070 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 13:17:40.168 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 13:17:40.169 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 13:17:44.787 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 13:17:44.823 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 13:17:44.842 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 13:17:44.843 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 13:17:45.339 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 13:17:45.351 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 13:17:45.351 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5182 ms
+2020-03-20 13:17:46.527 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 13:17:47.860 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 13:17:47.946 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 13:17:48.029 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 13:17:48.037 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 8.525 seconds (JVM running for 9.615)
+2020-03-20 13:17:54.172 CementStrength [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 13:17:54.172 CementStrength [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 13:17:54.188 CementStrength [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+2020-03-20 13:17:54.298 CementStrength [http-nio-8080-exec-2] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 13:17:54.347 CementStrength [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 13:17:54.562 CementStrength [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 13:17:54.631 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:17:58.263 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 13:19:22.528 CementStrength [http-nio-8080-exec-7] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 13:19:22.529 CementStrength [http-nio-8080-exec-7] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:19:24.072 CementStrength [http-nio-8080-exec-2] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 13:21:03.558 CementStrength [http-nio-8080-exec-7] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 13:21:03.560 CementStrength [http-nio-8080-exec-7] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:21:04.948 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 13:21:08.474 CementStrength [http-nio-8080-exec-7] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 13:21:08.476 CementStrength [http-nio-8080-exec-7] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:21:10.016 CementStrength [http-nio-8080-exec-2] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 13:22:07.513 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 13:22:07.514 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:22:08.809 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 13:22:34.490 CementStrength [http-nio-8080-exec-7] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:22:57.528 CementStrength [http-nio-8080-exec-4] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:23:47.885 CementStrength [http-nio-8080-exec-7] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:23:58.984 CementStrength [http-nio-8080-exec-4] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 13:23:58.987 CementStrength [http-nio-8080-exec-4] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:24:00.825 CementStrength [http-nio-8080-exec-5] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 13:45:10.899 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 13:45:10.901 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:45:12.479 CementStrength [http-nio-8080-exec-4] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 13:45:19.142 CementStrength [http-nio-8080-exec-10] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 13:45:26.791 CementStrength [http-nio-8080-exec-9] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 14:45:42.084 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 14:45:42.087 CementStrength [http-nio-8080-exec-3] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 14:45:44.832 CementStrength [http-nio-8080-exec-5] INFO  com.hx.controller.SysLogController - size:10
+2020-03-20 14:53:15.730 CementStrength [Thread-6] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 14:53:15.732 CementStrength [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 14:53:15.739 CementStrength [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 14:53:16.612 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 12864 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 14:53:16.613 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 14:53:17.626 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 14:53:17.628 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 14:53:17.629 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 14:53:17.630 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 14:53:17.882 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 14:53:17.886 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 14:53:17.887 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1270 ms
+2020-03-20 14:53:18.742 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 14:53:19.797 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 14:53:19.904 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 14:53:19.914 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 14:53:19.915 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 3.37 seconds (JVM running for 5741.558)
+2020-03-20 14:53:19.918 CementStrength [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-03-20 14:53:23.661 CementStrength [Thread-10] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 14:53:24.805 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 12864 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 14:53:24.806 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 14:53:26.046 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 14:53:26.047 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 14:53:26.048 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 14:53:26.048 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 14:53:26.305 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 14:53:26.310 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 14:53:26.310 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1487 ms
+2020-03-20 14:53:26.836 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 14:53:27.753 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 14:53:27.806 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 14:53:27.812 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 14:53:27.813 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 3.103 seconds (JVM running for 5749.455)
+2020-03-20 14:53:27.817 CementStrength [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-03-20 14:53:43.287 CementStrength [Thread-21] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 15:22:38.524 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 1240 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 15:22:38.529 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 15:22:38.632 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 15:22:38.633 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 15:22:42.041 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 15:22:42.059 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 15:22:42.075 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 15:22:42.076 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 15:22:42.413 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 15:22:42.424 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 15:22:42.425 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3792 ms
+2020-03-20 15:22:43.201 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 15:22:44.049 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 15:22:44.083 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 15:22:44.130 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 15:22:44.136 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 6.192 seconds (JVM running for 7.049)
+2020-03-20 15:23:11.929 CementStrength [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 15:23:11.929 CementStrength [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 15:23:11.944 CementStrength [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2020-03-20 15:23:26.382 CementStrength [http-nio-8080-exec-4] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 15:23:26.426 CementStrength [http-nio-8080-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 15:23:26.636 CementStrength [http-nio-8080-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 15:23:26.688 CementStrength [http-nio-8080-exec-4] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 15:23:31.740 CementStrength [http-nio-8080-exec-7] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 15:24:49.819 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 15:24:49.821 CementStrength [http-nio-8080-exec-3] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 15:24:51.320 CementStrength [http-nio-8080-exec-7] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 15:25:02.015 CementStrength [http-nio-8080-exec-5] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 15:25:09.423 CementStrength [http-nio-8080-exec-9] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 15:25:55.518 CementStrength [http-nio-8080-exec-2] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 15:25:55.520 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 15:25:57.032 CementStrength [http-nio-8080-exec-4] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 15:27:49.193 CementStrength [http-nio-8080-exec-9] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 15:27:49.195 CementStrength [http-nio-8080-exec-9] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 15:27:50.670 CementStrength [http-nio-8080-exec-10] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 15:28:47.744 CementStrength [http-nio-8080-exec-6] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 15:28:47.746 CementStrength [http-nio-8080-exec-6] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 15:28:49.615 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 15:30:06.796 CementStrength [http-nio-8080-exec-4] INFO  com.hx.config.LogAspect - 登录用户：SysAdmin
+2020-03-20 15:30:16.544 CementStrength [http-nio-8080-exec-9] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 15:30:16.548 CementStrength [http-nio-8080-exec-9] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 15:30:18.436 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 15:33:15.840 CementStrength [http-nio-8080-exec-10] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 15:33:15.843 CementStrength [http-nio-8080-exec-10] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 15:33:16.971 CementStrength [http-nio-8080-exec-6] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 15:33:23.888 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 15:47:21.182 CementStrength [Thread-6] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 15:47:21.184 CementStrength [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 15:47:21.198 CementStrength [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 15:47:21.849 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 1240 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 15:47:21.850 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 15:47:22.587 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 15:47:22.588 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 15:47:22.589 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 15:47:22.590 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 15:47:22.766 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 15:47:22.768 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 15:47:22.769 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 915 ms
+2020-03-20 15:47:23.211 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 15:47:23.675 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 15:47:23.696 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 15:47:23.701 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 15:47:23.702 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 1.897 seconds (JVM running for 1486.614)
+2020-03-20 15:47:23.705 CementStrength [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-03-20 15:47:48.372 CementStrength [Thread-10] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 15:47:48.976 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 1240 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 15:47:48.976 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 15:47:49.545 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 15:47:49.546 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 15:47:49.546 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 15:47:49.546 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 15:47:49.654 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 15:47:49.656 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 15:47:49.656 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 675 ms
+2020-03-20 15:47:49.948 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 15:47:50.582 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 15:47:50.598 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 15:47:50.603 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 15:47:50.603 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 1.667 seconds (JVM running for 1513.516)
+2020-03-20 15:47:50.605 CementStrength [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-03-20 15:48:09.482 CementStrength [Thread-16] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 15:48:10.208 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 1240 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 15:48:10.209 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 15:48:10.779 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 15:48:10.780 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 15:48:10.781 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 15:48:10.781 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 15:48:10.893 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 15:48:10.896 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 15:48:10.896 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 684 ms
+2020-03-20 15:48:11.154 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 15:48:11.458 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 15:48:11.473 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 15:48:11.478 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 15:48:11.479 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 1.314 seconds (JVM running for 1534.391)
+2020-03-20 15:48:11.481 CementStrength [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-03-20 15:48:28.868 CementStrength [Thread-22] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 15:48:29.455 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 1240 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 15:48:29.455 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 15:48:29.950 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 15:48:29.951 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 15:48:29.952 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 15:48:29.952 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 15:48:30.090 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 15:48:30.093 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 15:48:30.093 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 636 ms
+2020-03-20 15:48:30.326 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 15:48:30.632 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 15:48:30.649 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 15:48:30.653 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 15:48:30.654 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 1.239 seconds (JVM running for 1553.566)
+2020-03-20 15:48:30.656 CementStrength [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-03-20 15:48:55.692 CementStrength [Thread-33] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 15:48:59.144 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 16108 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 15:48:59.152 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 15:48:59.255 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 15:48:59.255 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 15:49:03.623 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 15:49:03.652 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 15:49:03.674 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 15:49:03.675 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 15:49:04.220 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 15:49:04.227 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 15:49:04.228 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4973 ms
+2020-03-20 15:49:05.374 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 15:49:06.453 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 15:49:06.500 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 15:49:06.554 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 15:49:06.559 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 7.982 seconds (JVM running for 9.461)
+2020-03-20 15:49:47.668 CementStrength [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 15:49:47.668 CementStrength [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 15:49:47.682 CementStrength [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2020-03-20 15:49:47.781 CementStrength [http-nio-8080-exec-2] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 15:49:47.819 CementStrength [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 15:49:48.035 CementStrength [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 15:49:48.087 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 15:54:58.160 CementStrength [http-nio-8080-exec-6] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 15:58:13.479 CementStrength [Thread-9] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 15:58:13.480 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 15:58:13.497 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 15:58:17.178 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 6804 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 15:58:17.181 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 15:58:17.252 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 15:58:17.252 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 15:58:21.089 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 15:58:21.130 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 15:58:21.153 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 15:58:21.154 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 15:58:21.670 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 15:58:21.680 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 15:58:21.680 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4428 ms
+2020-03-20 15:58:22.825 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 15:58:23.943 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 15:58:24.000 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 15:58:24.063 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 15:58:24.069 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 7.374 seconds (JVM running for 8.208)
+2020-03-20 15:58:56.602 CementStrength [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 15:58:56.602 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 15:58:56.614 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2020-03-20 15:58:56.703 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 15:58:56.781 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 15:58:56.999 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 15:58:57.058 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 15:59:01.114 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 16:00:16.238 CementStrength [http-nio-8080-exec-7] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 16:00:16.240 CementStrength [http-nio-8080-exec-7] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 16:00:17.604 CementStrength [http-nio-8080-exec-9] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 16:07:36.453 CementStrength [Thread-9] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 16:07:36.454 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 16:07:36.473 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 16:07:40.401 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 9900 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 16:07:40.404 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 16:07:40.478 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 16:07:40.479 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 16:07:44.463 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 16:07:44.488 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 16:07:44.507 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 16:07:44.507 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 16:07:44.937 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 16:07:44.946 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 16:07:44.946 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4467 ms
+2020-03-20 16:07:45.877 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 16:07:46.874 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 16:07:46.921 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 16:07:46.966 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 16:07:46.969 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 7.042 seconds (JVM running for 8.066)
+2020-03-20 16:09:22.474 CementStrength [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 16:09:22.474 CementStrength [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 16:09:22.487 CementStrength [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2020-03-20 16:09:22.585 CementStrength [http-nio-8080-exec-2] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 16:09:22.626 CementStrength [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 16:09:22.854 CementStrength [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 16:09:22.915 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 16:09:30.387 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 16:12:24.911 CementStrength [Thread-9] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 16:12:24.912 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 16:12:24.926 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 16:12:28.542 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 10664 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 16:12:28.547 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 16:12:28.649 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 16:12:28.649 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 16:12:33.341 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 16:12:33.364 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 16:12:33.379 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 16:12:33.379 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 16:12:33.721 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 16:12:33.729 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 16:12:33.729 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5080 ms
+2020-03-20 16:12:34.785 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 16:12:35.861 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 16:12:35.909 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 16:12:36.007 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 16:12:36.012 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 7.951 seconds (JVM running for 8.812)
+2020-03-20 16:15:08.685 CementStrength [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 16:15:08.685 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 16:15:08.700 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2020-03-20 16:15:08.807 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 16:15:08.854 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 16:15:09.068 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 16:15:09.111 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 16:15:11.914 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 16:17:25.375 CementStrength [Thread-9] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 16:17:25.376 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 16:17:25.394 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 16:17:28.415 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 11628 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 16:17:28.419 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 16:17:28.513 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 16:17:28.513 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 16:17:32.164 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 16:17:32.184 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 16:17:32.201 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 16:17:32.201 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 16:17:32.642 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 16:17:32.649 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 16:17:32.649 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4136 ms
+2020-03-20 16:17:33.881 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 16:17:34.995 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 16:17:35.044 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 16:17:35.090 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 16:17:35.095 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 7.159 seconds (JVM running for 8.765)
+2020-03-20 16:17:54.914 CementStrength [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 16:17:54.915 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 16:17:54.928 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2020-03-20 16:18:03.991 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 16:18:04.028 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 16:18:04.191 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 16:18:04.226 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 16:18:06.640 CementStrength [http-nio-8080-exec-7] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 16:25:04.275 CementStrength [http-nio-8080-exec-2] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 16:25:04.277 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 16:25:07.263 CementStrength [http-nio-8080-exec-10] INFO  com.hx.controller.SysLogController - size:10
+2020-03-20 16:25:08.254 CementStrength [http-nio-8080-exec-10] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 16:25:23.412 CementStrength [http-nio-8080-exec-8] INFO  com.hx.config.LogAspect - 登录用户：SysAdmin
+2020-03-20 16:25:31.319 CementStrength [Thread-9] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 16:25:31.320 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-20 16:25:31.333 CementStrength [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-20 16:25:35.097 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 17672 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 16:25:35.103 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 16:25:35.184 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 16:25:35.185 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 16:25:38.886 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 16:25:38.919 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 16:25:38.939 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 16:25:38.940 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 16:25:39.360 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 16:25:39.370 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 16:25:39.370 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4185 ms
+2020-03-20 16:25:40.381 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 16:25:41.307 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 16:25:41.342 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 16:25:41.392 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 16:25:41.399 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 6.773 seconds (JVM running for 7.646)
+2020-03-20 16:26:07.887 CementStrength [Thread-9] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 16:26:11.150 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Starting CementstrengthApplication on SD-20191014XVBT with PID 11940 (D:\hxxs\cmps\target\classes started by Administrator in D:\hxxs\cmps)
+2020-03-20 16:26:11.154 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - No active profile set, falling back to default profiles: default
+2020-03-20 16:26:11.268 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-20 16:26:11.268 CementStrength [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-20 16:26:16.203 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-03-20 16:26:16.245 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-20 16:26:16.275 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-20 16:26:16.275 CementStrength [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-20 16:26:16.936 CementStrength [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-20 16:26:16.955 CementStrength [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-03-20 16:26:16.955 CementStrength [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5687 ms
+2020-03-20 16:26:18.223 CementStrength [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'threadPoolTaskExecutor'
+2020-03-20 16:26:19.446 CementStrength [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-03-20 16:26:19.526 CementStrength [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-20 16:26:19.575 CementStrength [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-20 16:26:19.580 CementStrength [restartedMain] INFO  com.hx.CementstrengthApplication - Started CementstrengthApplication in 8.946 seconds (JVM running for 10.479)
+2020-03-20 16:30:42.183 CementStrength [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-20 16:30:42.183 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-03-20 16:30:42.196 CementStrength [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2020-03-20 16:30:42.274 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 16:30:42.310 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-03-20 16:30:42.497 CementStrength [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-03-20 16:30:42.538 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 16:30:43.723 CementStrength [http-nio-8080-exec-2] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 16:30:43.726 CementStrength [http-nio-8080-exec-2] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 16:30:45.473 CementStrength [http-nio-8080-exec-3] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 16:36:28.783 CementStrength [http-nio-8080-exec-8] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 16:36:28.787 CementStrength [http-nio-8080-exec-8] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 16:36:30.285 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.SysUserController - size:10
+2020-03-20 16:36:34.599 CementStrength [http-nio-8080-exec-5] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 16:46:16.498 CementStrength [http-nio-8080-exec-8] INFO  com.hx.controller.SysLogController - size:10
+2020-03-20 16:55:01.412 CementStrength [http-nio-8080-exec-1] INFO  com.hx.controller.LoginController - User{id='null', username='admin', password='admin', simpled='false'}
+2020-03-20 16:55:01.414 CementStrength [http-nio-8080-exec-1] INFO  com.hx.config.LogAspect - 登录用户：admin
+2020-03-20 16:55:04.686 CementStrength [http-nio-8080-exec-7] INFO  com.hx.controller.SysUserController - size:10

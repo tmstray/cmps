@@ -7,6 +7,7 @@ import com.github.pagehelper.PageInfo;
 import com.hx.config.Log;
 import com.hx.entity.MainData;
 import com.hx.entity.SysLog;
+import com.hx.entity.SysUser;
 import com.hx.entity.User;
 import com.hx.model.BusinessType;
 import com.hx.model.MainDataModel;
@@ -80,7 +81,7 @@ public class MainDataController {
     @Log(businessModule = "煤炭热值", businessType = BusinessType.SYNCHRONIZE)
     public Response dataSynchronize(HttpSession session){
         logger.info("同步数据开始...");
-        User user = (User)session.getAttribute("USER_SESSION");
+        SysUser user = (SysUser)session.getAttribute("USER_SESSION");
         logger.info("simpled:" + user.isSimpled());
         boolean result = mainDataService.dataSynchronize(user.isSimpled());
         logger.info("同步数据结束...");

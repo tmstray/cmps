@@ -159,7 +159,7 @@ public class SysUserController
         mv.addObject("requestModel",model);
         return mv;
     }
-    
+
 
     /**
      * 分页数据查询：
@@ -188,17 +188,20 @@ public class SysUserController
      * @return
      */
     @PostMapping("/addUser")
-    @com.hx.config.Log(businessModule = "用户管理", businessType = BusinessType.INSERT)
+    @ResponseBody
+    @Log(businessModule = "用户管理", businessType = BusinessType.INSERT)
     public Response add(SysUser sysUser)
     {
         Response response = null;
-        if (Constants.NOT_UNIQUE.equals(userService.checkUserNameUnique(sysUser.getUserName())))
+        String isExists=userService.checkUserNameUnique(sysUser.getUserName());
+        if (Constants.NOT_UNIQUE.equals(isExists))
         {
             return new Response(500,"新增用户失败，登录账号已存在");
+//            return response = new Response(500,"新增失败，账号已存在");
         }
-//        User user = (User) httpSession.getAttribute("USER_SESSION");
-        User user = new User();
+        SysUser user = (SysUser) httpSession.getAttribute("USER_SESSION");
         sysUser.setPassword(sysUser.getPassword());
+        sysUser.setCreateBy(user.getUserName());
         int result =userService.insertUser(sysUser);
 
         if(result>0){
@@ -210,17 +213,18 @@ public class SysUserController
     }
 
     @PostMapping("/updateUser22")
+    @ResponseBody
     @Log(businessModule = "用户管理", businessType = BusinessType.UPDATE)
-    public Response edit(@Validated @RequestBody SysUser sysUser)
+    public Response edit(SysUser sysUser)
     {
         Response response = null;
-        User user = (User) httpSession.getAttribute("USER_SESSION");
-        sysUser.setUpdateBy(user.getUsername());
+        SysUser sessionUser = (SysUser) httpSession.getAttribute("USER_SESSION");
+        sysUser.setUpdateBy(sessionUser.getUserName());
         int result =userService.updateUser(sysUser);
         if(result>0){
-            response = new Response(200,"success:新增用户成功!");
+            response = new Response(200,"success:修改用户成功!");
         }else {
-            response = new Response(500,"fail:新增用户失败!");
+            response = new Response(500,"fail:修改用户失败!");
         }
         return response;
     }
@@ -230,7 +234,6 @@ public class SysUserController
      */
     @Log(businessModule = "用户管理", businessType = BusinessType.DELETE)
     @PostMapping(value ="/userIds")
-//    @GetMapping(value = "/getByUser")
     @ResponseBody
     public Response remove(Long userIds)
     {
