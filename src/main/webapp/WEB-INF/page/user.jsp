@@ -60,9 +60,6 @@
 				});
 				return ;
 			}
-
-			alert(document.getElementById("userId").value);
-
 			if(document.getElementById("userId").value!=null && document.getElementById("userId").value!=''){
 				url="${pageContext.request.contextPath}/user/updateUser";
 			}
