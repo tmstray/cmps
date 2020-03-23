@@ -30,7 +30,7 @@
 			$.messager.alert("系统提示","请选择要删除的数据！");
 			return;
 	    }
-		var userid = selectedRows.val();
+		var userid =selectedRows.val();
 		$.messager.confirm("系统提示","您确认要删掉这<font color=red>"+selectedRows.size()+"</font>条数据吗？",function(r){
 			if(r){
 				$.post("${pageContext.request.contextPath}/user/userIds",{userIds:userid},function(result){
@@ -53,7 +53,6 @@
 
 		function saveStudent(){
 			var menuIdSelect=$("input[name='menuId']:checked");
-			alert(menuIdSelect.val())
 			if(menuIdSelect.val()=='' || menuIdSelect.val()==undefined){
 				layer.msg('未勾选菜单权限不能保存！', {
 					icon: 1,
@@ -89,6 +88,54 @@
 				}
 			}).serialize();
 		}
+
+	function openModifyDialog(){
+		var selectedRows=$("input[name='IDCheck']:checked");
+		if (selectedRows.size() <= 0) {
+			$.messager.alert("系统提示","请选择要修改的数据！");
+			return;
+		}
+		var row=selectedRows.val().split(",");
+
+
+		$("#dlg").dialog("open").dialog("setTitle","编辑用户信息");
+		$("#userName").val(row[1]);
+		$("#nickName").val(row[2]);
+		$("#phoneNumber").val(row[2]);
+
+		$("#menuId1").attr("checked",false);
+		$("#menuId2").attr("checked",false);
+		$("#menuId3").attr("checked",false);
+		$("#menuId4").attr("checked",false);
+
+		$("#fm").form("submit",{
+			url:url,
+			onSubmit:function(){
+				return $(this).form("validate");
+			},
+			success:function(result){
+				var response =JSON.parse(result);
+				if(response.resCode==200){
+					layer.msg('保存成功', {
+						icon: 1,
+						time: 2000 //2秒关闭（如果不配置，默认是3秒）
+					}, function(){
+					});
+					$("#dlg").dialog("close");
+					search();
+
+				}else{
+					layer.msg("系统提示"+response.resMessage,{
+						icon: 1,
+						time: 2000 //2秒关闭（如果不配置，默认是3秒）
+					}, function(){
+					});
+					return;
+				}
+			}
+		}).serialize();
+	}
+
 		/** 模糊查询 **/
 		function search() {
 			var pageSize = $("#pageSize").val().trim();
@@ -206,12 +253,13 @@
 				<div id="tb">
 					<div>
 						<a href="javascript:openStudentAddDialog()" class="easyui-linkbutton" iconCls="icon-add" plain="true">添加</a>
+						<a href="javascript:openModifyDialog()" class="easyui-linkbutton" iconCls="icon-edit" plain="true">修改</a>
 						<a href="javascript:deleteStudent()" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
 					</div>
 				</div>
 				<div id="dlg" class="easyui-dialog" style="width: 750px;height: 550px;padding: 10px 20px"
 					closed="true" buttons="#dlg-buttons">
-			<form id="fm" method="post">
+				<form id="fm" method="post">
 				<input type="hidden" id="pageSize"  name="pageSize" value="${pageInfo.pageSize}">
 				<table cellspacing="5px;">
 					<tr>
@@ -230,10 +278,10 @@
 					</tr>
 					<tr>
 						<td>用户昵称：</td>
-						<td><input type="text" name="nickName" id="nickName" class="easyui-validatebox"/></td>
+						<td><input type="text" name="nickName" id="nickName" class="easyui-validatebox" maxlength="25"/></td>
 						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 						<td>手机号码：</td>
-						<td><input type="text" name="phoneNumber" id="phoneNumber" class="easyui-validatebox"/></td>
+						<td><input type="text" name="phoneNumber" id="phoneNumber" class="easyui-validatebox" maxlength="11"/></td>
 					</tr>
 					<tr>
 						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -255,10 +303,10 @@
 		</form>
 	</div>
 
-	<div id="dlg-buttons" align="center">
-		<a href="javascript:saveStudent()" class="easyui-linkbutton" iconCls="icon-ok">保存</a>
-		<a href="javascript:closeStudentDialog()" class="easyui-linkbutton" iconCls="icon-cancel">关闭</a>
-	</div>
+				<div id="dlg-buttons" align="center">
+					<a href="javascript:saveStudent()" class="easyui-linkbutton" iconCls="icon-ok">保存</a>
+					<a href="javascript:closeStudentDialog()" class="easyui-linkbutton" iconCls="icon-cancel">关闭</a>
+				</div>
 		</div>
 		<div class="ui_content">
 			<div class="ui_tb">
