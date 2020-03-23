@@ -53,17 +53,17 @@ public class SysUserController
 
     @Resource
     HttpSession httpSession;
-    
+
     private Map<String, Object> result = new HashMap<>();
-    
-    
+
+
     @GetMapping("/goSysUserListView")
     public ModelAndView goSysUserListView(ModelAndView modelAndView) {
         //向页面发送一个存储着Clazz的List对象
         modelAndView.setViewName("user3");
         return modelAndView;
     }
-    
+
     @PostMapping("/getUserList")
     @ResponseBody//these params seem like...why not included in basic value Object
     public PageResult getFriendList(Integer page, Integer rows) {
@@ -72,13 +72,13 @@ public class SysUserController
         //返回分页数据
         return ResultUtil.tablePage(pageInfo);
     }
-    
-    @PostMapping("/updateUser")
+
+    @PostMapping("/updateUser2222")
     @ResponseBody
     public Map<String, Object> editFriend(SysUser sysUser) {
         return userService.updateUser(sysUser) > 0 ? ResultUtil.success() : ResultUtil.error("更新失败:服务器端发生异常!");
     }
-    
+
     @PostMapping("/getUserList22")
     @ResponseBody
     public Map<String, Object> getStudentList(Integer page, Integer rows) {
@@ -102,7 +102,7 @@ public class SysUserController
 
         return result;
     }
-    
+
     @PostMapping("/addSysUser")
     @ResponseBody
     public Map<String, Object> addStudent(SysUser sysUser) {
@@ -121,7 +121,7 @@ public class SysUserController
 
         return result;
     }
-    
+
     @PostMapping("/editSysUser")
     @ResponseBody
     public Map<String, Object> editStudent(SysUser sysUser) {
@@ -133,7 +133,7 @@ public class SysUserController
         }
         return result;
     }
-    
+
     @PostMapping("/deleteSysUser")
     @ResponseBody
     public Map<String, Object> deleteStudent(@RequestParam(value = "ids[]", required = true) Integer[] ids) {
@@ -145,7 +145,7 @@ public class SysUserController
 //        }
         return result;
     }
-    
+
 
     @GetMapping(value = "/getByUser")
     public ModelAndView findByPage(MainDataModel model){
@@ -212,7 +212,7 @@ public class SysUserController
         return response;
     }
 
-    @PostMapping("/updateUser22")
+    @PostMapping("/updateUser")
     @ResponseBody
     @Log(businessModule = "用户管理", businessType = BusinessType.UPDATE)
     public Response edit(SysUser sysUser)

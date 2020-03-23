@@ -70,12 +70,6 @@
 					return $(this).form("validate");
 				},
 				success:function(result){
-					
-					//alert(response);
-					if(result.errorMsg){
-						$.messager.alert("系统提示",result.errorMsg);
-						return;
-					}else{
 						//layer.msg('保存成功', {icon: 2});
 					var response =JSON.parse(result);
 					if(response.resCode==200){
@@ -86,7 +80,6 @@
 						});
 						$("#dlg").dialog("close");
 						search();
-
 					}else{
 						layer.msg("系统提示"+response.resMessage,{
 							icon: 1,
@@ -96,10 +89,8 @@
 						return;
 					}
 				}
-			});
-			
-			}).serialize();
-		}
+        }).serialize();
+    }
 
 	function openModifyDialog(){
 		var selectedRows=$("input[name='IDCheck']:checked");
