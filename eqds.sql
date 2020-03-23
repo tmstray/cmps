@@ -105,15 +105,15 @@ CREATE TABLE `eqds_lastcount` (
 
 CREATE TABLE `sys_log` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
-  `business_module` varchar(100) DEFAULT NULL COMMENT '业务模块',
-  `business_type` int(20) DEFAULT NULL COMMENT '业务类型（ 1新增 2修改 3删除,4数据同步 5数据上传）',
-  `method` varchar(100) DEFAULT NULL COMMENT '操作方法',
-  `request_method` varchar(10) DEFAULT NULL COMMENT '请求方式',
-  `ip` varchar(64) DEFAULT NULL COMMENT '操作者IP',
-  `status` int(1) DEFAULT NULL COMMENT '操作状态（0正常 1异常）',
-  `error_msg` varchar(2000) DEFAULT NULL COMMENT '错误消息',
-  `remarks` varchar(200) DEFAULT NULL COMMENT '备注',
-  `create_by` varchar(32) DEFAULT NULL COMMENT '操作人',
+  `business_module` varchar(100) DEFAULT '' COMMENT '业务模块',
+  `business_type` int(20) DEFAULT '' COMMENT '业务类型（ 1新增 2修改 3删除,4数据同步 5数据上传）',
+  `method` varchar(100) DEFAULT '' COMMENT '操作方法',
+  `request_method` varchar(10) DEFAULT '' COMMENT '请求方式',
+  `ip` varchar(64) DEFAULT '' COMMENT '操作者IP',
+  `status` int(1) DEFAULT '0' COMMENT '操作状态（0正常 1异常）',
+  `error_msg` varchar(2000) DEFAULT '' COMMENT '错误消息',
+  `remarks` varchar(200) DEFAULT '' COMMENT '备注',
+  `create_by` varchar(32) DEFAULT '' COMMENT '操作人',
   `create_time` datetime DEFAULT NULL COMMENT '操作时间',
   `delete_flag` int(11) DEFAULT '0' COMMENT '删除标志',
   PRIMARY KEY (`id`)
@@ -133,7 +133,7 @@ CREATE TABLE `sys_user` (
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   `update_by` varchar(64) DEFAULT '' COMMENT '更新者',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
-  `remarks` varchar(500) DEFAULT NULL COMMENT '备注',
+  `remarks` varchar(500) DEFAULT '' COMMENT '备注',
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

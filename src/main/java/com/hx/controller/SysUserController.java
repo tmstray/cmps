@@ -220,6 +220,7 @@ public class SysUserController
         Response response = null;
         SysUser sessionUser = (SysUser) httpSession.getAttribute("USER_SESSION");
         sysUser.setUpdateBy(sessionUser.getUserName());
+        sysUser.setUserId(Long.parseLong(sysUser.getUserId()+""));
         int result =userService.updateUser(sysUser);
         if(result>0){
             response = new Response(200,"success:修改用户成功!");

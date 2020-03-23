@@ -21,16 +21,15 @@
 	<!-- Favicon  -->
 	<link rel="icon" href="/images/favicon.png">
 	<script type="text/javascript">
-
 	var url;
-
 	function deleteStudent(){
 		var selectedRows=$("input[name='IDCheck']:checked");
 		if (selectedRows.size() <= 0) {
 			$.messager.alert("系统提示","请选择要删除的数据！");
 			return;
 	    }
-		var userid =selectedRows.val();
+		var result =selectedRows.val().split(";");
+		var userid =result[0];
 		$.messager.confirm("系统提示","您确认要删掉这<font color=red>"+selectedRows.size()+"</font>条数据吗？",function(r){
 			if(r){
 				$.post("${pageContext.request.contextPath}/user/userIds",{userIds:userid},function(result){
@@ -60,6 +59,10 @@
 				}, function(){
 				});
 				return ;
+			}
+
+			if(document.getElementById("userId").value!=null && document.getElementById("userId").value!=''){
+				url="${pageContext.request.contextPath}/user/updateUser";
 			}
 			$("#fm").form("submit",{
 				url:url,
@@ -104,21 +107,64 @@
 			$.messager.alert("系统提示","请选择要修改的数据！");
 			return;
 		}
-		var row=selectedRows.val().split(",");
-
-
+ 		var result =selectedRows.val().split(";");
 		$("#dlg").dialog("open").dialog("setTitle","编辑用户信息");
-		$("#userName").val(row[1]);
-		$("#nickName").val(row[2]);
-		$("#phoneNumber").val(row[2]);
+		if(result[0]!=null && result[0]!="" ){
+			$("#userId").val(result[0]);
+		}
+		if(result[1]!=null && result[1]!="" ) {
+			$("#userName").val(result[1]);
+		}
+		if(result[2]!=null && result[2]!="" ) {
+			$("#password").val(result[2]);
+		}
+		if(result[3]!=null && result[3]!=""&& result[3]!='null') {
+			$("#nickName").val(result[3])
+		}
+		if(result[4]!=null && result[4]!="" && result[4]!='null') {
+			$("#phoneNumber").val(result[4]);
+		}
 
-		$("#menuId1").attr("checked",false);
-		$("#menuId2").attr("checked",false);
-		$("#menuId3").attr("checked",false);
-		$("#menuId4").attr("checked",false);
+		// $("#menuId1").attr("checked",false);
+		// $("#menuId2").attr("checked",false);
+		// $("#menuId3").attr("checked",false);
+		// $("#menuId4").attr("checked",false);
 
-		$("#fm").form("submit",{
-			url:url,
+		if(result[5] !=null && result[5] !='') {
+			var menuids = result[5].split(",");
+			for (var i=0;i<menuids.length;i++){
+				if(menuids[i]=="1") {
+					$("#menuId1").attr("checked", true);
+				}
+				if(menuids[i]=="2") {
+					$("#menuId2").attr("checked", true);
+				}
+				if(menuids[i]=="3") {
+					$("#menuId3").attr("checked", true);
+				}
+				if(menuids[i]=="4") {
+					$("#menuId4").attr("checked", true);
+				}
+			}
+		}else {
+			$("#menuId1").attr("checked",false);
+			$("#menuId2").attr("checked",false);
+			$("#menuId3").attr("checked",false);
+			$("#menuId4").attr("checked",false);
+		}
+	}
+	function modifySave() {
+		var menuIdSelect=$("input[name='menuId']:checked");
+		if(menuIdSelect.val()=='' || menuIdSelect.val()==undefined){
+			layer.msg('未勾选菜单权限不能保存！', {
+				icon: 1,
+				time: 2000 //2秒关闭（如果不配置，默认是3秒）
+			}, function(){
+			});
+			return ;
+		}
+		$("#fm1").form("submit",{
+			url:"${pageContext.request.contextPath}/user/updateUser",
 			onSubmit:function(){
 				return $(this).form("validate");
 			},
@@ -274,7 +320,7 @@
 					<tr>
 						<td>用户名：</td>
 						<td><input type="text" name="userName" id="userName" class="easyui-validatebox" required="true"/></td>
-						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>&nbsp;<input type="hidden" name="userId" id="userId" class="easyui-validatebox"/>&nbsp;</td>
 						<td>密码：</td>
 						<td><input type="password" name="password" id="password" class="easyui-validatebox" required="true"/></td>
 					</tr>
@@ -328,13 +374,15 @@
 						<th>用户昵称</th>
 						<th>手机号码</th>
 						<th>帐号状态</th>
+						<th>菜单ID</th>
 						<th>创建者</th>
 						<th>创建时间 </th>
 					</tr>
 					<c:forEach var="item" items="${pageInfo.list}">
 						<tr>
-							<td><input type="checkbox" name="IDCheck" value="${item.userId}" status="${item.status}"
-									   class="acb"/></td>
+							<td><input type="checkbox" name="IDCheck"
+									   value="${item.userId};${item.userName};${item.password};${item.nickName};${item.phoneNumber};${item.menuId}"
+									   status="${item.status}" class="acb"/></td>
 							<td>${item.userId}</td>
 							<td>${item.userName}</td>
 							<td>${item.nickName}</td>
@@ -349,6 +397,7 @@
 									</c:when>
 								</c:choose>
 							</td>
+							<td>${item.menuId}</td>
 							<td>${item.createBy}</td>
 							<td>
 								<c:choose>
@@ -407,6 +456,7 @@
 				"<th>用户昵称</th>" +
 				"<th>手机号码</th>" +
 				"<th>账号状态</th>" +
+				"<th>菜单ID</th>" +
 				"<th>创建者</th>" +
 				"<th>创建时间 </th>" +
 				"</tr>";
@@ -414,7 +464,8 @@
 		var bodyStr = "";
 		for(i in response.pageInfo.list){
 			var item = response.pageInfo.list[i];
-			bodyStr += "<tr><td><input type=\"checkbox\" name=\"IDCheck\" value=" + item.userId
+			bodyStr += "<tr><td><input type=\"checkbox\" name=\"IDCheck\" " +
+					"value=" + item.userId+";"+item.userName+";"+item.password+";"+item.nickName+";"+item.phoneNumber+";"+item.menuId
 					+" qbad="+" class=\"acb\"/></td>";
 			bodyStr += "<td>"+item.userId+"</td>";
 			bodyStr += "<td>"+item.userName+"</td>";
@@ -427,119 +478,13 @@
 					bodyStr += "<span>停用</span>";
 				}
 			bodyStr += "</td>";
+			bodyStr += "<td>"+item.menuId+"</td>";
 			bodyStr += "<td>"+item.createBy+"</td>";
 			bodyStr += "<td>"+item.createTime+"</td>";
 			bodyStr += "</tr>"
 		}
 		return hrhead + bodyStr;
 	}
-</script>
-
-<script type="text/javascript">
-$(function () {
-    // 设置地市多选下拉框内容
-    setCityData();
-});
-
-/**
- * 获取选中的值
- */
-function getSearchParams() {
-    var cityIn = $('#ttt').combobox('getValues');
-    if (cityIn[0] === '') { // 去除首位空格
-        cityIn.splice(0, 1);
-    }
-    console.log(cityIn);
-    alert(cityIn);
-}
-
-/**
- * 设置地市多选内容
- */
-function setCityData() {
-    var tttData = [
-        {id: '', text: '全选'},
-        {id: '1', text: '选项1'},
-        {id: '2', text: '选项2'},
-        {id: '3', text: '选项3'},
-        {id: '4', text: '选项4'},
-        {id: '5', text: '选项5'},
-        {id: '6', text: '选项6'},
-    ];
-    combobox_checkbox('ttt', tttData, 'auto');
-}
-
-/**
- * 带有复选框的easyui下拉框
- * @param _id input标签的id
- * @param optionsJson json字符串，定义选项的内容，
- * 例子：
- * [
- * {id: '对应于option标签的value', text: '页面显示文本'}
- * ]
- * @param hight 下拉框高度
- */
-function combobox_checkbox(_id, optionsJson, hight) {
-    $('#'+_id).combobox({
-        data: optionsJson,
-        valueField:'id',
-        textField:'text',
-        panelHeight:hight,
-        multiple:true,
-        editable:false,
-        formatter: function (row) { // formatter方法就是实现了在每个下拉选项前面增加checkbox框的方法
-            var opts = $(this).combobox('options');
-            return '<input type="checkbox" class="combobox-checkbox">' + row[opts.textField]
-        },
-        onLoadSuccess: function () { // 下拉框数据加载成功调用
-            // 正常情况下是默认选中“所有”，但我想实现点击所有全选功能，这这样会冲突，暂时默认都不选
-            $("#"+_id).combobox('clear'); //清空
-        },
-        onSelect: function (row) { // 选中一个选项时调用
-            var opts = $(this).combobox('options');
-            //当点击所有时，则勾中所有的选项
-            if (row.text === "全选") {
-                var data = $("#"+_id).combobox('getData');
-                for (var i = 0; i < data.length; i++) {
-                    $('#'+data[i].domId + ' input[type="checkbox"]').prop("checked", true);
-                }
-                var list = [];
-                $.map(opts.data, function (opt) {
-                    list.push(opt.id);
-                });
-                $("#"+_id).combobox('setValues', list); // combobox全选
-            } else {
-                //设置选中选项所对应的复选框为选中状态
-                $('#'+row.domId + ' input[type="checkbox"]').prop("checked", true);
-            }
-        },
-        onUnselect: function (row) { // 取消选中一个选项时调用
-            var opts = $(this).combobox('options');
-            // 当取消全选勾中时，则取消所有的勾选
-            if (row.text === "全选") {
-                var a = $("#"+_id).combobox('getData');
-                for (var i = 0; i < a.length; i++) {
-                    $('#'+a[i].domId + ' input[type="checkbox"]').prop("checked", false);
-                }
-                $("#"+_id).combobox('clear');//清空选中项
-            } else {
-                //设置选中选项所对应的复选框为非选中状态
-                $('#'+row.domId + ' input[type="checkbox"]').prop("checked", false);
-                var selectedList = $("#"+_id).combobox('getValues');
-                // 如果“所有”是选中状态,则将其取消选中
-                if (selectedList[0] === "") {
-                    // 将“所有”选项移出数组，并且将该项的复选框设为非选中
-                    selectedList.splice(0, 1);
-                    $('#'+opts.data[0].domId + ' input[type="checkbox"]').prop("checked", false);
-                }
-                $("#"+_id).combobox('clear');//清空
-
-                $("#"+_id).combobox('setValues', selectedList); // 重新复制选中项
-
-            }
-        }
-    });
-}
 </script>
 </body>
 </html>
