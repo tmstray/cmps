@@ -1,16 +1,21 @@
 package com.hx.service.impl;
 
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.hx.config.Constants;
 import com.hx.dao.SysUserMapper;
 import com.hx.entity.SysUser;
 import com.hx.model.MainDataModel;
 import com.hx.service.SysUserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+import com.hx.utils.page.object.BaseConditionVO;
 
-import java.util.List;
 
 
 /**
@@ -20,7 +25,7 @@ import java.util.List;
  * @date: 2019年12月24日下午2:26:09
  */
 @Service
-public class SysUserServiceImpl implements SysUserService
+public class SysUserServiceImpl extends AbstractService<SysUser, Integer> implements SysUserService
 {
 
     @Autowired
@@ -32,7 +37,6 @@ public class SysUserServiceImpl implements SysUserService
      * @param model 用户信息
      * @return 用户信息集合信息
      */
-    @Override
     public List<SysUser> selectUserList(MainDataModel model)
     {
         return userMapper.selectUserList(model);
@@ -106,4 +110,36 @@ public class SysUserServiceImpl implements SysUserService
     {
         return userMapper.deleteUserById(userId);
     }
+
+	@Override
+	public void setBaseMapper() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public PageInfo<SysUser> selectForPage(BaseConditionVO baseConditionVO) {
+		
+		PageHelper.startPage(baseConditionVO.getPageNum(), baseConditionVO.getPageSize()); //设置每页的记录数
+        List<SysUser> list = userMapper.selectBySelective(); //获取列表信息
+        return new PageInfo<>(list);
+	}
+
+	@Override
+	public List<SysUser> selectBySelective() {
+		return null;
+	}
+
+	@Override
+	public PageInfo<SysUser> selectForPage(SysUser reccord, BaseConditionVO baseConditionVO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<SysUser> selectBySelective(SysUser friend) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

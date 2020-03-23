@@ -62,11 +62,12 @@
 					return $(this).form("validate");
 				},
 				success:function(result){
+					
+					//alert(response);
 					if(result.errorMsg){
-						$.messager.alert("系统提示",result.resMessage);
+						$.messager.alert("系统提示",result.errorMsg);
 						return;
 					}else{
-
 						//layer.msg('保存成功', {icon: 2});
 						layer.msg('保存成功', {
 							  icon: 1,
@@ -84,7 +85,7 @@
 						//$("#dg").datagrid("reload");
 					}
 				}
-			}).serialize();
+			});
 			
 		}
 

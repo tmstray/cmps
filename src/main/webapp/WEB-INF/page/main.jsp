@@ -73,7 +73,7 @@
 				attributes:{
 					// url:"log.jsp"
 					//method: "POST",
-					url:"user/getByUser"
+					url:"user/goSysUserListView"
 				}
 			}]
 		}];

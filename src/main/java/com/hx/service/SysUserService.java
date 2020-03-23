@@ -1,9 +1,11 @@
 package com.hx.service;
 
+import java.util.List;
+
+import com.github.pagehelper.PageInfo;
 import com.hx.entity.SysUser;
 import com.hx.model.MainDataModel;
-
-import java.util.List;
+import com.hx.utils.page.object.BaseConditionVO;
 
 /**
  *
@@ -11,8 +13,13 @@ import java.util.List;
  * @author Administrator
  * @date: 2019年12月24日下午2:19:37
  */
-public interface SysUserService
+public interface SysUserService extends BaseService<SysUser, Integer>
 {
+	@Override
+	List<SysUser> selectBySelective(SysUser friend);
+	
+	List<SysUser> selectBySelective();
+	
     /**
      * 根据条件分页查询用户列表
      *
@@ -61,4 +68,7 @@ public interface SysUserService
      * @return 结果
      */
     public String checkUserNameUnique(String userName);
+
+
+	PageInfo<SysUser> selectForPage(BaseConditionVO baseConditionVO);
 }

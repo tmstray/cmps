@@ -1,12 +1,12 @@
 package com.hx.dao;
 
 
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+
 import com.hx.entity.SysUser;
 import com.hx.model.MainDataModel;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-
-import java.util.List;
 
 /**
  *
@@ -14,9 +14,16 @@ import java.util.List;
  * @author Administrator
  * @date: 2019年12月24日下午2:17:52
  */
+//@Repository
 @Mapper
-public interface SysUserMapper
+public interface SysUserMapper extends BaseMapper<SysUser, Integer>
 {
+	
+	@Override
+	List<SysUser> selectBySelective();
+	
+//	@Override
+//	List<SysUser> selectBySelective(SysUser sysUser);
     /**
      * 根据条件分页查询用户列表
      *
