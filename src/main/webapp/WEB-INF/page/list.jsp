@@ -358,7 +358,7 @@
         var bodyStr = "";
         for(i in response.pageInfo.list){
             var item = response.pageInfo.list[i];
-            bodyStr += "<tr><td><input type=\"checkbox\" name=\"IDCheck\" value=" + item.id
+            bodyStr += "<tr><td><input type=\"checkbox\" name=\"IDCheck\" value=" + item.ID
                     +" status="+item.status+" qbad="+" class=\"acb\"/></td>";
 
             bodyStr += "<td>"+item.sampleNo+"</td>";
