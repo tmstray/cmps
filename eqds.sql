@@ -106,7 +106,7 @@ CREATE TABLE `eqds_lastcount` (
 CREATE TABLE `sys_log` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `business_module` varchar(100) DEFAULT '' COMMENT '业务模块',
-  `business_type` int(20) DEFAULT '' COMMENT '业务类型（ 1新增 2修改 3删除,4数据同步 5数据上传）',
+  `business_type` int(20)  COMMENT '业务类型（ 1新增 2修改 3删除,4数据同步 5数据上传）',
   `method` varchar(100) DEFAULT '' COMMENT '操作方法',
   `request_method` varchar(10) DEFAULT '' COMMENT '请求方式',
   `ip` varchar(64) DEFAULT '' COMMENT '操作者IP',
