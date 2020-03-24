@@ -306,7 +306,13 @@
 			bodyStr += "<td>"+item.method+"</td>";
 			bodyStr += "<td>"+item.ip+"</td>";
 			bodyStr += "<td>"+item.requestMethod+"</td>";
-			bodyStr += "<td>"+item.status+"</td>";
+			bodyStr += "<td>"
+			if(item.status==0){
+				bodyStr += "<span>正常</span>";
+			}else if(item.status==1){
+				bodyStr += "<span>异常</span>";
+			}
+			bodyStr += "</td>";
 			bodyStr += "<td>"+item.createBy+"</td>";
 			bodyStr += "<td>"+item.createTime+"</td>";
 			bodyStr += "</tr>"
